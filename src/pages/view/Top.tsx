@@ -1,15 +1,20 @@
-'use client' // this is a client component
-
-import st from './../../app/page.module.css'
-import React, { useEffect, useState } from 'react'
+import st from "./../../app/page.module.css";
+import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { rs, ad } from "./../reduxItem/store";
+import { batch } from "react-redux";
+import { changeLang } from "./../reduxItem/langSlice";
+import { changeTopTitle } from "../reduxItem/topTitleSlice";
 
 const Top = () => {
-  const [lang, setLang] = useState('Kor')
-  const [title, setTitle] = useState('이대윤 포트폴리오')
+  const lang = useSelector((state: rs) => {
+    return state.lang.value;
+  });
+  const title = useSelector((state: rs) => {
+    return state.topTitle.value;
+  });
 
-  useEffect(() => {
-    lang === 'Kor' ? setTitle('이대윤 포트폴리오') : setTitle("DAEYUN'S PORTFOLIO")
-  }, [lang])
+  const dispatch: ad = useDispatch();
 
   return (
     <div className={st.header}>
@@ -17,13 +22,16 @@ const Top = () => {
       <button
         className={st.headerBtn}
         onClick={() => {
-          lang === 'Kor' ? setLang('Eng') : setLang('Kor')
+          batch(() => {
+            dispatch(changeLang("changeLang"));
+            dispatch(changeTopTitle("changeLang"));
+          });
         }}
       >
         {lang}
       </button>
     </div>
-  )
-}
+  );
+};
 
-export default Top
+export default Top;
