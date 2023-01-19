@@ -1,15 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const topTitleSlice = createSlice({
-  name: "TopTitle",
-  initialState: { value: "이대윤 포트폴리오" },
+  name: "topTitle",
+  initialState: { value: ["이대윤", "포트", "폴리오"] },
   reducers: {
     changeTopTitle: (state, action) => {
       console.log("topTitleSlice-changeLang");
       if (action.payload === "changeLang") {
-        state.value === "이대윤 포트폴리오"
-          ? (state.value = "DAEYUN'S PORTFOLIO")
-          : (state.value = "이대윤 포트폴리오");
+        state.value[0] === "이대윤"
+          ? (state.value = ["DAEYUN", "PORT", "FOLIO"])
+          : (state.value = ["이대윤", "포트", "폴리오"]);
       }
     },
   },

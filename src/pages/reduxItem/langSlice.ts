@@ -5,12 +5,12 @@ import { changeTopTitle } from "../reduxItem/topTitleSlice";
 
 const langSlice = createSlice({
   name: "lang",
-  initialState: { value: "Kor" },
+  initialState: { value: "Ko" },
   reducers: {
     changeLang: (state, action) => {
       console.log("langSlice-changeLang");
       if (action.payload === "changeLang") {
-        state.value === "Kor" ? (state.value = "Eng") : (state.value = "Kor");
+        state.value === "Ko" ? (state.value = "En") : (state.value = "Ko");
       }
     },
   },
