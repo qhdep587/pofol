@@ -1,38 +1,77 @@
-.App {
+.mainBackground {
+  font-family: "Noto Sans KR", sans-serif;
   text-align: center;
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-image: url("../public/image/gray.jpg");
+  background-size: cover;
+  background-color: #000;
+  cursor: none;
+  overflow: hidden;
+}
+.mainBackgroundBlur {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: #000;
+  opacity: 0.7;
 }
 
-.App-logo {
-  height: 40vmin;
+.cursor {
+  width: 1.2rem;
+  height: 1.2rem;
+  border: 1.5px solid rgba(73, 153, 132);
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1000;
+  transform: translate(-50%, -50%);
   pointer-events: none;
+  transition: all 0.3s ease;
+  transition-property: background, transform;
+  transform-origin: 100% 100%;
+  backdrop-filter: sepia(100%);
+  background-size: cover;
+  background-color: rgba(213, 236, 230, 0.1);
+} 
+
+.left-menu {
+  height: 100%;
+  width: 150;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+.left-menu-item {
+  padding: 15px 20px 15px 20px;
+  font-size: 20px;
+  color: ivory;
+  display: block;
+  transition: 0.3s;
+}
+.left-menu-item-content {
+  padding: 15px 20px 15px 20px;
+  font-size: 20px;
+  color: ivory;
+  display: block;
+  transition: 0.3s;
+}
+.left-menu-item-content:hover {
+  text-decoration: solid underline rgb(64, 138, 118) 3px;
+}
+.left-menu-item-ivory {
+  color: ivory;
+}
+.left-menu-item-deco {
+  text-decoration: solid underline rgb(64, 138, 118) 3px;
+}
+.left-menu-item:nth-child(1) {
+  color: rgb(73, 153, 132);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.left-menu-item-content:nth-child(1){
+  color: rgb(73, 153, 132);
 }
