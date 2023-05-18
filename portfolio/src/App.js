@@ -2,6 +2,7 @@ import './App.css'
 import AppRouter from './routes/AppRouter'
 import HeaderLayout from './layout/HeaderLayout'
 import LeftMenu from './layout/LeftMenu'
+import MainComp from './layout/MainComp'
 
 const App = () => {
   window.addEventListener('scroll', cursor)
@@ -12,11 +13,13 @@ const App = () => {
   }
   return (
     <div className="mainBackground">
-      <div className="mainBackgroundBlur">
+      <div className="mainBackgroundBlur container">
         <div className="cursor"></div>
         <LeftMenu />
-        <HeaderLayout />
-        <AppRouter />
+        <MainComp>
+          {/* <HeaderLayout /> */}
+          {/* <AppRouter /> */}
+        </MainComp>
       </div>
     </div>
   )
