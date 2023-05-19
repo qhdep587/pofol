@@ -1,8 +1,7 @@
 import './App.css'
-import AppRouter from './routes/AppRouter'
-import HeaderLayout from './layout/HeaderLayout'
 import LeftMenu from './layout/LeftMenu'
 import MainComp from './layout/MainComp'
+import { BrowserRouter } from 'react-router-dom'
 
 const App = () => {
   window.addEventListener('scroll', cursor)
@@ -12,16 +11,15 @@ const App = () => {
     document.querySelector('.cursor').style.top = e.pageY - window.scrollY + 'px'
   }
   return (
-    <div className="mainBackground">
-      <div className="mainBackgroundBlur container">
-        <div className="cursor"></div>
-        <LeftMenu />
-        <MainComp>
-          {/* <HeaderLayout /> */}
-          {/* <AppRouter /> */}
-        </MainComp>
+    <BrowserRouter>
+      <div className="mainBackground">
+        <div className="mainBackgroundBlur container">
+          <div className="cursor"></div>
+          <LeftMenu />
+          <MainComp />
+        </div>
       </div>
-    </div>
+    </BrowserRouter>
   )
 }
 
