@@ -6,6 +6,7 @@ const MainComp = () => {
       <div className="MainCompChild">
         <div className="MainCompItem header">HEADER</div>
       </div>
+
       <div className="MainCompChild">
         <div className="MainCompItem content">
           <AppRouter></AppRouter>

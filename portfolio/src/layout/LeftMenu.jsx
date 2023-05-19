@@ -26,7 +26,6 @@ const LeftMenu = () => {
       case 4:
         navigate('/project')
         break
-
       default:
         navigate('/home')
         break
