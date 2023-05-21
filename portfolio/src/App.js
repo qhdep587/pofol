@@ -1,14 +1,22 @@
-import './App.css'
-import LeftMenu from './layout/LeftMenu'
-import MainComp from './layout/MainComp'
-import { BrowserRouter } from 'react-router-dom'
+import "./App.css";
+import LeftMenu from "./layout/LeftMenu";
+import MainComp from "./layout/MainComp";
+import { BrowserRouter } from "react-router-dom";
 
 const App = () => {
-  window.addEventListener('scroll', cursor)
-  window.addEventListener('mousemove', cursor)
+  window.addEventListener("scroll", cursor);
+  window.addEventListener("mousemove", cursor);
   function cursor(e) {
-    document.querySelector('.cursor').style.left = e.pageX + 'px'
-    document.querySelector('.cursor').style.top = e.pageY - window.scrollY + 'px'
+    if (document.querySelector(".cursor").style.left === "0px") {
+      document.querySelector(".cursor").style.opacity = 0;
+    } else if (document.querySelector(".cursor").style.top === "0px") {
+      document.querySelector(".cursor").style.opacity = 0;
+    } else {
+      document.querySelector(".cursor").style.opacity = 0.7;
+    }
+    document.querySelector(".cursor").style.left = e.pageX + "px";
+    document.querySelector(".cursor").style.top =
+      e.pageY - window.scrollY + "px";
   }
   return (
     <BrowserRouter>
@@ -20,7 +28,7 @@ const App = () => {
         </div>
       </div>
     </BrowserRouter>
-  )
-}
+  );
+};
 
-export default App
+export default App;

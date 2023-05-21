@@ -12,7 +12,6 @@ const LeftMenu = () => {
   }
 
   const navRouter = goto => {
-    console.log(goto)
     switch (goto) {
       case 1:
         navigate('/intro')

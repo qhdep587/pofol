@@ -1,19 +1,20 @@
-import React from 'react'
-import AppRouter from '../routes/AppRouter'
+import React from "react";
+import AppRouter from "../routes/AppRouter";
+import Header from "../components/Header";
 const MainComp = () => {
   return (
     <div className="MainComp container">
       <div className="MainCompChild">
-        <div className="MainCompItem header">HEADER</div>
+        <Header />
       </div>
 
       <div className="MainCompChild">
         <div className="MainCompItem content">
-          <AppRouter></AppRouter>
+          <AppRouter />
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default MainComp
+export default MainComp;
