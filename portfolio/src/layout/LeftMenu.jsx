@@ -4,14 +4,22 @@ import { useNavigate } from 'react-router-dom'
 const LeftMenu = () => {
   const navigate = useNavigate()
   const linkFn = (target, num) => {
-    for (let i = 1; i < 5; i++) {
-      document.getElementById('menu' + i).className = 'left-menu-item-content'
+    if (num > 0) {
+      for (let i = 1; i < 5; i++) {
+        document.getElementById('menu' + i).className = 'left-menu-item-content'
+      }
+      document.getElementById('menu' + num).className += ' active'
+      navRouter(num)
     }
-    document.getElementById('menu' + num).className += ' active'
-    navRouter(num)
   }
 
   const navRouter = goto => {
+    if (goto === 'home') {
+      for (let i = 1; i < 5; i++) {
+        document.getElementById('menu' + i).className = 'left-menu-item-content'
+      }
+    }
+
     switch (goto) {
       case 1:
         navigate('/intro')
