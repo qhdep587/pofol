@@ -80,6 +80,7 @@
   height: 100%;
   width: 130px;
   min-width: 130px;
+  min-height: 33px;
   position: relative;
   top: 0;
   left: 0;
@@ -232,6 +233,8 @@
   
 }
 .header-item-left-icon-modal-item{
+  width: 80px;
+  height: 80px;
   padding: 0px 10px 10px 10px;
   flex: 1;
 }
@@ -376,8 +379,8 @@
   .left-menu {
     display: flex;
     flex-flow: row wrap;
-    min-height: 25px;
-    max-height: 6.3vw !important;
+    min-height: 40px;
+    max-height: 40px !important;
     width: 100vw;
     position: relative;
     top: 0;
@@ -400,7 +403,7 @@
     padding-top: 0px;
     align-content: center;
     justify-content: center;
-    font-size: 3.3vw;
+    font-size: 20px;
     transition: 0.3s;
     color: rgb(73, 153, 132);
     border-right: solid rgba(214, 231, 233, 0.2) 1px;
@@ -412,11 +415,19 @@
     align-content: center;
     justify-content: center;
     min-width: 2vw;
-    font-size: 3.2vw;
+    font-size: 20px;
     color: ivory;
     transition: 0.3s;
     padding-left: 5vw;
     padding-right: 5vw;
+  }
+  .left-menu-item:hover {
+    color: rgb(73, 153, 132);
+    text-shadow: none;
+  }
+  .left-menu-item-content:hover {
+    color: ivory;
+    text-shadow: none;
   }
 
   .left-menu-item-ivory {
@@ -457,7 +468,7 @@
   }
 
   .MainCompItem.header {
-    padding: 9px 20px 22px 20px;
+    padding: 3px 5px 5px 5px;
     max-height: 40px !important;
     font-size: 3vw;
     align-content: center;
@@ -503,6 +514,7 @@
     max-width: 23x;
     height: 25px;
   }
+ 
   .header-item-left-icon-modal {
     position:absolute;
     top: 35px;
@@ -528,8 +540,19 @@
     
   }
   .header-item-left-icon-modal-item{
+    width: 80px;
+  height: 80px;
     padding: 0px 10px 10px 10px;
     flex: 1;
+  }
+  .header-item-left-icon:hover{
+    box-shadow: none;
+  }
+  .header-item-left-icon.active{
+    box-shadow: 0px 0px 4px 1px rgb(206, 235, 201), 0 0 5px rgb(6, 150, 102);
+  }
+  .header-item-left-icon-modal:hover{
+    box-shadow: none;
   }
   .header-item1{
     color: ivory;
@@ -575,12 +598,14 @@
   }
   .intro-item:nth-child(1) {
     flex: 1;
-    min-height: 300px;
+    min-width: 330px;
+    min-height: 400px;
     background-color: red;
   }
   .intro-item:nth-child(2) {
     flex: 1;
-    min-height: 300px;
+    min-width: 330px;
+    min-height: 400px;
     background-color: blue;
   }
   .edu {
@@ -672,8 +697,8 @@
   .left-menu {
     display: flex;
     flex-flow: row nowrap;
-    min-height: 25px;
-    max-height: 8vw !important;
+    min-height: 33px;
+    max-height: 33px;
     width: 100vw;
     position: relative;
     top: 0;
@@ -696,7 +721,7 @@
     padding-top: 0px;
     align-content: center;
     justify-content: center;
-    font-size: 3.9vw;
+    font-size: 18px;
     display: block;
     transition: 0.3s;
     color: rgb(73, 153, 132);
@@ -709,12 +734,20 @@
     align-content: center;
     justify-content: center;
     min-width: 2vw;
-    font-size: 3.9vw;
+    font-size: 18px;
     color: ivory;
     display: block;
     transition: 0.3s;
-    padding-left: 5vw;
+    padding-left: 15px;
     padding-right: 5vw;
+  }
+  .left-menu-item:hover {
+    color: rgb(73, 153, 132);
+    text-shadow: none;
+  }
+  .left-menu-item-content:hover {
+    color: ivory;
+    text-shadow: none;
   }
 
   .left-menu-item-ivory {
@@ -726,7 +759,7 @@
 
   .container {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     justify-content: flex-start;
   }
 
@@ -760,7 +793,7 @@
     max-height: 40px !important;
     font-size: 3.8vw;
     align-content: center;
-    padding: 5px 10px 5px 5px;
+    padding: 3px 5px 5px 5px;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
@@ -802,6 +835,8 @@
     max-width: 23x;
     height: 25px;
   }
+  
+
   .header-item-left-icon-modal {
     position:absolute;
     top: 35px;
@@ -827,8 +862,19 @@
     
   }
   .header-item-left-icon-modal-item{
+    width: 80px;
+  height: 80px;
     padding: 0px 10px 10px 10px;
     flex: 1;
+  }
+  .header-item-left-icon:hover{
+    box-shadow: none;
+  }
+  .header-item-left-icon.active{
+    box-shadow: 0px 0px 4px 1px rgb(206, 235, 201), 0 0 5px rgb(6, 150, 102);
+  }
+  .header-item-left-icon-modal:hover{
+    box-shadow: none;
   }
   .header-item1{
     color: ivory;
@@ -868,18 +914,18 @@
   }
   .intro {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column nowrap;
     flex: 1;
-    overflow-y: auto;
+    overflow-y: scroll;
   }
   .intro-item:nth-child(1) {
-    flex-grow: 1;
-    min-height: 300px;
+    flex: 1;
+    min-height: 400px;
     background-color: red;
   }
   .intro-item:nth-child(2) {
-    flex-grow: 1;
-    min-height: 300px;
+    flex: 1;
+    min-height: 400px;
     background-color: blue;
   }
   .edu {

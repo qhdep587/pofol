@@ -3,27 +3,33 @@ import axios from 'axios'
 import { useEffect, useState } from 'react'
 
 const Header = () => {
-  useEffect(() => {
-    fetchData()
-  }, [])
-
   const [temp, setTemp] = useState('')
   const [city, setCity] = useState('')
   const [icon, setIcon] = useState('')
   const [tf, setTf] = useState(false)
 
+  useEffect(() => {
+    fetchData()
+  }, [])
+
+  useEffect(() => {
+    if (tf) {
+      document.getElementById('chatIcon').className += ' active'
+    } else {
+      document.getElementById('chatIcon').className = 'header-item-left-icon'
+    }
+  }, [tf])
+
   const fetchData = async () => {
     try {
-      const resCity = await axios.get('http://ip-api.com/json')
-      const cityName = resCity.data.regionName
+      // const resCity = await axios.get('http://ip-api.com/json') https할려면 돈내래^^
+      // const cityName = resCity.data.regionName
       const res = await axios.get(
-        'https://api.openweathermap.org/data/2.5/weather?q=' +
-          cityName +
-          '&units=metric&appid=' +
+        'https://api.openweathermap.org/data/2.5/weather?q=Seoul&units=metric&appid=' +
           process.env.REACT_APP_MY_KEY
       )
       setTemp(res.data.main.temp.toFixed(0))
-      setCity(cityName.toLowerCase())
+      setCity('seoul')
       setIcon(res.data.weather[0].description.replace(' ', ''))
     } catch (error) {
       console.error(error)
@@ -39,6 +45,7 @@ const Header = () => {
       <div className="header-item-left">
         <img
           className="header-item-left-icon"
+          id="chatIcon"
           src={require('../common/image/chat.png')}
           alt="href='https://www.flaticon.com/kr/free-icons/' title='아스트랄 아이콘'>
           아스트랄 아이콘 제작자: Metami septiana - Flaticon"
