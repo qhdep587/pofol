@@ -201,6 +201,12 @@
   max-width: 23x;
   height: 25px;
 }
+.header-item-left-icon:hover{
+  box-shadow: -1px -1px 5px 1px rgb(224, 252, 219), 0 0 5px rgb(1, 211, 141);
+}
+.header-item-left-icon-modal:hover{
+  box-shadow: -1px -1px 5px 1px rgb(224, 252, 219), 0 0 5px rgb(1, 211, 141);
+}
 .header-item-left-icon-modal {
   position:absolute;
   top: 1px;
@@ -338,7 +344,7 @@
       );
     background-size: cover;
     background-color: #000;
-    cursor: pointer;
+    cursor: default;
     overflow: hidden;
   }
   .mainBackgroundBlur {
@@ -634,7 +640,7 @@
       );
     background-size: cover;
     background-color: #000;
-    cursor: pointer;
+    cursor: default;
     overflow: hidden;
   }
   .mainBackgroundBlur {

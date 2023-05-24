@@ -47,6 +47,7 @@ const Header = () => {
         <div
           className="header-item-left-icon-modal"
           style={tf ? { display: 'flex' } : { display: 'none' }}
+          onClick={() => clickQR()}
         >
           <text style={{ fontSize: '10px' }}>
             <text style={{ color: 'rgb(255, 230, 0)' }}>kakao</text>
@@ -57,7 +58,6 @@ const Header = () => {
             className="header-item-left-icon-modal-item"
             src={require('../common/image/chatQR.jpg')}
             alt="오픈채팅 QR코드"
-            onClick={() => clickQR()}
           />
         </div>
       </div>
