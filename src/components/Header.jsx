@@ -16,7 +16,7 @@ const Header = () => {
     if (tf) {
       document.getElementById('chatIcon').className += ' active'
     } else {
-      document.getElementById('chatIcon').className = 'header-item-left-icon'
+      document.getElementById('chatIcon').className = 'header-item-left'
     }
   }, [tf])
 
@@ -42,10 +42,9 @@ const Header = () => {
 
   return (
     <div className="MainCompItem header">
-      <div className="header-item-left">
+      <div className="header-item-left" id="chatIcon">
         <img
           className="header-item-left-icon"
-          id="chatIcon"
           src={require('../common/image/chat.png')}
           alt="href='https://www.flaticon.com/kr/free-icons/' title='아스트랄 아이콘'>
           아스트랄 아이콘 제작자: Metami septiana - Flaticon"
