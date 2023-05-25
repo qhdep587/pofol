@@ -385,11 +385,12 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba(31, 27, 27, 0.8);
+    background-color: rgba(31, 27, 27, 0.9);
     transition: 0.5s;
     overflow: hidden;
     box-shadow: none;
     border-bottom: solid rgba(214, 231, 233, 0.2) 1px;
+    z-index: 500;
   }
   .left-menu-item-content-box:nth-child(1) {
     flex: 1;
@@ -451,7 +452,7 @@
   .MainCompChild:nth-child(1) {
     align-content: center;
     justify-content: center;
-    background-color: rgba(31, 27, 27, 0.8);
+    background-color: rgba(31, 27, 27, 0.9);
     height: 6vw;
     color: ivory;
     box-shadow: none;
@@ -461,8 +462,10 @@
     position: fixed;
     width: 100%;
   top: 41px;
+  z-index: 500;
   }
   .MainCompChild:nth-child(2) {
+    z-index: 1;
     position: relative;
     top: 80px;
     align-content: flex-start;
@@ -717,11 +720,12 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba(31, 27, 27, 0.8);
+    background-color: rgba(31, 27, 27, 0.9);
     transition: 0.5s;
     overflow: hidden;
     box-shadow: none;
     border-bottom: solid rgba(214, 231, 233, 0.2) 1px;
+    z-index: 500;
   }
   .left-menu-item-content-box:nth-child(1) {
     flex: 1;
@@ -785,7 +789,7 @@
   .MainCompChild:nth-child(1) {
     align-content: center;
     justify-content: center;
-    background-color: rgba(31, 27, 27, 0.8);
+    background-color: rgba(31, 27, 27, 0.9);
     padding-top: 1px;
     padding-bottom: 0px;
     height: 7.7vw;
@@ -797,8 +801,10 @@
     position: fixed;
     width: 100%;
   top: 41px;
+  z-index: 500;
   }
   .MainCompChild:nth-child(2) {
+    z-index: 1;
     position: relative;
     top: 82px;
     align-content: flex-start;
