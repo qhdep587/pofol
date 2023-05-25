@@ -202,7 +202,7 @@
   max-width: 23x;
   height: 25px;
 }
-.header-item-left-icon:hover{
+.header-item-left.active{
   box-shadow: 0px 0px 4px 1px rgb(206, 235, 201), 0 0 5px rgb(6, 150, 102);
 }
 .header-item-left-icon-modal:hover{
@@ -555,6 +555,9 @@
   .header-item-left.active{
     box-shadow: 0px 0px 4px 1px rgb(206, 235, 201), 0 0 5px rgb(6, 150, 102);
   }
+  .left-menu-item-content.active {
+    text-decoration: solid underline rgb(64, 138, 118) 3px;
+  }
   .header-item-left-icon-modal:hover{
     box-shadow: none;
   }
@@ -880,6 +883,9 @@
   }
   .header-item-left.active{
     box-shadow: 0px 0px 4px 1px rgb(206, 235, 201), 0 0 5px rgb(6, 150, 102);
+  }
+  .left-menu-item-content.active {
+    text-decoration: solid underline rgb(64, 138, 118) 3px;
   }
   .header-item-left-icon-modal:hover{
     box-shadow: none;
