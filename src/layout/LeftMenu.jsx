@@ -34,7 +34,7 @@ const LeftMenu = () => {
         navigate('/project')
         break
       default:
-        navigate('/home')
+        navigate('/')
         break
     }
   }
