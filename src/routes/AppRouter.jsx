@@ -9,7 +9,7 @@ import Project from '../components/Project'
 const AppRouter = () => {
   return (
     <Routes>
-      <Route exact path="/home" element={<Home />} />
+      <Route exact path="/" element={<Home />} />
       <Route exact path="/intro" element={<Intro />} />
       <Route path="/work" element={<Work />} />
       <Route path="/edu" element={<Edu />} />
