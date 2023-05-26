@@ -282,6 +282,7 @@
   margin-top: 35px;
   flex: 1;
   z-index: 20;
+  display: flex;
 }
 .home-item2 {
   max-width: 500px;
@@ -308,16 +309,25 @@
 }
 
 .home-app{
+  width: 500px;
+  height: 60px;
+  flex: 1;
+  background-color: rgb(0, 8, 5) !important;
+  border: double rgba(29, 116, 83, 0.5) 5px;
+  padding-top:20px;
+  position: relative;
+}
+.home-app-slideup{
   animation-duration: 2s;
   animation-name: slideup;
 }
 @keyframes slideup {
   from {
-    margin-top: 70%;
+    margin-bottom: 70%;
   }
 
   to {
-    margin-top: 0%;
+    margin-bottom: 0%;
   }
 }
 .intro {
@@ -683,6 +693,15 @@
   }
   
   .home-app{
+    width: 400px;
+    height: 50px;
+    background-color: rgb(0, 8, 5) !important;
+    border: double rgba(29, 116, 83, 0.5) 5px;
+    padding-top: 13px;
+    position: relative;
+    left: -12px;
+  }
+  .home-app-slideup{
     animation-duration: 2s;
     animation-name: slideup;
   }
@@ -1072,6 +1091,15 @@
   }
   
   .home-app{
+    width: 370px;
+    height: 50px;
+    background-color: rgb(0, 8, 5) !important;
+    border: double rgba(29, 116, 83, 0.5) 5px;
+    padding-top: 13px;
+    position: relative;
+    left: 0px;
+  }
+  .home-app-slideup{
     animation-duration: 2s;
     animation-name: slideup;
   }
