@@ -1,5 +1,7 @@
-import React from 'react'
-import TypeIt from 'typeit-react'
+import React from "react";
+import TypeIt from "typeit-react";
+import { Canvas } from "@react-three/fiber";
+import { OrbitControls } from "@react-three/drei";
 
 const Home = () => {
   return (
@@ -9,19 +11,19 @@ const Home = () => {
           <div className="home-app-slideup1">
             <TypeIt
               style={{
-                color: 'ivory',
-                fontSize: '18px',
-                paddingTop: '5px',
-                height: '100%',
+                color: "ivory",
+                fontSize: "18px",
+                paddingTop: "5px",
+                height: "100%",
               }}
               options={{ startDelay: 900, speed: 100 }}
-              getBeforeInit={instance => {
+              getBeforeInit={(instance) => {
                 instance
                   .type("Hello, I'm danny.")
                   .pause(50)
                   .delete(7)
                   .pause(500)
-                  .type(' 대윤', { delay: 190 })
+                  .type(" 대윤", { delay: 190 })
                   .pause(300)
                   .delete(13)
                   .pause(600)
@@ -33,23 +35,55 @@ const Home = () => {
                   )
                   .pause(700)
                   .move(-7)
-                  .type(' <text class="text-bold">프론트엔드</text>&nbsp;&nbsp;')
+                  .type(
+                    ' <text class="text-bold">프론트엔드</text>&nbsp;&nbsp;'
+                  )
                   .pause(300)
                   .move(7)
                   .type('<text class="text-bold">dbs</text>', { delay: 190 })
                   .delete(3, { delay: 200 })
-                  .type('<text class="text-bold">윤</text>입니다.', { delay: 100 })
+                  .type('<text class="text-bold">윤</text>입니다.', {
+                    delay: 100,
+                  });
 
-                return instance
+                return instance;
               }}
             ></TypeIt>
           </div>
         </div>
       </div>
-      <div className="home-item2">home2</div>
+      <div className="home-item2">
+        <div className="canvas-item1">
+          <Canvas>
+            <OrbitControls
+              enableZoom={false}
+              autoRotate={false}
+              rotateSpeed={0.5}
+            />
+            <mesh rotation={[2, 0, 1]}>
+              <ambientLight intensity={0.5} />
+              <directionalLight position={[2, 5, -2]} intensity={1} />
+              <torusGeometry attach="geometry" args={[1, 0.2, 11, 100]} />
+              <meshBasicMaterial
+                attach="material"
+                color={"rgb(73, 153, 132)"}
+              />
+            </mesh>
+            <mesh>
+              <ambientLight intensity={0.5} />
+              <directionalLight position={[-2, 5, 2]} intensity={1} />
+              <torusGeometry attach="geometry" args={[2, 0.2, 11, 100]} />
+              <meshBasicMaterial
+                attach="material"
+                color={"rgb(73, 153, 132)"}
+              />
+            </mesh>
+          </Canvas>
+        </div>
+      </div>
       <div className="home-item3">© 2023 DaeYun Lee. All Rights Reserved.</div>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
