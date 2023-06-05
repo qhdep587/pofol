@@ -1,34 +1,72 @@
-import React, { useEffect } from 'react'
-import TypeIt from 'typeit-react'
-import * as THREE from 'three'
-import { CENTER } from 'three-mesh-bvh'
+import React, { useEffect } from "react";
+import TypeIt from "typeit-react";
+import * as THREE from "three";
+import { CENTER } from "three-mesh-bvh";
 
 const Home = () => {
   useEffect(() => {
-    MyCanvas()
-  }, [])
+    MyCanvas();
+  }, []);
 
   function MyCanvas() {
     //장면
-    const scene = new THREE.Scene()
+    const scene = new THREE.Scene();
 
     //카메라
-    const fov = 75
-    const aspect = 2
-    const near = 0.1
-    const far = 30
-    const camera = new THREE.PerspectiveCamera(fov, aspect, near, far)
-    camera.position.set(0, 0, 15)
+    const fov = 75;
+    const aspect = 2;
+    const near = 0.1;
+    const far = 30;
+    const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
+    camera.position.set(0, 0, 15);
 
     //렌더러
-    const canvas = document.querySelector('#canvas')
-    const renderer = new THREE.WebGLRenderer({ canvas })
+    const canvas = document.querySelector("#canvas");
+    const renderer = new THREE.WebGLRenderer({ canvas });
 
     //도형
-    const geometry1 = new THREE.OctahedronGeometry(1.4, 0)
-    const material1 = new THREE.MeshMatcapMaterial({ color: '#e6e600' })
-    const Octahedron = new THREE.Mesh(geometry1, material1)
-    scene.add(Octahedron)
+    const Octahedron1_geometry = new THREE.OctahedronGeometry(1.4, 0);
+    const Octahedron1_material = new THREE.MeshStandardMaterial({
+      color: "#9c8402",
+    });
+    const Octahedron1 = new THREE.Mesh(
+      Octahedron1_geometry,
+      Octahedron1_material
+    );
+    scene.add(Octahedron1);
+
+    const Octahedron2_geometry = new THREE.OctahedronGeometry(1.4, 0);
+    const Octahedron2_material = new THREE.MeshStandardMaterial({
+      color: "#9c8402",
+    });
+    const Octahedron2 = new THREE.Mesh(
+      Octahedron2_geometry,
+      Octahedron2_material
+    );
+    Octahedron2.rotation.set(1, 1, 0);
+    scene.add(Octahedron2);
+
+    const Octahedron3_geometry = new THREE.OctahedronGeometry(1.4, 0);
+    const Octahedron3_material = new THREE.MeshStandardMaterial({
+      color: "#9c8402",
+    });
+    const Octahedron3 = new THREE.Mesh(
+      Octahedron3_geometry,
+      Octahedron3_material
+    );
+    Octahedron3.rotation.set(2, 2, 0);
+    scene.add(Octahedron3);
+
+    const Octahedron4_geometry = new THREE.OctahedronGeometry(1.4, 0);
+    const Octahedron4_material = new THREE.MeshStandardMaterial({
+      color: "#9c8402",
+    });
+    const Octahedron4 = new THREE.Mesh(
+      Octahedron4_geometry,
+      Octahedron4_material
+    );
+    Octahedron4.rotation.set(-1, -1, 0);
+    scene.add(Octahedron3);
     // const geometry2 = new THREE.TorusGeometry(2.2, 0.22, 16, 100)
     // const material2 = new THREE.MeshStandardMaterial({ color: 'orange' })
     // const torus2 = new THREE.Mesh(geometry2, material2)
@@ -46,20 +84,27 @@ const Home = () => {
     // const torus5 = new THREE.Mesh(geometry5, material5)
     // torus5.position.set(0, 0, -2)
     // scene.add(torus5)
-    const geometry = new THREE.TorusKnotGeometry(5.8, 0.2, 100, 20, 12, 1)
-    const material = new THREE.MeshLambertMaterial({ color: '#ff1a1a' })
-    const torusKnot = new THREE.Mesh(geometry, material)
-    scene.add(torusKnot)
+    const rose_geometry = new THREE.TorusKnotGeometry(
+      5.8,
+      0.25,
+      100,
+      20,
+      12,
+      1
+    );
+    const rose_material = new THREE.MeshLambertMaterial({ color: "#9b0707" });
+    const rose = new THREE.Mesh(rose_geometry, rose_material);
+    scene.add(rose);
 
     //빛
-    const ambientLight = new THREE.AmbientLight('black', 0.3)
-    const directionalLight = new THREE.DirectionalLight('#bf00ff', 0.9)
-    directionalLight.position.set(-2, 5, 1)
-    scene.add(ambientLight)
-    scene.add(directionalLight)
+    const ambientLight = new THREE.AmbientLight("#c0c0c0", 0.3);
+    const directionalLight = new THREE.DirectionalLight("ivory", 0.5);
+    directionalLight.position.set(-2, 5, 1);
+    scene.add(ambientLight);
+    scene.add(directionalLight);
 
     function render(time) {
-      time *= 0.0005 // 회전 속도
+      time *= 0.0005; // 회전 속도
 
       //회전
       // torus2.rotation.x = time
@@ -70,35 +115,44 @@ const Home = () => {
       // torus4.rotation.y = time * 0.5
       // torus5.rotation.x = time * 1.5
       // torus5.rotation.y = time / 0.3
-      torusKnot.rotation.z = time / 2
-      // torusKnot.rotation.x = time * 0.1
-      // torusKnot.rotation.y = time / 3
-      Octahedron.rotation.z = time
-      Octahedron.rotation.x = time * 3
-      Octahedron.rotation.y = time * 3
+      rose.rotation.z = time / 2;
+      // rose.rotation.x = time * 0.1
+      // rose.rotation.y = time / 3
+      Octahedron1.rotation.z = time * 4;
+      Octahedron1.rotation.x = time * 4;
+      Octahedron1.rotation.y = time * 4;
+      Octahedron2.rotation.z = time * 1;
+      Octahedron2.rotation.x = time * 1;
+      Octahedron2.rotation.y = time * 1;
+      Octahedron3.rotation.z = time * 2;
+      Octahedron3.rotation.x = time * 2;
+      Octahedron3.rotation.y = time * 2;
+      Octahedron4.rotation.z = time * 3;
+      Octahedron4.rotation.x = time * 3;
+      Octahedron4.rotation.y = time * 3;
 
-      const canvas = renderer.domElement
-      camera.aspect = canvas.clientWidth / canvas.clientHeight
-      camera.updateProjectionMatrix()
-      renderer.render(scene, camera)
+      const canvas = renderer.domElement;
+      camera.aspect = canvas.clientWidth / canvas.clientHeight;
+      camera.updateProjectionMatrix();
+      renderer.render(scene, camera);
       if (resizeRendererToDisplaySize(renderer)) {
-        const canvas = renderer.domElement
-        camera.aspect = canvas.clientWidth / canvas.clientHeight
-        camera.updateProjectionMatrix()
+        const canvas = renderer.domElement;
+        camera.aspect = canvas.clientWidth / canvas.clientHeight;
+        camera.updateProjectionMatrix();
       }
-      requestAnimationFrame(render)
+      requestAnimationFrame(render);
     }
-    render()
+    render();
 
     function resizeRendererToDisplaySize(renderer) {
-      const canvas = renderer.domElement
-      const width = canvas.clientWidth
-      const height = canvas.clientHeight
-      const needResize = canvas.width !== width || canvas.height !== height
+      const canvas = renderer.domElement;
+      const width = canvas.clientWidth;
+      const height = canvas.clientHeight;
+      const needResize = canvas.width !== width || canvas.height !== height;
       if (needResize) {
-        renderer.setSize(width, height, false)
+        renderer.setSize(width, height, false);
       }
-      return needResize
+      return needResize;
     }
   }
 
@@ -109,19 +163,19 @@ const Home = () => {
           <div className="home-app-slideup1">
             <TypeIt
               style={{
-                color: 'ivory',
-                fontSize: '18px',
-                paddingTop: '5px',
-                height: '100%',
+                color: "ivory",
+                fontSize: "18px",
+                paddingTop: "5px",
+                height: "100%",
               }}
               options={{ startDelay: 900, speed: 100 }}
-              getBeforeInit={instance => {
+              getBeforeInit={(instance) => {
                 instance
                   .type("Hello, I'm danny.")
                   .pause(50)
                   .delete(7)
                   .pause(500)
-                  .type(' 대윤', { delay: 190 })
+                  .type(" 대윤", { delay: 190 })
                   .pause(300)
                   .delete(13)
                   .pause(600)
@@ -133,16 +187,18 @@ const Home = () => {
                   )
                   .pause(700)
                   .move(-7)
-                  .type(' <text class="text-bold">프론트엔드</text>&nbsp;&nbsp;')
+                  .type(
+                    ' <text class="text-bold">프론트엔드</text>&nbsp;&nbsp;'
+                  )
                   .pause(300)
                   .move(7)
                   .type('<text class="text-bold">dbs</text>', { delay: 190 })
                   .delete(3, { delay: 200 })
                   .type('<text class="text-bold">윤</text>입니다.', {
                     delay: 100,
-                  })
+                  });
 
-                return instance
+                return instance;
               }}
             ></TypeIt>
           </div>
@@ -153,7 +209,7 @@ const Home = () => {
       </div>
       <div className="home-item3">© 2023 DaeYun Lee. All Rights Reserved.</div>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

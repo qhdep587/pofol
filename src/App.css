@@ -317,6 +317,7 @@
   height: 500px;
   width: 500px;
   z-index: 30;
+  opacity: 1;
 }
 .home-item3 {
   color: rgb(150, 150, 150);
@@ -340,7 +341,7 @@
   width: 500px;
   height: 60px;
   flex: 1;
-  background-color: rgba(2, 3, 3,0.5) !important;
+  background-color: rgba(2, 3, 3, 0.5) !important;
   /* border: dotted rgba(29, 116, 83, 0.5) 2px; */
   padding-top: 20px;
   position: relative;
