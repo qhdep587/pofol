@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import TypeIt from "typeit-react";
 import * as THREE from "three";
-import { CENTER } from "three-mesh-bvh";
 
 const Home = () => {
   useEffect(() => {
