@@ -15,9 +15,9 @@ const Home = () => {
     const fov = 75;
     const aspect = 2;
     const near = 0.1;
-    const far = 30;
+    const far = 50;
     const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-    camera.position.set(0, 0, 15);
+    camera.position.set(0, 0, 16);
 
     //렌더러
     const canvas = document.querySelector("#canvas");
@@ -25,7 +25,7 @@ const Home = () => {
 
     //도형
     const Octahedron1_geometry = new THREE.OctahedronGeometry(1.4, 0);
-    const Octahedron1_material = new THREE.MeshStandardMaterial({
+    const Octahedron1_material = new THREE.MeshPhongMaterial({
       color: "#9c8402",
     });
     const Octahedron1 = new THREE.Mesh(
@@ -35,37 +35,43 @@ const Home = () => {
     scene.add(Octahedron1);
 
     const Octahedron2_geometry = new THREE.OctahedronGeometry(1.4, 0);
-    const Octahedron2_material = new THREE.MeshStandardMaterial({
+    const Octahedron2_material = new THREE.MeshPhongMaterial({
       color: "#9c8402",
     });
     const Octahedron2 = new THREE.Mesh(
       Octahedron2_geometry,
       Octahedron2_material
     );
-    Octahedron2.rotation.set(1, 1, 0);
     scene.add(Octahedron2);
 
     const Octahedron3_geometry = new THREE.OctahedronGeometry(1.4, 0);
-    const Octahedron3_material = new THREE.MeshStandardMaterial({
+    const Octahedron3_material = new THREE.MeshPhongMaterial({
       color: "#9c8402",
     });
     const Octahedron3 = new THREE.Mesh(
       Octahedron3_geometry,
       Octahedron3_material
     );
-    Octahedron3.rotation.set(2, 2, 0);
     scene.add(Octahedron3);
 
     const Octahedron4_geometry = new THREE.OctahedronGeometry(1.4, 0);
-    const Octahedron4_material = new THREE.MeshStandardMaterial({
+    const Octahedron4_material = new THREE.MeshPhongMaterial({
       color: "#9c8402",
     });
     const Octahedron4 = new THREE.Mesh(
       Octahedron4_geometry,
       Octahedron4_material
     );
-    Octahedron4.rotation.set(-1, -1, 0);
     scene.add(Octahedron3);
+
+    const leaf_geometry = new THREE.CapsuleGeometry(4, 9, 1, 2);
+    const leaf_material = new THREE.MeshStandardMaterial({
+      color: "rgb(0, 64, 0)",
+    });
+    const leaf = new THREE.Mesh(leaf_geometry, leaf_material);
+    leaf.position.set(6, 6, -8);
+    leaf.rotation.set(1.2, 0.2, -0.7);
+    scene.add(leaf);
     // const geometry2 = new THREE.TorusGeometry(2.2, 0.22, 16, 100)
     // const material2 = new THREE.MeshStandardMaterial({ color: 'orange' })
     // const torus2 = new THREE.Mesh(geometry2, material2)
@@ -83,14 +89,7 @@ const Home = () => {
     // const torus5 = new THREE.Mesh(geometry5, material5)
     // torus5.position.set(0, 0, -2)
     // scene.add(torus5)
-    const rose_geometry = new THREE.TorusKnotGeometry(
-      5.8,
-      0.25,
-      100,
-      20,
-      12,
-      1
-    );
+    const rose_geometry = new THREE.TorusKnotGeometry(5.8, 0.3, 100, 20, 12, 1);
     const rose_material = new THREE.MeshLambertMaterial({ color: "#9b0707" });
     const rose = new THREE.Mesh(rose_geometry, rose_material);
     scene.add(rose);
@@ -98,7 +97,7 @@ const Home = () => {
     //빛
     const ambientLight = new THREE.AmbientLight("#c0c0c0", 0.3);
     const directionalLight = new THREE.DirectionalLight("ivory", 0.5);
-    directionalLight.position.set(-2, 5, 1);
+    directionalLight.position.set(-2, 5, 3);
     scene.add(ambientLight);
     scene.add(directionalLight);
 
@@ -129,6 +128,9 @@ const Home = () => {
       Octahedron4.rotation.z = time * 3;
       Octahedron4.rotation.x = time * 3;
       Octahedron4.rotation.y = time * 3;
+      // leaf.rotation.z = time * 3;
+      // leaf.rotation.x = time * 10;
+      // leaf.rotation.y = time / 1.5;
 
       const canvas = renderer.domElement;
       camera.aspect = canvas.clientWidth / canvas.clientHeight;
