@@ -1,7 +1,8 @@
-import React from "react";
-import AppRouter from "../routes/AppRouter";
-import Header from "../components/Header";
+import React from 'react'
+import AppRouter from '../routes/AppRouter'
+import Header from '../components/Header'
 const MainComp = () => {
+  //
   return (
     <div className="MainComp container">
       <div className="MainCompChild">
@@ -14,7 +15,7 @@ const MainComp = () => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default MainComp;
+export default MainComp
