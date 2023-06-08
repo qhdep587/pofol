@@ -400,106 +400,6 @@
 }
 .project {
 }
-/*가로모드///////////////////////////////////////////////////*/
-@media screen and (max-height: 550px) {
-  .mainBackground {cursor: default;}
-  .cursor {
-    display: none;
-  }
-  .left-menu-item-content.active {
-    text-shadow: 1px 1px 5px rgb(224, 252, 219), 0 0 5px rgb(1, 211, 141);
-    text-decoration: none;
-  }
-  .left-menu-item:hover {
-    color: rgb(73, 153, 132);
-    text-shadow: none;
-  }
-  .home {
-    display: flex;
-    flex-flow: column wrap;
-    flex: 1;
-    align-content: center;
-    justify-content: center;
-  }
-  .home-item1 {
-    max-height: 0px;
-    z-index: 50;
-    display: flex;
-    flex:1;
-    position: relative;
-    top: 150px;
-    align-content: center;
-    justify-content: center;
-  }
-  .home-item2 {
-    max-width: 500px;
-    max-height: 500px;
-    flex: 1;
-    z-index: 10;
-    align-content: center;
-    justify-content: center;
-    min-width: 100%;
-  }
-  .canvas-item {
-    position: relative;
-    top: 7px;
-    height: 350px;
-    width: 350px;
-    z-index: 30;
-    opacity: 1;
-  }
-  .home-item3 {
-    width: 100%;
-    color: rgb(150, 150, 150);
-    font-size: 10px;
-    z-index: 20;
-    position: relative;
-    transform: translate(0%,0%);
-    bottom: 5px !important;
-    flex: 1;
-    min-height: 25px;
-    max-height: 25px;
-  }
-  
-  .text-bold {
-    font-size: 16px;
-    color: ivory;
-    font-weight: 600;
-    border-bottom: solid rgb(64, 143, 122) 3px;
-    border-top: solid rgb(64, 143, 122) 3px;
-  }
-  .text-rose {
-    font-size: 16px;
-    color: ivory;
-    font-weight: 600;
-    border-bottom: solid #9b0707 3px;
-    border-top: solid #9b0707 3px;
-  }
-  .red {
-    font-size: 16px;
-    color: #ff0000;
-    font-weight: 600;
-  }
-  .green {
-    font-size: 16px;
-    color: rgb(0, 212, 0);
-    font-weight: 400;
-  }
-  
-  .home-app {
-    height: 50px;
-    padding-left: 20px;
-    padding-right: 20px;
-    width: fit-content;
-    border-radius: 10px;
-    background-color: rgba(2, 3, 3, 0.5) !important;
-    border: solid rgba(29, 116, 83, 0.5) 1px;
-    padding-top: 14px;
-    position: relative;
-  }
-  .home-app:only-child{
-   font-size: 16px;}
-}
 
 /* //////////////////////////////////////////////////////////여기부터 단말기////////////////////////////////////////////////////////////  */
 @media screen and (max-width: 768px) {
@@ -666,7 +566,8 @@
   .MainCompChild:nth-child(2) {
     z-index: 1;
     position: relative;
-    top: 80px;
+    /* top: 80px; */
+    margin-top: 80px;
     align-content: flex-start;
     justify-content: flex-start;
     display: flex;
@@ -1109,7 +1010,8 @@
   .MainCompChild:nth-child(2) {
     z-index: 1;
     position: relative;
-    top: 82px;
+    /* top: 80px; */
+    margin-top: 80px;
     align-content: flex-start;
     justify-content: flex-start;
     display: flex;
@@ -1378,4 +1280,306 @@
     align-content: center;
     justify-content: center;
   }
+}
+/*가로모드///////////////////////////////////////////////////*/
+@media screen and (max-height: 550px) {
+  .mainBackground {cursor: default;}
+  .cursor {
+    display: none;
+  }
+  .left-menu-item-content.active {
+    text-shadow: 1px 1px 5px rgb(224, 252, 219), 0 0 5px rgb(1, 211, 141);
+    text-decoration: none;
+  }
+  .left-menu-item:hover {
+    color: rgb(73, 153, 132);
+    text-shadow: none;
+  }
+  .home {
+    display: flex;
+    flex-flow: column wrap;
+    flex: 1;
+    align-content: center;
+    justify-content: center;
+  }
+  .home-item1 {
+    max-height: 0px;
+    z-index: 50;
+    display: flex;
+    flex:1;
+    position: relative;
+    top: 150px;
+    align-content: center;
+    justify-content: center;
+  }
+  .home-item2 {
+    max-width: 500px;
+    max-height: 500px;
+    flex: 1;
+    z-index: 10;
+    align-content: center;
+    justify-content: center;
+    min-width: 100%;
+  }
+  .canvas-item {
+    position: relative;
+    top: 7px;
+    height: 350px;
+    width: 350px;
+    z-index: 30;
+    opacity: 1;
+  }
+  .home-item3 {
+    width: 100%;
+    color: rgb(150, 150, 150);
+    font-size: 10px;
+    z-index: 20;
+    position: relative;
+    transform: translate(0%,0%);
+    bottom: 5px !important;
+    flex: 1;
+    min-height: 25px;
+    max-height: 25px;
+  }
+  
+  .text-bold {
+    font-size: 16px;
+    color: ivory;
+    font-weight: 600;
+    border-bottom: solid rgb(64, 143, 122) 3px;
+    border-top: solid rgb(64, 143, 122) 3px;
+  }
+  .text-rose {
+    font-size: 16px;
+    color: ivory;
+    font-weight: 600;
+    border-bottom: solid #9b0707 3px;
+    border-top: solid #9b0707 3px;
+  }
+  .red {
+    font-size: 16px;
+    color: #ff0000;
+    font-weight: 600;
+  }
+  .green {
+    font-size: 16px;
+    color: rgb(0, 212, 0);
+    font-weight: 400;
+  }
+  
+  .home-app {
+    height: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: fit-content;
+    border-radius: 10px;
+    background-color: rgba(2, 3, 3, 0.5) !important;
+    border: solid rgba(29, 116, 83, 0.5) 1px;
+    padding-top: 14px;
+    position: relative;
+  }
+  .home-app:only-child{
+   font-size: 16px;}
+}
+
+/*가로모드2///////////////////////////////////////////////////*/
+@media screen and (max-height: 390px) {
+  .mainBackground {cursor: default;}
+  .cursor {
+    display: none;
+  }
+  .left-menu-item-content.active {
+    text-shadow: 1px 1px 5px rgb(224, 252, 219), 0 0 5px rgb(1, 211, 141);
+    text-decoration: none;
+  }
+  .left-menu-item:hover {
+    color: rgb(73, 153, 132);
+    text-shadow: none;
+  }
+  .home {
+    display: flex;
+    flex-flow: column wrap;
+    flex: 1;
+    align-content: center;
+    justify-content: center;
+  }
+  .home-item1 {
+    max-height: 0px;
+    z-index: 50;
+    display: flex;
+    flex:1;
+    position: relative;
+    top: 127px;
+    align-content: center;
+    justify-content: center;
+  }
+  .home-item2 {
+    max-width: 500px;
+    max-height: 500px;
+    flex: 1;
+    z-index: 10;
+    align-content: center;
+    justify-content: center;
+    min-width: 100%;
+  }
+  .canvas-item {
+    position: relative;
+    top: 7px;
+    height: 300px;
+    width: 300px;
+    z-index: 30;
+    opacity: 1;
+  }
+  .home-item3 {
+    width: 100%;
+    color: rgb(150, 150, 150);
+    font-size: 10px;
+    z-index: 20;
+    position: relative;
+    transform: translate(0%,0%);
+    bottom: 5px !important;
+    flex: 1;
+    min-height: 25px;
+    max-height: 25px;
+  }
+  
+  .text-bold {
+    font-size: 16px;
+    color: ivory;
+    font-weight: 600;
+    border-bottom: solid rgb(64, 143, 122) 3px;
+    border-top: solid rgb(64, 143, 122) 3px;
+  }
+  .text-rose {
+    font-size: 16px;
+    color: ivory;
+    font-weight: 600;
+    border-bottom: solid #9b0707 3px;
+    border-top: solid #9b0707 3px;
+  }
+  .red {
+    font-size: 16px;
+    color: #ff0000;
+    font-weight: 600;
+  }
+  .green {
+    font-size: 16px;
+    color: rgb(0, 212, 0);
+    font-weight: 400;
+  }
+  
+  .home-app {
+    height: 45px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: fit-content;
+    border-radius: 10px;
+    background-color: rgba(2, 3, 3, 0.5) !important;
+    border: solid rgba(29, 116, 83, 0.5) 1px;
+    padding-top: 13px;
+    position: relative;
+  }
+  .home-app:only-child{
+   font-size: 16px;}
+}
+
+/*가로모드3///////////////////////////////////////////////////*/
+@media screen and (max-height: 330px) {
+  .mainBackground {cursor: default;}
+  .cursor {
+    display: none;
+  }
+  .left-menu-item-content.active {
+    text-shadow: 1px 1px 5px rgb(224, 252, 219), 0 0 5px rgb(1, 211, 141);
+    text-decoration: none;
+  }
+  .left-menu-item:hover {
+    color: rgb(73, 153, 132);
+    text-shadow: none;
+  }
+  .home {
+    display: flex;
+    flex-flow: column wrap;
+    flex: 1;
+    align-content: center;
+    justify-content: center;
+  }
+  .home-item1 {
+    max-height: 0px;
+    z-index: 50;
+    display: flex;
+    flex:1;
+    position: relative;
+    top: 100px;
+    align-content: center;
+    justify-content: center;
+  }
+  .home-item2 {
+    max-width: 500px;
+    max-height: 500px;
+    flex: 1;
+    z-index: 10;
+    align-content: center;
+    justify-content: center;
+    min-width: 100%;
+  }
+  .canvas-item {
+    position: relative;
+    top: 7px;
+    height: 240px;
+    width: 240px;
+    z-index: 30;
+    opacity: 1;
+  }
+  .home-item3 {
+    width: 100%;
+    color: rgb(150, 150, 150);
+    font-size: 10px;
+    z-index: 20;
+    position: relative;
+    transform: translate(0%,0%);
+    bottom: 5px !important;
+    flex: 1;
+    min-height: 25px;
+    max-height: 25px;
+  }
+  
+  .text-bold {
+    font-size: 16px;
+    color: ivory;
+    font-weight: 600;
+    border-bottom: solid rgb(64, 143, 122) 3px;
+    border-top: solid rgb(64, 143, 122) 3px;
+  }
+  .text-rose {
+    font-size: 16px;
+    color: ivory;
+    font-weight: 600;
+    border-bottom: solid #9b0707 3px;
+    border-top: solid #9b0707 3px;
+  }
+  .red {
+    font-size: 16px;
+    color: #ff0000;
+    font-weight: 600;
+  }
+  .green {
+    font-size: 16px;
+    color: rgb(0, 212, 0);
+    font-weight: 400;
+  }
+  
+  .home-app {
+    height: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: fit-content;
+    border-radius: 10px;
+    background-color: rgba(2, 3, 3, 0.5) !important;
+    border: solid rgba(29, 116, 83, 0.5) 1px;
+    padding-top: 10px;
+    position: relative;
+  }
+  .home-app:only-child{
+   font-size: 16px;}
 }
