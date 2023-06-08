@@ -157,6 +157,7 @@
   flex-flow: column nowrap;
   color: ivory;
   flex: 13;
+  overflow-y: auto;
 }
 
 .MainCompItem.header {
@@ -554,7 +555,6 @@
     background-color: #000;
     opacity: 0.8;
   }
-cursor: default;
   .cursor {
     display: none;
     width: 1.2rem;
@@ -644,6 +644,7 @@ cursor: default;
   .MainComp.container {
     flex-flow: column nowrap;
     flex: 10;
+    overflow-y: auto;
   }
 
   .MainCompChild:nth-child(1) {
@@ -658,8 +659,9 @@ cursor: default;
     border-bottom: solid rgba(214, 231, 233, 0.2) 1px;
     position: fixed;
     width: 100%;
-    top: 41px;
+    top: 40px;
     z-index: 500;
+    border-top: solid rgba(214, 231, 233, 0.2) 1px;
   }
   .MainCompChild:nth-child(2) {
     z-index: 1;
@@ -818,7 +820,7 @@ cursor: default;
     display: flex;
     flex: 1;
   }
-
+  
   .home {
     display: flex;
     flex-flow: column wrap;
@@ -1083,6 +1085,7 @@ cursor: default;
   .MainComp.container {
     flex-flow: column wrap;
     flex: 10;
+    overflow-y: auto;
   }
 
   .MainCompChild:nth-child(1) {
@@ -1099,8 +1102,9 @@ cursor: default;
     border-bottom: solid rgba(214, 231, 233, 0.2) 1px;
     position: fixed;
     width: 100%;
-    top: 41px;
+    top: 40px;
     z-index: 500;
+    border-top: solid rgba(214, 231, 233, 0.2) 1px;
   }
   .MainCompChild:nth-child(2) {
     z-index: 1;
