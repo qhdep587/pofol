@@ -2,7 +2,6 @@ import React from 'react'
 import AppRouter from '../routes/AppRouter'
 import Header from '../components/Header'
 const MainComp = () => {
-  //
   return (
     <div className="MainComp container">
       <div className="MainCompChild">
