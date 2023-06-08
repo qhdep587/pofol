@@ -149,6 +149,8 @@
   border-bottom: solid rgba(214, 231, 233, 0.3) 1px;
   flex: 2;
   max-height: 55px;
+   min-height: 55px;
+  z-index: 500;
 }
 .MainCompChild:nth-child(2) {
   display: flex;
@@ -164,8 +166,8 @@
   display: flex;
   flex-flow: row nowrap;
   justify-content: end;
-}
-.header-item {
+  }
+  .header-item {
   max-width: 140px;
   height: 100%;
   flex: 1;
@@ -336,23 +338,23 @@
 }
 
 .text-bold {
-  font-size: 20px;
+  font-size: 18px;
   color: ivory;
-  font-weight: 400;
+  font-weight: 600;
   border-bottom: solid rgb(64, 143, 122) 3px;
   border-top: solid rgb(64, 143, 122) 3px;
 }
 .text-rose {
-  font-size: 20px;
+  font-size: 18px;
   color: ivory;
-  font-weight: 400;
+  font-weight: 600;
   border-bottom: solid #9b0707 3px;
   border-top: solid #9b0707 3px;
 }
 .red {
   font-size: 18px;
   color: #ff0000;
-  font-weight: 400;
+  font-weight: 600;
 }
 .green {
   font-size: 18px;
@@ -372,6 +374,7 @@
   position: relative;
 }
 .home-app:only-child{
+  font-weight: lighter;
  font-size: 18px;}
 
 .intro {
@@ -396,6 +399,107 @@
 }
 .project {
 }
+/*가로모드///////////////////////////////////////////////////*/
+@media screen and (max-height: 550px) {
+  .mainBackground {cursor: default;}
+  .cursor {
+    display: none;
+  }
+  .left-menu-item-content.active {
+    text-shadow: 1px 1px 5px rgb(224, 252, 219), 0 0 5px rgb(1, 211, 141);
+    text-decoration: none;
+  }
+  .left-menu-item:hover {
+    color: rgb(73, 153, 132);
+    text-shadow: none;
+  }
+  .home {
+    display: flex;
+    flex-flow: column wrap;
+    flex: 1;
+    align-content: center;
+    justify-content: center;
+  }
+  .home-item1 {
+    max-height: 0px;
+    z-index: 50;
+    display: flex;
+    flex:1;
+    position: relative;
+    top: 155px;
+    align-content: center;
+    justify-content: center;
+  }
+  .home-item2 {
+    max-width: 500px;
+    max-height: 500px;
+    flex: 1;
+    z-index: 10;
+    align-content: center;
+    justify-content: center;
+    min-width: 100%;
+  }
+  .canvas-item {
+    position: relative;
+    top: -13px;
+    height: 400px;
+    width: 400px;
+    z-index: 30;
+    opacity: 1;
+  }
+  .home-item3 {
+    width: 100%;
+    color: rgb(150, 150, 150);
+    font-size: 10px;
+    z-index: 20;
+    position: relative;
+    transform: translate(0%,0%);
+    bottom: 5px !important;
+    flex: 1;
+    min-height: 25px;
+    max-height: 25px;
+  }
+  
+  .text-bold {
+    font-size: 16px;
+    color: ivory;
+    font-weight: 600;
+    border-bottom: solid rgb(64, 143, 122) 3px;
+    border-top: solid rgb(64, 143, 122) 3px;
+  }
+  .text-rose {
+    font-size: 16px;
+    color: ivory;
+    font-weight: 600;
+    border-bottom: solid #9b0707 3px;
+    border-top: solid #9b0707 3px;
+  }
+  .red {
+    font-size: 16px;
+    color: #ff0000;
+    font-weight: 600;
+  }
+  .green {
+    font-size: 16px;
+    color: rgb(0, 212, 0);
+    font-weight: 400;
+  }
+  
+  .home-app {
+    height: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: fit-content;
+    border-radius: 10px;
+    background-color: rgba(2, 3, 3, 0.5) !important;
+    border: solid rgba(29, 116, 83, 0.5) 1px;
+    padding-top: 14px;
+    position: relative;
+  }
+  .home-app:only-child{
+   font-size: 16px;}
+}
+
 /* //////////////////////////////////////////////////////////여기부터 단말기////////////////////////////////////////////////////////////  */
 @media screen and (max-width: 768px) {
   .mainBackground {
@@ -450,7 +554,7 @@
     background-color: #000;
     opacity: 0.8;
   }
-
+cursor: default;
   .cursor {
     display: none;
     width: 1.2rem;
@@ -763,26 +867,26 @@
   }
   
   .text-bold {
-    font-size: 18px;
+    font-size: 16px;
     color: ivory;
-    font-weight: 400;
+    font-weight: 600;
     border-bottom: solid rgb(64, 143, 122) 3px;
     border-top: solid rgb(64, 143, 122) 3px;
   }
   .text-rose {
-    font-size: 18px;
+    font-size: 16px;
     color: ivory;
-    font-weight: 400;
+    font-weight: 600;
     border-bottom: solid #9b0707 3px;
     border-top: solid #9b0707 3px;
   }
   .red {
-    font-size: 18px;
+    font-size: 16px;
     color: #ff0000;
-    font-weight: 400;
+    font-weight: 600;
   }
   .green {
-    font-size: 18px;
+    font-size: 16px;
     color: rgb(0, 212, 0);
     font-weight: 400;
   }
@@ -795,7 +899,7 @@
     border-radius: 10px;
     background-color: rgba(2, 3, 3, 0.5) !important;
     border: solid rgba(29, 116, 83, 0.5) 1px;
-    padding-top: 15px;
+    padding-top: 14px;
     position: relative;
   }
   .home-app:only-child{
@@ -1204,26 +1308,26 @@
   }
   
   .text-bold {
-    font-size: 16px;
+    font-size: 14px;
     color: ivory;
-    font-weight: 400;
+    font-weight: 600;
     border-bottom: solid rgb(64, 143, 122) 3px;
     border-top: solid rgb(64, 143, 122) 3px;
   }
   .text-rose {
-    font-size: 16px;
+    font-size: 14px;
     color: ivory;
-    font-weight: 400;
+    font-weight: 600;
     border-bottom: solid #9b0707 3px;
     border-top: solid #9b0707 3px;
   }
   .red {
-    font-size: 16px;
+    font-size: 14px;
     color: #ff0000;
-    font-weight: 400;
+    font-weight: 600;
   }
   .green {
-    font-size: 16px;
+    font-size: 14px;
     color: rgb(0, 212, 0);
     font-weight: 400;
   }
@@ -1232,7 +1336,7 @@
     height: 45px;
     padding-left: 20px;
     padding-right: 20px;
-    padding-top:15px;
+    padding-top:7px;
     width: fit-content;
     border-radius: 10px;
     background-color: rgba(2, 3, 3, 0.5) !important;
