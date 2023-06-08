@@ -899,7 +899,7 @@ cursor: default;
     border-radius: 10px;
     background-color: rgba(2, 3, 3, 0.5) !important;
     border: solid rgba(29, 116, 83, 0.5) 1px;
-    padding-top: 14px;
+    padding-top: 19px;
     position: relative;
   }
   .home-app:only-child{
@@ -1336,7 +1336,7 @@ cursor: default;
     height: 45px;
     padding-left: 20px;
     padding-right: 20px;
-    padding-top:7px;
+    padding-top: 19px;
     width: fit-content;
     border-radius: 10px;
     background-color: rgba(2, 3, 3, 0.5) !important;
