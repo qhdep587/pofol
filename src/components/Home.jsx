@@ -68,7 +68,7 @@ const Home = () => {
     //빛
     const ambientLight = new THREE.AmbientLight('#c0c0c0', 0.5)
     const directionalLight = new THREE.DirectionalLight('ivory', 0.6)
-    directionalLight.position.set(-2, 5, 3)
+    directionalLight.position.set(-2, 4, 3)
     scene.add(ambientLight)
     scene.add(directionalLight)
 
@@ -76,9 +76,7 @@ const Home = () => {
       time *= 0.0005 // 회전 속도
 
       //회전
-      rose.rotation.z = time / 2
-      // rose.rotation.x = time * 0.1
-      // rose.rotation.y = time / 3
+      rose.rotation.z -= 0.005
       Octahedron1.rotation.z = time * 4
       Octahedron1.rotation.x = time * 4
       Octahedron1.rotation.y = time * 4
@@ -91,9 +89,6 @@ const Home = () => {
       Octahedron4.rotation.z = time * 3
       Octahedron4.rotation.x = time * 3
       Octahedron4.rotation.y = time * 3
-      // leaf.rotation.z = time * 3;
-      // leaf.rotation.x = time * 10;
-      // leaf.rotation.y = time / 1.5;
 
       const canvas = renderer.domElement
       camera.aspect = canvas.clientWidth / canvas.clientHeight

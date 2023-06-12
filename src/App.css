@@ -54,8 +54,8 @@
   width: 100vw;
   height: 100vh;
   position: absolute;
-  background-color: #000;
-  opacity: 0.8;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 1;
 }
 
 .cursor {
@@ -84,7 +84,7 @@
   position: relative;
   top: 0;
   left: 0;
-  background-color: rgba(31, 27, 27, 0.8);
+  background-color: rgba(255, 255, 255, 0.04);
   overflow: hidden;
   transition: 0.5s;
   flex: 1;
@@ -98,7 +98,6 @@
   transition: 0.3s;
   color: rgb(73, 153, 132);
   border-bottom: solid rgba(214, 231, 233, 0.3) 1px;
-  /* border-bottom: solid rgb(139, 139, 133) 1px; */
 }
 .left-menu-item-content {
   padding: 12px 20px 12px 20px;
@@ -143,7 +142,7 @@
   flex-flow: row wrap;
   align-content: center;
   justify-content: center;
-  background-color: rgba(31, 27, 27, 0.8);
+  background-color: rgba(255, 255, 255, 0.04);
   height: 55px;
   color: ivory;
   border-bottom: solid rgba(214, 231, 233, 0.3) 1px;
@@ -323,7 +322,7 @@
   height: 480px;
   width: 480px;
   z-index: 30;
-  opacity: 1;
+  opacity: 0.85;
 }
 .home-item3 {
   width: 100%;
@@ -387,7 +386,14 @@
 .intro-item:nth-child(1) {
   flex: 1;
   min-width: 300px;
-  background-color: red;
+  background-color: black;
+  display: flex;
+  opacity: 1;
+}
+.intro-canvas-item{
+  background-color: black;
+  flex:1;
+  opacity: 1;
 }
 .intro-item:nth-child(2) {
   flex: 1;
