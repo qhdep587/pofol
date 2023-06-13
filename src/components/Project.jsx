@@ -1,38 +1,42 @@
-import React, { useEffect } from 'react'
-import * as THREE from 'three'
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
+import React, { useEffect } from "react";
+import * as THREE from "three";
+import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
 const Project = () => {
   useEffect(() => {
-    MyCanvas()
-  }, [])
+    MyCanvas();
+  }, []);
 
   function MyCanvas() {
     //장면
-    const scene = new THREE.Scene()
+    const scene = new THREE.Scene();
 
     //카메라
-    const fov = 50
-    const aspect = 2
-    const near = 1
-    const far = 4000
-    const camera = new THREE.PerspectiveCamera(fov, aspect, near, far)
-    camera.position.set(0, 20, 100)
-    camera.lookAt(0, 0, 0)
+    const fov = 50;
+    const aspect = 2;
+    const near = 1;
+    const far = 4000;
+    const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
+    camera.position.set(0, 20, 100);
+    camera.lookAt(0, 0, 0);
 
     //렌더러
-    const canvas = document.querySelector('#project-canvas')
-    const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true })
+    const canvas = document.querySelector("#project-canvas");
+    const renderer = new THREE.WebGLRenderer({
+      canvas,
+      antialias: true,
+      alpha: true,
+    });
 
     //벽 텍스처
     // const texture = new THREE.TextureLoader().load(require('../common/image/blackWall.jpg'))
 
     //도형
-    const roomBox_geo = new THREE.BoxGeometry(50, 50, 50)
+    const roomBox_geo = new THREE.BoxGeometry(50, 50, 50);
     const roomBox_mat = new THREE.MeshStandardMaterial({
       color: 0x333333,
       // map: texture,
-    })
+    });
     // const roomBox = new THREE.Mesh(roomBox_geo, roomBox_mat)
     const roomBox = new THREE.Mesh(
       new THREE.PlaneGeometry(1, 1, 128, 128),
@@ -109,22 +113,22 @@ const Project = () => {
         transparent: true,
         depthTest: false,
       })
-    )
-    roomBox_mat.side = THREE.BackSide
-    scene.add(roomBox)
+    );
+    roomBox_mat.side = THREE.BackSide;
+    scene.add(roomBox);
 
     //마우스컨트롤
-    const controll = new OrbitControls(camera, renderer.domElement)
-    controll.enableDamping = true
-    controll.minDistance = 20
-    controll.maxDistance = 100
-    controll.update()
+    const controll = new OrbitControls(camera, renderer.domElement);
+    controll.enableDamping = true;
+    controll.minDistance = 20;
+    controll.maxDistance = 100;
+    controll.update();
 
     //빛
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.2)
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.2);
     // const directionalLight = new THREE.DirectionalLight('ivory', 0.6)
     // directionalLight.position.set(-2, 4, 3)
-    scene.add(ambientLight)
+    scene.add(ambientLight);
     // scene.add(directionalLight)
 
     // function resizeRendererToDisplaySize(renderer) {
@@ -139,50 +143,50 @@ const Project = () => {
     // }
 
     const resizeRendererToDisplaySize = () => {
-      const container = renderer.domElement
-      camera.aspect = container.clientWidth / container.clientHeight
-      renderer.setSize(container.clientWidth, container.clientHeight)
-      renderer.setPixelRatio(devicePixelRatio)
+      const container = renderer.domElement;
+      camera.aspect = container.clientWidth / container.clientHeight;
+      renderer.setSize(container.clientWidth, container.clientHeight);
+      renderer.setPixelRatio(devicePixelRatio);
 
-      camera.aspect = container.clientWidth / container.clientHeight
-      camera.updateProjectionMatrix()
+      camera.aspect = container.clientWidth / container.clientHeight;
+      camera.updateProjectionMatrix();
 
-      roomBox.scale.set(camera.aspect * 1.55, 0.75, 1)
-    }
+      roomBox.scale.set(camera.aspect * 1.55, 0.75, 1);
+    };
 
     const animate = () => {
-      roomBox.material.uniforms.time.value += 0.01
+      roomBox.material.uniforms.time.value += 0.01;
 
-      renderer.render(scene, camera)
-      requestAnimationFrame(() => animate())
-    }
+      renderer.render(scene, camera);
+      requestAnimationFrame(() => animate());
+    };
 
     function render(time) {
-      time *= 0.0005 // 회전 속도
+      time *= 0.0005; // 회전 속도
 
       //회전
       // Octahedron1.rotation.z = time * 4
 
-      const canvas = renderer.domElement
-      camera.aspect = canvas.clientWidth / canvas.clientHeight
-      camera.updateProjectionMatrix()
-      renderer.render(scene, camera)
+      const canvas = renderer.domElement;
+      camera.aspect = canvas.clientWidth / canvas.clientHeight;
+      camera.updateProjectionMatrix();
+      renderer.render(scene, camera);
       if (resizeRendererToDisplaySize()) {
-        const canvas = renderer.domElement
-        camera.aspect = canvas.clientWidth / canvas.clientHeight
-        camera.updateProjectionMatrix()
+        const canvas = renderer.domElement;
+        camera.aspect = canvas.clientWidth / canvas.clientHeight;
+        camera.updateProjectionMatrix();
       }
-      requestAnimationFrame(render)
+      requestAnimationFrame(render);
     }
-    render()
+    render();
 
-    animate()
+    animate();
   }
   return (
     <div className="project">
       <canvas className="project-canvas-item" id="project-canvas"></canvas>
     </div>
-  )
-}
+  );
+};
 
-export default Project
+export default Project;
