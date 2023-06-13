@@ -21,7 +21,7 @@ const Home = () => {
 
     //렌더러
     const canvas = document.querySelector('#canvas')
-    const renderer = new THREE.WebGLRenderer({ canvas })
+    const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true })
 
     //도형
     const Octahedron1_geometry = new THREE.OctahedronGeometry(1.3, 0)
@@ -50,7 +50,7 @@ const Home = () => {
       color: '#9c8402',
     })
     const Octahedron4 = new THREE.Mesh(Octahedron4_geometry, Octahedron4_material)
-    scene.add(Octahedron3)
+    scene.add(Octahedron4)
 
     const leaf_geometry = new THREE.CapsuleGeometry(4, 9, 1, 2)
     const leaf_material = new THREE.MeshStandardMaterial({
