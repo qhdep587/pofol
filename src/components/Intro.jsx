@@ -1,32 +1,33 @@
-import React, { useEffect } from "react";
-import * as THREE from "three";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+import React, { useEffect } from 'react'
+import * as THREE from 'three'
+import { RGBADepthPacking } from 'three'
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 
 const Intro = () => {
   useEffect(() => {
-    MyCanvas1();
-    MyCanvas2();
-  }, []);
+    MyCanvas1()
+    MyCanvas2()
+  }, [])
 
   function MyCanvas1() {
     //장면
-    const scene = new THREE.Scene();
+    const scene = new THREE.Scene()
 
     //카메라
-    const fov = 50;
-    const aspect = 2;
-    const near = 1;
-    const far = 4000;
-    const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-    camera.position.set(0, 0, 100);
+    const fov = 50
+    const aspect = 2
+    const near = 1
+    const far = 4000
+    const camera = new THREE.PerspectiveCamera(fov, aspect, near, far)
+    camera.position.set(0, 0, 100)
 
     //렌더러
-    const canvas = document.querySelector("#intro-canvas1");
+    const canvas = document.querySelector('#intro-canvas1')
     const renderer = new THREE.WebGLRenderer({
       canvas,
       antialias: true,
       alpha: true,
-    });
+    })
 
     const roomBox = new THREE.Mesh(
       new THREE.PlaneGeometry(1, 1, 128, 128),
@@ -103,108 +104,171 @@ const Intro = () => {
         transparent: true,
         depthTest: false,
       })
-    );
-    scene.add(roomBox);
+    )
+    scene.add(roomBox)
 
     const resizeRendererToDisplaySize = () => {
-      const container = renderer.domElement;
-      camera.aspect = container.clientWidth / container.clientHeight;
-      camera.updateProjectionMatrix();
-      renderer.setSize(container.clientWidth, container.clientHeight);
-      renderer.setPixelRatio(devicePixelRatio);
+      const container = renderer.domElement
+      camera.aspect = container.clientWidth / container.clientHeight
+      camera.updateProjectionMatrix()
+      renderer.setSize(container.clientWidth, container.clientHeight)
+      renderer.setPixelRatio(devicePixelRatio)
 
-      roomBox.scale.set(camera.aspect * 1.55, 0.75, 1);
-    };
+      roomBox.scale.set(camera.aspect * 1.55, 0.75, 1)
+    }
 
-    window.addEventListener("resize", resizeRendererToDisplaySize);
+    window.addEventListener('resize', resizeRendererToDisplaySize)
 
     const animate = () => {
-      roomBox.material.uniforms.time.value += 0.01;
+      roomBox.material.uniforms.time.value += 0.01
 
-      renderer.render(scene, camera);
-      requestAnimationFrame(() => animate());
-    };
+      renderer.render(scene, camera)
+      requestAnimationFrame(() => animate())
+    }
 
     function render(time) {
-      time *= 0.0005; // 회전 속도
+      time *= 0.0005 // 회전 속도
 
-      const canvas = renderer.domElement;
-      camera.aspect = canvas.clientWidth / canvas.clientHeight;
-      camera.updateProjectionMatrix();
-      renderer.render(scene, camera);
+      const canvas = renderer.domElement
+      camera.aspect = canvas.clientWidth / canvas.clientHeight
+      camera.updateProjectionMatrix()
+      renderer.render(scene, camera)
       if (resizeRendererToDisplaySize()) {
-        const canvas = renderer.domElement;
-        camera.aspect = canvas.clientWidth / canvas.clientHeight;
-        camera.updateProjectionMatrix();
+        const canvas = renderer.domElement
+        camera.aspect = canvas.clientWidth / canvas.clientHeight
+        camera.updateProjectionMatrix()
       }
-      requestAnimationFrame(render);
+      requestAnimationFrame(render)
     }
-    render();
+    render()
 
-    animate();
+    animate()
   }
 
   function MyCanvas2() {
     //장면
-    const scene = new THREE.Scene();
+    const scene = new THREE.Scene()
 
     //카메라
-    const fov = 75;
-    const aspect = 2;
-    const near = 0.1;
-    const far = 50;
-    const camera = new THREE.PerspectiveCamera(fov, aspect, near, far);
-    camera.position.set(0, 0, 15);
+    const fov = 75
+    const aspect = 2
+    const near = 0.1
+    const far = 100
+    const camera = new THREE.PerspectiveCamera(fov, aspect, near, far)
+    camera.position.set(0, 0, 35)
 
     //렌더러
-    const canvas = document.querySelector("#intro-canvas2");
+    const canvas = document.querySelector('#intro-canvas2')
     const renderer = new THREE.WebGLRenderer({
       canvas,
       alpha: true,
       antialias: true,
-    });
+    })
+    renderer.outputColorSpace = THREE.LinearSRGBColorSpace
+
+    //벽 텍스처
+    const texture1 = new THREE.TextureLoader().load(require('../common/image/res2.jpg'))
+    const texture2 = new THREE.TextureLoader().load(require('../common/image/resItem.png'))
+    const greenWood = new THREE.TextureLoader().load(require('../common/image/greenwood.jpg'))
+
+    //마우스컨트롤
+    const controll = new OrbitControls(camera, renderer.domElement)
+    controll.enableDamping = true
+    controll.minDistance = 40
+    controll.maxDistance = 1000
+    controll.enableZoom = false
+    controll.update()
 
     //도형
-    const rose_geometry = new THREE.PlaneGeometry(12, 8);
-    const rose_material = new THREE.MeshLambertMaterial({ color: "#9b0707" });
-    const rose = new THREE.Mesh(rose_geometry, rose_material);
-    scene.add(rose);
+    const pic_geometry = new THREE.BoxGeometry(25, 20)
+    const pic_material = new THREE.MeshLambertMaterial({
+      map: texture1,
+      transparent: true,
+      opacity: 1,
+    })
+    const pic = new THREE.Mesh(pic_geometry, pic_material)
+    pic.position.set(0, 0, -1)
+    pic.rotation.set(-0.05, 0, 0)
+    scene.add(pic)
+
+    const pic_geometry2 = new THREE.PlaneGeometry(18, 18)
+    const pic_material2 = new THREE.MeshBasicMaterial({
+      map: texture2,
+      transparent: true,
+      opacity: 1,
+      alpha: true,
+    })
+    const pic2 = new THREE.Mesh(pic_geometry2, pic_material2)
+    pic2.position.set(4, -2, 1)
+    scene.add(pic2)
+
+    const pic_geometry3 = new THREE.BoxGeometry(28, 23)
+    const pic_material3 = [
+      new THREE.MeshBasicMaterial({
+        color: 'black',
+      }),
+      new THREE.MeshBasicMaterial({
+        color: 'black',
+      }),
+      new THREE.MeshBasicMaterial({
+        color: 'black',
+      }),
+      new THREE.MeshBasicMaterial({
+        color: 'black',
+      }),
+      new THREE.MeshBasicMaterial({
+        map: greenWood,
+      }),
+      new THREE.MeshBasicMaterial({
+        color: 'black',
+      }),
+    ]
+    const pic3 = new THREE.Mesh(pic_geometry3, pic_material3)
+    pic3.position.set(0, 0, -1.1)
+    pic3.rotation.set(-0.05, 0, 0)
+    scene.add(pic3)
 
     //빛
-    const ambientLight = new THREE.AmbientLight("#c0c0c0", 0.5);
-    const directionalLight = new THREE.DirectionalLight("ivory", 0.6);
-    directionalLight.position.set(-2, 4, 3);
-    scene.add(ambientLight);
-    scene.add(directionalLight);
+    const ambientLight = new THREE.AmbientLight('white', 0.7)
+    const directionalLight = new THREE.DirectionalLight('gray', 0.1)
+    const directionalLight2 = new THREE.DirectionalLight('#750f0f', 1)
+    directionalLight.position.set(0, 0, 4)
+    directionalLight2.position.set(0, 0, 4)
+    scene.add(ambientLight)
+    scene.add(directionalLight)
+    scene.add(directionalLight2)
+
+    // const helper = new THREE.DirectionalLightHelper(directionalLight)
+    // scene.add(helper)
 
     function render(time) {
-      time *= 0.0005; // 회전 속도
-
       //회전
-      // rose.rotation.z -= 0.005;
+      // pic.rotation.y -= 0.0005
+      // pic2.rotation.y -= 0.0005
+      // pic3.rotation.y -= 0.0005
 
-      const canvas = renderer.domElement;
-      camera.aspect = canvas.clientWidth / canvas.clientHeight;
-      camera.updateProjectionMatrix();
-      renderer.render(scene, camera);
+      const canvas = renderer.domElement
+      camera.aspect = canvas.clientWidth / canvas.clientHeight
+      camera.updateProjectionMatrix()
+      renderer.render(scene, camera)
       if (resizeRendererToDisplaySize(renderer)) {
-        const canvas = renderer.domElement;
-        camera.aspect = canvas.clientWidth / canvas.clientHeight;
-        camera.updateProjectionMatrix();
+        const canvas = renderer.domElement
+        camera.aspect = canvas.clientWidth / canvas.clientHeight
+        camera.updateProjectionMatrix()
       }
-      requestAnimationFrame(render);
+      requestAnimationFrame(render)
     }
-    render();
+    render()
 
     function resizeRendererToDisplaySize(renderer) {
-      const canvas = renderer.domElement;
-      const width = canvas.clientWidth;
-      const height = canvas.clientHeight;
-      const needResize = canvas.width !== width || canvas.height !== height;
+      const canvas = renderer.domElement
+      const width = canvas.clientWidth
+      const height = canvas.clientHeight
+      const needResize = canvas.width !== width || canvas.height !== height
       if (needResize) {
-        renderer.setSize(width, height, false);
+        renderer.setSize(width, height, false)
       }
-      return needResize;
+      return needResize
     }
   }
 
@@ -216,7 +280,7 @@ const Intro = () => {
       </div>
       <div className="intro-item">intro2</div>
     </div>
-  );
-};
+  )
+}
 
-export default Intro;
+export default Intro
