@@ -184,7 +184,20 @@ const Intro = () => {
     //마우스컨트롤
     const controll = new OrbitControls(camera, renderer.domElement);
     controll.enableDamping = true;
-    controll.minDistance = 34;
+    console.log(window.innerWidth);
+    if (window.innerWidth < 1000 && window.innerWidth >= 768) {
+      console.log(1);
+      controll.minDistance = 40;
+    } else if (window.innerWidth < 768 && window.innerWidth >= 660) {
+      console.log(2);
+      controll.minDistance = 40;
+    } else if (window.innerWidth < 660) {
+      console.log(3);
+      controll.minDistance = 29;
+    } else {
+      console.log(4);
+      controll.minDistance = 36;
+    }
     controll.maxDistance = 1000;
     controll.enableZoom = false;
     controll.update();
