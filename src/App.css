@@ -148,7 +148,7 @@
   border-bottom: solid rgba(214, 231, 233, 0.3) 1px;
   flex: 2;
   max-height: 55px;
-   min-height: 55px;
+  min-height: 55px;
   z-index: 500;
 }
 .MainCompChild:nth-child(2) {
@@ -166,8 +166,8 @@
   display: flex;
   flex-flow: row nowrap;
   justify-content: end;
-  }
-  .header-item {
+}
+.header-item {
   max-width: 140px;
   height: 100%;
   flex: 1;
@@ -301,7 +301,7 @@
   max-height: 0px;
   z-index: 50;
   display: flex;
-  flex:1;
+  flex: 1;
   position: relative;
   top: 180px;
   align-content: center;
@@ -322,7 +322,6 @@
   height: 480px;
   width: 480px;
   z-index: 30;
-  
 }
 .home-item3 {
   width: 100%;
@@ -330,7 +329,7 @@
   font-size: 10px;
   z-index: 20;
   position: relative;
-    transform: translate(0%,0%);
+  transform: translate(0%, 0%);
   bottom: -4vh !important;
   flex: 1;
   min-height: 25px;
@@ -340,21 +339,18 @@
 .text-bold {
   font-size: 18px;
   color: ivory;
-  font-weight: 600;
   border-bottom: solid rgb(64, 143, 122) 3px;
   border-top: solid rgb(64, 143, 122) 3px;
 }
 .text-rose {
   font-size: 18px;
   color: ivory;
-  font-weight: 600;
   border-bottom: solid #9b0707 3px;
   border-top: solid #9b0707 3px;
 }
 .red {
   font-size: 18px;
   color: #ff0000;
-  font-weight: 600;
 }
 .green {
   font-size: 18px;
@@ -373,9 +369,10 @@
   padding-top: 19px;
   position: relative;
 }
-.home-app:only-child{
+.home-app:only-child {
   font-weight: lighter;
- font-size: 18px;}
+  font-size: 18px;
+}
 
 .intro {
   display: flex;
@@ -390,14 +387,51 @@
   display: flex;
   overflow: hidden;
 }
-.intro-canvas-item1{
+@keyframes loop {
+  0% {
+    left: 30%;
+  }
+  5% {
+    left: 30%;
+  }
+  25% {
+    left: 33%;
+  }
+  45% {
+    left: 30%;
+    top: 10%;
+  }
+  55% {
+    left: 30%;
+    top: 10%;
+  }
+  75% {
+    left: 30%;
+    top: 15%;
+  }
+  100% {
+    left: 30%;
+    top: 10%;
+  }
+}
+.alim-move {
+  position: absolute;
+  top: 10%;
+  left: 30%;
+  width: 35px;
+  height: 35px;
+  animation: loop 1.8s infinite;
+  z-index: 100;
+  opacity: 0.7;
+}
+.intro-canvas-item1 {
   position: relative;
   top: 90px;
   width: 100%;
   height: 100%;
   z-index: 10;
 }
-.intro-canvas-item2{
+.intro-canvas-item2 {
   position: relative;
   width: 100%;
   height: 100%;
@@ -407,8 +441,15 @@
 .intro-item:nth-child(2) {
   flex: 1;
   min-width: 300px;
-  /* background-color: rgba(0, 0, 0, 0.25); */
-  background-color: blue;
+  background-color: rgba(0, 0, 0, 0.25);
+  /* background-color: blue; */
+}
+.mini-canvas {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  z-index: 10;
+  display: inline-block;
 }
 .edu {
 }
@@ -417,13 +458,49 @@
 .project {
   display: flex;
 }
-.project-canvas-item{
+.project-canvas-item {
   background-color: black;
-  flex:1;
+  flex: 1;
   opacity: 1;
 }
 /* //////////////////////////////////////////////////////////여기부터 단말기////////////////////////////////////////////////////////////  */
 @media screen and (max-width: 768px) {
+  @keyframes loop {
+    0% {
+      left: 22%;
+    }
+    5% {
+      left: 22%;
+    }
+    25% {
+      left: 27%;
+    }
+    45% {
+      left: 22%;
+      top: 17px;
+    }
+    55% {
+      left: 22%;
+      top: 17px;
+    }
+    75% {
+      left: 22%;
+      top: 30px;
+    }
+    100% {
+      left: 22%;
+      top: 17px;
+    }
+  }
+  .alim-move {
+    position: absolute;
+    top: 17px;
+    width: 30px;
+    height: 30px;
+    animation: loop 1.8s infinite;
+    z-index: 100;
+    opacity: 0.7;
+  }
   .mainBackground {
     font-family: "Cairo", "NanumGothic";
     text-align: center;
@@ -742,7 +819,7 @@
     display: flex;
     flex: 1;
   }
-  
+
   .home {
     display: flex;
     flex-flow: column wrap;
@@ -754,7 +831,7 @@
     max-height: 0px;
     z-index: 50;
     display: flex;
-    flex:1;
+    flex: 1;
     position: relative;
     top: 152px;
     align-content: center;
@@ -783,38 +860,37 @@
     font-size: 10px;
     z-index: 20;
     position: relative;
-    transform: translate(0%,0%);
+    transform: translate(0%, 0%);
     bottom: 5px !important;
     flex: 1;
     min-height: 25px;
     max-height: 25px;
   }
-  
+
   .text-bold {
     font-size: 16px;
     color: ivory;
-    font-weight: 600;
+
     border-bottom: solid rgb(64, 143, 122) 3px;
     border-top: solid rgb(64, 143, 122) 3px;
   }
   .text-rose {
     font-size: 16px;
     color: ivory;
-    font-weight: 600;
+
     border-bottom: solid #9b0707 3px;
     border-top: solid #9b0707 3px;
   }
   .red {
     font-size: 16px;
     color: #ff0000;
-    font-weight: 600;
   }
   .green {
     font-size: 16px;
     color: rgb(0, 212, 0);
     font-weight: 400;
   }
-  
+
   .home-app {
     height: 50px;
     padding-left: 20px;
@@ -826,9 +902,10 @@
     padding-top: 18px;
     position: relative;
   }
-  .home-app:only-child{
-   font-size: 16px;}
-  
+  .home-app:only-child {
+    font-size: 16px;
+  }
+
   .intro {
     display: flex;
     flex-flow: row wrap;
@@ -843,14 +920,14 @@
     display: flex;
     overflow-x: hidden;
   }
-  .intro-canvas-item1{
+  .intro-canvas-item1 {
     position: relative;
-  top: 47px;
+    top: 47px;
     width: 100%;
     height: 100%;
     z-index: 10;
   }
-  .intro-canvas-item2{
+  .intro-canvas-item2 {
     position: relative;
     width: 100%;
     height: 100%;
@@ -861,10 +938,10 @@
     flex: 1;
     min-width: 330px;
     min-height: 400px;
-    /* background-color: rgba(0, 0, 0, 0.25); */
-    background-color: blue;
+    background-color: rgba(0, 0, 0, 0.25);
+    /* background-color: blue; */
   }
- 
+
   .edu {
     align-content: center;
     justify-content: center;
@@ -878,8 +955,85 @@
     justify-content: center;
   }
 }
+
+@media screen and (max-width: 660px) {
+  @keyframes loop {
+    0% {
+      left: 50%;
+    }
+    5% {
+      left: 50%;
+    }
+    25% {
+      left: 55%;
+    }
+    45% {
+      left: 50%;
+      top: 17px;
+    }
+    55% {
+      left: 50%;
+      top: 17px;
+    }
+    75% {
+      left: 50%;
+      top: 30px;
+    }
+    100% {
+      left: 50%;
+      top: 17px;
+    }
+  }
+  .alim-move {
+    position: absolute;
+    top: 17px;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    animation: loop 1.8s infinite;
+    z-index: 100;
+    opacity: 0.7;
+  }
+}
 /* //////////////////////////////////////////////////////////소형단말기////////////////////////////////////////////////////////////  */
 @media screen and (max-width: 550px) {
+  @keyframes loop {
+    0% {
+      left: 50%;
+    }
+    5% {
+      left: 50%;
+    }
+    25% {
+      left: 55%;
+    }
+    45% {
+      left: 50%;
+      top: 17px;
+    }
+    55% {
+      left: 50%;
+      top: 17px;
+    }
+    75% {
+      left: 50%;
+      top: 30px;
+    }
+    100% {
+      left: 50%;
+      top: 17px;
+    }
+  }
+  .alim-move {
+    position: absolute;
+    top: 15px;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    animation: loop 1.8s infinite;
+    z-index: 100;
+    opacity: 0.7;
+  }
   .mainBackground {
     font-family: "Cairo", "NanumGothic";
     text-align: center;
@@ -1215,7 +1369,7 @@
     max-height: 0px;
     z-index: 50;
     display: flex;
-    flex:1;
+    flex: 1;
     position: relative;
     top: 164px;
     align-content: center;
@@ -1232,7 +1386,7 @@
   }
   .canvas-item {
     position: relative;
-    top:10px;
+    top: 10px;
     height: 370px;
     width: 370px;
     z-index: 30;
@@ -1244,38 +1398,37 @@
     font-size: 10px;
     z-index: 20;
     position: relative;
-    transform: translate(0%,0%);
+    transform: translate(0%, 0%);
     bottom: 5px !important;
     flex: 1;
     min-height: 25px;
     max-height: 25px;
   }
-  
+
   .text-bold {
     font-size: 14px;
     color: ivory;
-    font-weight: 600;
+
     border-bottom: solid rgb(64, 143, 122) 3px;
     border-top: solid rgb(64, 143, 122) 3px;
   }
   .text-rose {
     font-size: 14px;
     color: ivory;
-    font-weight: 600;
+
     border-bottom: solid #9b0707 3px;
     border-top: solid #9b0707 3px;
   }
   .red {
     font-size: 14px;
     color: #ff0000;
-    font-weight: 600;
   }
   .green {
     font-size: 14px;
     color: rgb(0, 212, 0);
     font-weight: 400;
   }
-  
+
   .home-app {
     height: 45px;
     padding-left: 20px;
@@ -1287,9 +1440,10 @@
     border: solid rgba(29, 116, 83, 0.5) 1px;
     position: relative;
   }
-  .home-app:only-child{
-   font-size: 14px;}
-  
+  .home-app:only-child {
+    font-size: 14px;
+  }
+
   .intro {
     display: flex;
     flex-flow: row wrap;
@@ -1299,18 +1453,18 @@
   .intro-item:nth-child(1) {
     flex: 1;
     min-height: 400px;
-  background-color: rgba(0, 0, 0, 0.2);
-  display: flex;
-  overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: flex;
+    overflow: hidden;
   }
-  .intro-canvas-item1{
+  .intro-canvas-item1 {
     position: relative;
-  top: 47px;
+    top: 47px;
     width: 100%;
     height: 100%;
     z-index: 10;
   }
-  .intro-canvas-item2{
+  .intro-canvas-item2 {
     position: relative;
     width: 100%;
     height: 100%;
@@ -1320,7 +1474,8 @@
   .intro-item:nth-child(2) {
     flex: 1;
     min-height: 400px;
-    background-color: blue;
+    background-color: rgba(0, 0, 0, 0.25);
+    /* background-color: blue; */
   }
   .edu {
     align-content: center;
@@ -1337,7 +1492,9 @@
 }
 /*가로모드///////////////////////////////////////////////////*/
 @media screen and (max-height: 550px) {
-  .mainBackground {cursor: default;}
+  .mainBackground {
+    cursor: default;
+  }
   .cursor {
     display: none;
   }
@@ -1360,7 +1517,7 @@
     max-height: 0px;
     z-index: 50;
     display: flex;
-    flex:1;
+    flex: 1;
     position: relative;
     top: 150px;
     align-content: center;
@@ -1389,38 +1546,37 @@
     font-size: 10px;
     z-index: 20;
     position: relative;
-    transform: translate(0%,0%);
+    transform: translate(0%, 0%);
     bottom: 5px !important;
     flex: 1;
     min-height: 25px;
     max-height: 25px;
   }
-  
+
   .text-bold {
     font-size: 16px;
     color: ivory;
-    font-weight: 600;
+
     border-bottom: solid rgb(64, 143, 122) 3px;
     border-top: solid rgb(64, 143, 122) 3px;
   }
   .text-rose {
     font-size: 16px;
     color: ivory;
-    font-weight: 600;
+
     border-bottom: solid #9b0707 3px;
     border-top: solid #9b0707 3px;
   }
   .red {
     font-size: 16px;
     color: #ff0000;
-    font-weight: 600;
   }
   .green {
     font-size: 16px;
     color: rgb(0, 212, 0);
     font-weight: 400;
   }
-  
+
   .home-app {
     height: 50px;
     padding-left: 20px;
@@ -1432,17 +1588,18 @@
     padding-top: 14px;
     position: relative;
   }
-  .home-app:only-child{
-   font-size: 16px;}
-  
-   .intro-canvas-item1{
+  .home-app:only-child {
+    font-size: 16px;
+  }
+
+  .intro-canvas-item1 {
     position: relative;
-  top: 30px;
+    top: 30px;
     width: 100%;
     height: 100%;
     z-index: 10;
   }
-  .intro-canvas-item2{
+  .intro-canvas-item2 {
     position: relative;
     width: 100%;
     height: 100%;
@@ -1453,7 +1610,9 @@
 
 /*가로모드2///////////////////////////////////////////////////*/
 @media screen and (max-height: 390px) {
-  .mainBackground {cursor: default;}
+  .mainBackground {
+    cursor: default;
+  }
   .cursor {
     display: none;
   }
@@ -1476,7 +1635,7 @@
     max-height: 0px;
     z-index: 50;
     display: flex;
-    flex:1;
+    flex: 1;
     position: relative;
     top: 127px;
     align-content: center;
@@ -1505,38 +1664,37 @@
     font-size: 10px;
     z-index: 20;
     position: relative;
-    transform: translate(0%,0%);
+    transform: translate(0%, 0%);
     bottom: 5px !important;
     flex: 1;
     min-height: 25px;
     max-height: 25px;
   }
-  
+
   .text-bold {
     font-size: 16px;
     color: ivory;
-    font-weight: 600;
+
     border-bottom: solid rgb(64, 143, 122) 3px;
     border-top: solid rgb(64, 143, 122) 3px;
   }
   .text-rose {
     font-size: 16px;
     color: ivory;
-    font-weight: 600;
+
     border-bottom: solid #9b0707 3px;
     border-top: solid #9b0707 3px;
   }
   .red {
     font-size: 16px;
     color: #ff0000;
-    font-weight: 600;
   }
   .green {
     font-size: 16px;
     color: rgb(0, 212, 0);
     font-weight: 400;
   }
-  
+
   .home-app {
     height: 45px;
     padding-left: 20px;
@@ -1548,17 +1706,18 @@
     padding-top: 13px;
     position: relative;
   }
-  .home-app:only-child{
-   font-size: 16px;}
+  .home-app:only-child {
+    font-size: 16px;
+  }
 
-  .intro-canvas-item1{
-     position: relative;
-   top: 30px;
-     width: 100%;
-     height: 100%;
-     z-index: 10;
-   }
-   .intro-canvas-item2{
+  .intro-canvas-item1 {
+    position: relative;
+    top: 30px;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+  }
+  .intro-canvas-item2 {
     position: relative;
     width: 100%;
     height: 100%;
@@ -1569,7 +1728,9 @@
 
 /*가로모드3///////////////////////////////////////////////////*/
 @media screen and (max-height: 330px) {
-  .mainBackground {cursor: default;}
+  .mainBackground {
+    cursor: default;
+  }
   .cursor {
     display: none;
   }
@@ -1592,7 +1753,7 @@
     max-height: 0px;
     z-index: 50;
     display: flex;
-    flex:1;
+    flex: 1;
     position: relative;
     top: 100px;
     align-content: center;
@@ -1621,38 +1782,37 @@
     font-size: 10px;
     z-index: 20;
     position: relative;
-    transform: translate(0%,0%);
+    transform: translate(0%, 0%);
     bottom: 5px !important;
     flex: 1;
     min-height: 25px;
     max-height: 25px;
   }
-  
+
   .text-bold {
     font-size: 16px;
     color: ivory;
-    font-weight: 600;
+
     border-bottom: solid rgb(64, 143, 122) 3px;
     border-top: solid rgb(64, 143, 122) 3px;
   }
   .text-rose {
     font-size: 16px;
     color: ivory;
-    font-weight: 600;
+
     border-bottom: solid #9b0707 3px;
     border-top: solid #9b0707 3px;
   }
   .red {
     font-size: 16px;
     color: #ff0000;
-    font-weight: 600;
   }
   .green {
     font-size: 16px;
     color: rgb(0, 212, 0);
     font-weight: 400;
   }
-  
+
   .home-app {
     height: 40px;
     padding-left: 20px;
@@ -1664,17 +1824,18 @@
     padding-top: 10px;
     position: relative;
   }
-  .home-app:only-child{
-   font-size: 16px;}
+  .home-app:only-child {
+    font-size: 16px;
+  }
 
-  .intro-canvas-item1{
-     position: relative;
-   top: 30px;
-     width: 100%;
-     height: 100%;
-     z-index: 10;
-   }
-   .intro-canvas-item2{
+  .intro-canvas-item1 {
+    position: relative;
+    top: 30px;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+  }
+  .intro-canvas-item2 {
     position: relative;
     width: 100%;
     height: 100%;
