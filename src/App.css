@@ -47,7 +47,7 @@
     );
   background-size: cover;
   background-color: #000;
-  overflow: hidden;
+  overflow: auto;
   cursor: none;
 }
 .mainBackgroundBlur {
@@ -444,6 +444,28 @@
   flex: 1;
   min-width: 300px;
   background-color: rgba(0, 0, 0, 0.25);
+  width: 100%;
+  min-height: 600px;
+}
+.intro-text-box {
+  display: block;
+  border-left: 2px solid rgba(29, 116, 83, 0.6);
+  border-right: 2px solid rgba(29, 116, 83, 0.6);
+  border-radius: 20px;
+  width: 70%;
+  height: 65%;
+  transform: translateX(18%);
+  padding-bottom: 40px;
+  padding-top: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-bottom: 5%;
+  font-size: 17px;
+  line-height: 2.5;
+}
+.fsfw {
+  font-size: 19px;
+  font-weight: bold;
 }
 .mini-canvas {
   position: relative;
@@ -533,11 +555,31 @@
     transform: translateX(-100%);
     z-index: 30;
   }
+
   .intro-item:nth-child(2) {
     flex: 1;
     min-width: 300px;
     background-color: rgba(0, 0, 0, 0.25);
-    /* background-color: blue; */
+  }
+  .intro-text-box {
+    display: block;
+    border-left: 2px solid rgba(29, 116, 83, 0.6);
+    border-right: 2px solid rgba(29, 116, 83, 0.6);
+    border-radius: 20px;
+    width: 75%;
+    height: fit-content;
+    transform: translateX(11.5%);
+    padding-bottom: 40px;
+    padding-top: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 5%;
+    font-size: 15px;
+    line-height: 2.5;
+  }
+  .fsfw {
+    font-size: 17px;
+    font-weight: bold;
   }
 }
 /* //////////////////////////////////////////////////////////여기부터 단말기////////////////////////////////////////////////////////////  */
@@ -1020,6 +1062,26 @@
     min-height: 400px;
     background-color: rgba(0, 0, 0, 0.25);
   }
+  .intro-text-box {
+    display: block;
+    border-left: 2px solid rgba(29, 116, 83, 0.6);
+    border-right: 2px solid rgba(29, 116, 83, 0.6);
+    border-radius: 20px;
+    width: 75%;
+    height: fit-content;
+    transform: translateX(11.5%);
+    padding-bottom: 40px;
+    padding-top: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 5%;
+    font-size: 14.5px;
+    line-height: 2.5;
+  }
+  .fsfw {
+    font-size: 16px;
+    font-weight: bold;
+  }
 
   .edu {
     align-content: center;
@@ -1110,7 +1172,26 @@
     flex: 1;
     min-height: 400px;
     background-color: rgba(0, 0, 0, 0.25);
-    /* background-color: blue; */
+  }
+  .intro-text-box {
+    display: block;
+    border-left: 2px solid rgba(29, 116, 83, 0.6);
+    border-right: 2px solid rgba(29, 116, 83, 0.6);
+    border-radius: 20px;
+    width: 72%;
+    height: fit-content;
+    transform: translateX(16%);
+    padding-bottom: 40px;
+    padding-top: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 5%;
+    font-size: 14.5px;
+    line-height: 2.5;
+  }
+  .fsfw {
+    font-size: 16px;
+    font-weight: bold;
   }
 }
 /* //////////////////////////////////////////////////////////소형단말기////////////////////////////////////////////////////////////  */
@@ -1597,6 +1678,26 @@
     flex: 1;
     min-width: 300px;
     background-color: rgba(0, 0, 0, 0.25);
+  }
+  .intro-text-box {
+    display: block;
+    border-left: 2px solid rgba(29, 116, 83, 0.6);
+    border-right: 2px solid rgba(29, 116, 83, 0.6);
+    border-radius: 20px;
+    width: 73%;
+    height: fit-content;
+    transform: translateX(14%);
+    padding-bottom: 40px;
+    padding-top: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 5%;
+    font-size: 14.5px;
+    line-height: 2.5;
+  }
+  .fsfw {
+    font-size: 16px;
+    font-weight: bold;
   }
   .edu {
     align-content: center;
