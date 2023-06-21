@@ -8,6 +8,7 @@ const Intro = () => {
     MyCanvas2()
     MiniCanvas()
     MiniCanvas2()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   function MyCanvas1() {
@@ -588,7 +589,7 @@ const Intro = () => {
   const [tf, setTf] = useState(true)
 
   function Timer() {
-    setTimeout(() => setTf(!tf), 3200)
+    setTimeout(() => setTf(!tf), 2200)
   }
 
   return (
@@ -605,7 +606,6 @@ const Intro = () => {
         <canvas className="intro-canvas-item2" id="intro-canvas2"></canvas>
       </div>
       <div className="intro-item">
-        <br />
         <div style={{ display: 'inline-block' }}>
           <canvas className="mini-canvas" id="mini-canvas"></canvas>
           <span style={{ fontSize: 24 }}>INTRO</span>
@@ -613,15 +613,27 @@ const Intro = () => {
         </div>
         <br />
         <br />
-        <div style={{ display: 'block' }}>프론트 개발자 어쩌구저쩌구</div>
-        .....
-        <div style={{ display: 'block' }}>프론트 개발자 어쩌구저쩌구</div>
-        .....
-        <div style={{ display: 'block' }}>프론트 개발자 어쩌구저쩌구</div>
-        .....
+        <div className="intro-text-box">
+          저는 눈에 바로 들어오는 것을 좋아하여
+          <br />
+          <text className="text-bold fsfw">Front-end</text>
+          &nbsp;Developer에 <br />
+          초점을 맞추게 되었습니다.
+          <br />
+          <br />
+          항상 <text className="text-rose fsfw">사용자</text>의 입장에서
+          <br />
+          지루하지 않은 화면과,
+          <br />
+          최적의 편리함을 전달하고자 합니다.
+          <br />
+          <br />
+          방문해주셔서&nbsp;감사합니다.
+        </div>
       </div>
     </div>
   )
 }
+//class="text-bold"class="text-rose"
 
 export default Intro
