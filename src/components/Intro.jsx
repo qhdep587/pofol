@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 
@@ -532,7 +532,7 @@ const Intro = () => {
     window.addEventListener("resize", resizeRendererToDisplaySize);
     resizeRendererToDisplaySize();
   }
-
+  const requestRef1 = useRef();
   function MiniCanvas2() {
     //장면
     const scene = new THREE.Scene();
@@ -580,7 +580,8 @@ const Intro = () => {
         camera.aspect = canvas.clientWidth / canvas.clientHeight;
         camera.updateProjectionMatrix();
       }
-      requestAnimationFrame(render);
+
+      requestRef1.current = requestAnimationFrame(render);
     }
     render();
 
@@ -596,12 +597,10 @@ const Intro = () => {
     }
     window.addEventListener("resize", resizeRendererToDisplaySize);
     resizeRendererToDisplaySize();
-
-    Timer();
   }
 
+  Timer();
   const [tf, setTf] = useState(true);
-
   function Timer() {
     setTimeout(() => setTf(!tf), 2200);
   }
@@ -620,9 +619,23 @@ const Intro = () => {
         <canvas className="intro-canvas-item2" id="intro-canvas2"></canvas>
       </div>
       <div className="intro-item">
-        <div style={{ display: "inline-block" }}>
+        <div
+          style={{
+            display: "inline-block",
+            paddingTop: "3%",
+            position: "relative",
+            // top: "1.8%",
+          }}
+        >
           <canvas className="mini-canvas" id="mini-canvas"></canvas>
-          <span style={{ fontSize: 24 }}>INTRO</span>
+          <span
+            style={{
+              fontSize: 24,
+              color: "rgb(234, 255, 245)",
+            }}
+          >
+            INTRO
+          </span>
           <canvas className="mini-canvas" id="mini-canvas2"></canvas>
         </div>
         <br />
@@ -635,11 +648,13 @@ const Intro = () => {
           초점을 맞추게 되었습니다.
           <br />
           <br />
-          항상 <text className="text-rose fsfw">사용자</text>의 입장에서
+          항상 <text className="text-rose fsfw">사용자</text> 입장에서 상상하고
           <br />
           지루하지 않은 화면과,
           <br />
-          최적의 편리함을 전달하고자 합니다.
+          최적의 편리함을 추구하는
+          <br />
+          자세로 개발에 임하고 있습니다.
           <br />
           <br />
           방문해주셔서&nbsp;감사합니다.
@@ -648,6 +663,5 @@ const Intro = () => {
     </div>
   );
 };
-//class="text-bold"class="text-rose"
 
 export default Intro;
