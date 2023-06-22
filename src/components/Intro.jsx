@@ -607,23 +607,9 @@ const Intro = () => {
         <canvas className="intro-canvas-item2" id="intro-canvas2"></canvas>
       </div>
       <div className="intro-item">
-        <div
-          style={{
-            display: 'inline-block',
-            paddingTop: '3%',
-            position: 'relative',
-            // top: "1.8%",
-          }}
-        >
+        <div className="intro-title">
           <canvas className="mini-canvas" id="mini-canvas"></canvas>
-          <span
-            style={{
-              fontSize: 24,
-              color: 'rgb(234, 255, 245)',
-            }}
-          >
-            INTRO
-          </span>
+          <span>INTRO</span>
           <canvas className="mini-canvas" id="mini-canvas2"></canvas>
         </div>
         <br />
@@ -636,7 +622,7 @@ const Intro = () => {
           초점을 맞추게 되었습니다.
           <br />
           <br />
-          항상 <text className="text-rose fsfw">사용자</text> 입장에서 상상하고,
+          항상 <text className="text-rose fsfw">사용자</text> 입장에서 생각하고,
           <br />
           지루하지 않은 화면과
           <br />

@@ -453,15 +453,15 @@
   border-right: 2px solid rgba(29, 116, 83, 0.6);
   border-radius: 20px;
   width: 70%;
-  height: 65%;
+  height: 62%;
   max-height: 700px;
   transform: translateX(18%);
-  padding-top: 9%;
+  padding-top: 8%;
   padding-left: 10px;
   padding-right: 10px;
+  padding-bottom: 3%;
   margin-top: 7%;
-  margin-bottom: 5%;
-  font-size: 17px;
+  font-size: 16.5px;
   line-height: 2.5;
   color: rgb(234, 255, 245);
   position: relative;
@@ -469,8 +469,15 @@
 }
 .fsfw {
   color: rgb(234, 255, 245);
-  font-size: 19px;
+  font-size: 18px;
   font-weight: bold;
+}
+.intro-title{
+    display: inline-block;
+    padding-top: 3%;
+    position: relative;
+    font-size: 24;
+    color: rgb(234, 255, 245);
 }
 .mini-canvas {
   position: relative;
@@ -554,10 +561,10 @@
   }
   .intro-canvas-item2 {
     position: relative;
-    top: 12%;
+    top: 11.5%;
     width: 100%;
     height: 100%;
-    max-height: 600px;
+    max-height: 500px;
     transform: translateX(-100%);
     z-index: 30;
   }
@@ -577,124 +584,29 @@
     width: 75%;
     height: fit-content;
     transform: translateX(11.5%);
-    padding-bottom: 30px;
-    padding-top: 30px;
+    padding-bottom: 18%;
+    padding-top: 14%;
     padding-left: 10px;
     padding-right: 10px;
-    margin-bottom: 5%;
-    font-size: 15px;
-    line-height: 2.5;
+    font-size: 14.8px;
+    line-height: 2.3;
     top:-2.5%;
   }
   .fsfw {
     color: rgb(234, 255, 245);
-    font-size: 17px;
+    font-size: 16px;
     font-weight: bold;
   }
-}
-@media screen and (max-width: 950px) {
-  .intro {
-    display: flex;
-    flex-flow: row wrap;
-    flex: 1;
-    overflow-y: auto;
-  }
-  .intro-item:nth-child(1) {
-    flex: 1;
-    min-width: 300px;
-    background-color: rgba(0, 0, 0, 0.1);
-    display: flex;
-    overflow: hidden;
-  }
-  @keyframes loop {
-    0% {
-      left: 34%;
-    }
-    5% {
-      left: 34%;
-    }
-    25% {
-      left: 37%;
-    }
-    45% {
-      left: 34%;
-      top: 10%;
-    }
-    55% {
-      left: 34%;
-      top: 10%;
-    }
-    75% {
-      left: 34%;
-      top: 15%;
-    }
-    100% {
-      left: 34%;
-      top: 10%;
-    }
-  }
-  .alim-move {
-    position: absolute;
-    top: 10%;
-    left: 34%;
-    width: 35px;
-    height: 35px;
-    animation: loop 1.8s forwards;
-    z-index: 100;
-    opacity: 0.7;
-  }
-  .intro-canvas-item1 {
+  .intro-title{
+    display: inline-block;
+    padding-top: 3%;
     position: relative;
-    top: 90px;
-    width: 100%;
-    min-width: 100%;
-    min-height: 100%;
-    height: 100%;
-
-    z-index: 10;
-  }
-  .intro-canvas-item2 {
-    position: relative;
-    top: 12%;
-    width: 100%;
-    height: 100%;
-    max-height: 600px;
-    transform: translateX(-100%);
-    z-index: 30;
-  }
-
-  .intro-item:nth-child(2) {
-    flex: 1;
-    min-width: 300px;
-    background-color: rgba(0, 0, 0, 0.25);
-  }
-  .intro-text-box {
-    position: relative;
-    top: 12%;
-    display: block;
-    border-left: 2px solid rgba(29, 116, 83, 0.6);
-    border-right: 2px solid rgba(29, 116, 83, 0.6);
-    border-radius: 20px;
-    width: 75%;
-    height: fit-content;
-    transform: translateX(11.5%);
-    padding-bottom: 30px;
-    padding-top: 30px;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-bottom: 5%;
-    font-size: 15px;
-    line-height: 2.5;
-    top:-2.5%;
-  }
-  .fsfw {
+    font-size: 24;
     color: rgb(234, 255, 245);
-    font-size: 17px;
-    font-weight: bold;
   }
 }
 /* //////////////////////////////////////////////////////////여기부터 단말기////////////////////////////////////////////////////////////  */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 780px) {
   @keyframes loop {
     0% {
       left: 27%;
@@ -1181,13 +1093,12 @@
     width: 75%;
     height: fit-content;
     transform: translateX(11.5%);
-    padding-bottom: 40px;
-    padding-top: 40px;
+    padding-bottom: 19%;
+    padding-top: 14%;
     padding-left: 10px;
     padding-right: 10px;
-    margin-bottom: 5%;
     font-size: 14.5px;
-    line-height: 2.5;
+    line-height: 2.2;
   }
   .fsfw {
     color: rgb(234, 255, 245);
@@ -1284,6 +1195,7 @@
     flex: 1;
     min-height: 400px;
     background-color: rgba(0, 0, 0, 0.25);
+    margin-top: 3%;
   }
   .intro-text-box {
     display: block;
@@ -1293,14 +1205,13 @@
     width: 72%;
     height: fit-content;
     transform: translateX(16%);
-    padding-bottom: 30px;
-    padding-top: 30px;
+    padding-bottom: 12%;
+    padding-top: 10%;
     padding-left: 9px;
     padding-right: 10px;
-    margin-bottom: 5%;
     font-size: 14.5px;
-    line-height: 2.5;
-    top:-3%
+    line-height: 2.2;
+    top:-5%
   }
   .fsfw {
     color: rgb(234, 255, 245);
@@ -1805,9 +1716,8 @@
     padding-top: 30px;
     padding-left: 12px;
     padding-right: 10px;
-    margin-bottom: 5%;
     font-size: 14.5px;
-    line-height: 2.5;
+    line-height: 2.2;
     top: -4%;
   }
   .fsfw {
@@ -1830,6 +1740,43 @@
 }
 /*가로모드///////////////////////////////////////////////////*/
 @media screen and (max-height: 550px) {
+  @keyframes loop {
+    0% {
+      left: 34%;
+    }
+    5% {
+      left: 34%;
+    }
+    25% {
+      left: 37%;
+    }
+    45% {
+      left: 34%;
+      top: 17%;
+    }
+    55% {
+      left: 34%;
+      top: 17%;
+    }
+    75% {
+      left: 34%;
+      top: 22%;
+    }
+    100% {
+      left: 34%;
+      top: 17%;
+    }
+  }
+  .alim-move {
+    position: absolute;
+    top: 17% !important;
+    left: 34% !important;
+    width: 30px;
+    height: 30px;
+    animation: loop 1.8s infinite;
+    z-index: 100;
+    opacity: 0.7;
+  }
   .mainBackground {
     cursor: default;
   }
@@ -1956,22 +1903,84 @@
     position: relative;
     width: 100%;
     height: 100%;
-    top: -10px;
+    top:15px;
     transform: translateX(-100%);
     z-index: 30;
     min-width: 100%;
     min-height: 400px;
-    max-height: 500px;
+    max-height: 400px;
   }
   .intro-item:nth-child(2) {
     flex: 1;
     min-width: 300px;
     background-color: rgba(0, 0, 0, 0.25);
   }
+  .intro-text-box {
+    display: block;
+    border-left: 2px solid rgba(29, 116, 83, 0.6);
+    border-right: 2px solid rgba(29, 116, 83, 0.6);
+    border-radius: 20px;
+    width: 60%;
+    height: 52%;
+    max-height: 700px;
+    transform: translateX(18%);
+    padding-top: 6%;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 12px;
+    line-height: 2.2;
+    color: rgb(234, 255, 245);
+    position: relative;
+    top: -5%;
+    left: 2%;
+  }
+  .fsfw {
+    color: rgb(234, 255, 245);
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
 }
 
 /*가로모드2///////////////////////////////////////////////////*/
 @media screen and (max-height: 390px) {
+  @keyframes loop {
+    0% {
+      left: 34%;
+    }
+    5% {
+      left: 34%;
+    }
+    25% {
+      left: 37%;
+    }
+    45% {
+      left: 34%;
+      top: 17%;
+    }
+    55% {
+      left: 34%;
+      top: 17%;
+    }
+    75% {
+      left: 34%;
+      top: 22%;
+    }
+    100% {
+      left: 34%;
+      top: 17%;
+    }
+  }
+  .alim-move {
+    position: absolute;
+    top: 17% !important;
+    left: 34% !important;
+    width: 30px;
+    height: 30px;
+    animation: loop 1.8s infinite;
+    z-index: 100;
+    opacity: 0.7;
+  }
   .mainBackground {
     cursor: default;
   }
@@ -2093,6 +2102,7 @@
     min-height: 100%;
     height: 100%;
     z-index: 10;
+    max-height: 250px;
   }
   .intro-canvas-item2 {
     position: relative;
@@ -2102,18 +2112,87 @@
     transform: translateX(-100%);
     z-index: 30;
     min-width: 100%;
-    min-height: 400px;
-    max-height: 500px;
+    max-height: 200px;
   }
   .intro-item:nth-child(2) {
     flex: 1;
     min-width: 300px;
     background-color: rgba(0, 0, 0, 0.25);
   }
+  .intro-text-box {
+    display: block;
+    border-left: 2px solid rgba(29, 116, 83, 0.6);
+    border-right: 2px solid rgba(29, 116, 83, 0.6);
+    border-radius: 20px;
+    width: 60%;
+    height: 55%;
+    max-height: 700px;
+    transform: translateX(18%);
+    padding-top: 9%;
+    padding-left: 13px;
+    padding-right: 13px;
+    margin-top: 1%;
+    font-size: 11px;
+    line-height: 2.1;
+    color: rgb(234, 255, 245);
+    position: relative;
+    top: -6.5%;
+    left: 8px;
+  }
+  .fsfw {
+    color: rgb(234, 255, 245);
+    font-size: 14px;
+    font-weight: bold;
+  }
+  .intro-title{
+    display: inline-block;
+    padding-top: 0%;
+    top: -2.5%;
+    position: relative;
+    font-size: 20;
+    color: rgb(234, 255, 245);
+  }
 }
 
 /*가로모드3///////////////////////////////////////////////////*/
 @media screen and (max-height: 330px) {
+  @keyframes loop {
+    0% {
+      left: 34%;
+    }
+    5% {
+      left: 34%;
+    }
+    25% {
+      left: 37%;
+    }
+    45% {
+      left: 34%;
+      top: 17%;
+    }
+    55% {
+      left: 34%;
+      top: 17%;
+    }
+    75% {
+      left: 34%;
+      top: 22%;
+    }
+    100% {
+      left: 34%;
+      top: 17%;
+    }
+  }
+  .alim-move {
+    position: absolute;
+    top: 17% !important;
+    left: 34% !important;
+    width: 30px;
+    height: 30px;
+    animation: loop 1.8s infinite;
+    z-index: 100;
+    opacity: 0.7;
+  }
   .mainBackground {
     cursor: default;
   }
@@ -2244,12 +2323,44 @@
     transform: translateX(-100%);
     z-index: 30;
     min-width: 100%;
-    min-height: 400px;
-    max-height: 500px;
+    min-height: 300px;
+    max-height: 300px;
   }
   .intro-item:nth-child(2) {
     flex: 1;
     min-width: 300px;
     background-color: rgba(0, 0, 0, 0.25);
+  }
+  .intro-text-box {
+    display: block;
+    border-left: 2px solid rgba(29, 116, 83, 0.6);
+    border-right: 2px solid rgba(29, 116, 83, 0.6);
+    border-radius: 20px;
+    width: 60%;
+    height: 55%;
+    max-height: 700px;
+    transform: translateX(18%);
+    padding-top: 5%;
+    padding-left: 13px;
+    padding-right: 13px;
+    font-size: 10px;
+    line-height: 2.1;
+    color: rgb(234, 255, 245);
+    position: relative;
+    top: -7%;
+    left: 8px;
+  }
+  .fsfw {
+    color: rgb(234, 255, 245);
+    font-size: 12px;
+    font-weight: bold;
+  }
+  .intro-title{
+    display: inline-block;
+    padding-top: 0%;
+    top: -2.5%;
+    position: relative;
+    font-size: 16;
+    color: rgb(234, 255, 245);
   }
 }
