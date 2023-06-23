@@ -164,8 +164,7 @@ const Edu = () => {
         {/* 학력 */}
         <ul className="edu-text-box">
           <span className="edu-title">◆</span>&nbsp;&nbsp;
-          <span style={{ fontSize: '22px', color: 'ivory' }}>학력</span>
-          <br />
+          <span style={{ fontSize: '20px', color: 'ivory' }}>학력</span>
           <li style={{ fontSize: '10px' }}>&nbsp;</li>
           <li className="list-item">
             &nbsp;&nbsp;<strong>성동공업고등학교</strong>
@@ -180,7 +179,10 @@ const Edu = () => {
           <li className="list-item">&nbsp;</li>
           <li className="list-item2">
             &nbsp;&nbsp;<strong>학점은행제</strong>
-            &nbsp;&nbsp;&nbsp;경역학과&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;경역학과
+          </li>
+          <li className="list-item2">
+            &nbsp;&nbsp;
             <span style={{ color: '#1e7c60', fontWeight: 600 }}>[ </span>
             <span style={{ color: 'ivory', fontWeight: 500, fontSize: '15px' }}>
               방송통신대 편입 목표
@@ -200,12 +202,13 @@ const Edu = () => {
         {/* 교육 */}
         <ul className="edu-text-box">
           <span className="edu-title">◆</span>&nbsp;&nbsp;
-          <span style={{ fontSize: '22px', color: 'ivory' }}>교육이수</span>
-          <br />
+          <span style={{ fontSize: '20px', color: 'ivory' }}>교육이수</span>
           <li style={{ fontSize: '10px' }}>&nbsp;</li>
           <li className="list-item">
             &nbsp;&nbsp;<strong>KH정보교육원</strong>
-            &nbsp;&nbsp;&nbsp;<span style={{ color: '#1e7c60', fontWeight: 600 }}>[ </span>
+          </li>
+          <li className="list-item">
+            &nbsp;&nbsp;<span style={{ color: '#1e7c60', fontWeight: 600 }}>[ </span>
             <span style={{ color: 'ivory', fontWeight: 500, fontSize: '15px' }}>
               Java / Spring Framework 개발자 양성과정
             </span>
@@ -225,12 +228,13 @@ const Edu = () => {
         {/* 어학 */}
         <ul className="edu-text-box">
           <span className="edu-title">◆</span>&nbsp;&nbsp;
-          <span style={{ fontSize: '22px', color: 'ivory' }}>어학</span>
-          <br />
+          <span style={{ fontSize: '20px', color: 'ivory' }}>어학</span>
           <li style={{ fontSize: '10px' }}>&nbsp;</li>
           <li className="list-item">
             &nbsp;&nbsp;<strong>워킹홀리데이</strong>&nbsp;&nbsp;&nbsp;호주&nbsp;&nbsp;&nbsp;
-            <span style={{ color: '#1e7c60', fontWeight: 600 }}>[ </span>
+          </li>
+          <li className="list-item">
+            &nbsp;&nbsp;<span style={{ color: '#1e7c60', fontWeight: 600 }}>[ </span>
             <span style={{ color: 'ivory', fontWeight: 500, fontSize: '15px' }}>
               어학연수 / 사회경험
             </span>
