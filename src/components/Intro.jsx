@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react'
+import React, { useEffect, useState } from 'react'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 
@@ -484,15 +484,28 @@ const Intro = () => {
     const Octahedron1_material = new THREE.MeshNormalMaterial({})
     const Octahedron1 = new THREE.Mesh(Octahedron1_geometry, Octahedron1_material)
     scene.add(Octahedron1)
-    Octahedron1.position.set(0, -0.45, 0)
+    Octahedron1.position.set(0, 0, 0)
+
+    const rose_geometry = new THREE.TorusKnotGeometry(8, 0.1, 100, 20, 12, 1)
+    const rose_material = new THREE.MeshLambertMaterial({ color: '#9b0707' })
+    const rose = new THREE.Mesh(rose_geometry, rose_material)
+    scene.add(rose)
+
+    //빛
+    const ambientLight = new THREE.AmbientLight('#c0c0c0', 0.5)
+    const directionalLight = new THREE.DirectionalLight('ivory', 0.35)
+    directionalLight.position.set(-2, 4, 3)
+    scene.add(ambientLight)
+    scene.add(directionalLight)
 
     function render(time) {
       time *= 0.0005 // 회전 속도
 
       //회전
-      Octahedron1.rotation.z = time * 1
-      Octahedron1.rotation.x = time * 2
-      Octahedron1.rotation.y = time * 1.8
+      rose.rotation.z -= 0.005
+      Octahedron1.rotation.z = time * 4
+      Octahedron1.rotation.x = time * 4
+      Octahedron1.rotation.y = time * 4
 
       const canvas = renderer.domElement
       camera.aspect = canvas.clientWidth / canvas.clientHeight
@@ -507,7 +520,7 @@ const Intro = () => {
     }
     render()
 
-    function resizeRendererToDisplaySize() {
+    function resizeRendererToDisplaySize(renderer) {
       const canvas = renderer.domElement
       const width = canvas.clientWidth
       const height = canvas.clientHeight
@@ -517,11 +530,7 @@ const Intro = () => {
       }
       return needResize
     }
-
-    window.addEventListener('resize', resizeRendererToDisplaySize)
-    resizeRendererToDisplaySize()
   }
-  const requestRef1 = useRef()
   function MiniCanvas2() {
     //장면
     const scene = new THREE.Scene()
@@ -547,31 +556,43 @@ const Intro = () => {
     const Octahedron1_material = new THREE.MeshNormalMaterial({})
     const Octahedron1 = new THREE.Mesh(Octahedron1_geometry, Octahedron1_material)
     scene.add(Octahedron1)
-    Octahedron1.position.set(0, -0.45, 0)
+    Octahedron1.position.set(0, 0, 0)
+
+    const rose_geometry = new THREE.TorusKnotGeometry(8, 0.1, 100, 20, 12, 1)
+    const rose_material = new THREE.MeshLambertMaterial({ color: '#9b0707' })
+    const rose = new THREE.Mesh(rose_geometry, rose_material)
+    scene.add(rose)
+
+    //빛
+    const ambientLight = new THREE.AmbientLight('#c0c0c0', 0.5)
+    const directionalLight = new THREE.DirectionalLight('ivory', 0.35)
+    directionalLight.position.set(-2, 4, 3)
+    scene.add(ambientLight)
+    scene.add(directionalLight)
 
     function render(time) {
       time *= 0.0005 // 회전 속도
 
       //회전
-      Octahedron1.rotation.z = time * 1
-      Octahedron1.rotation.x = time * 2
-      Octahedron1.rotation.y = time * 1.8
+      rose.rotation.z -= 0.005
+      Octahedron1.rotation.z = time * 4
+      Octahedron1.rotation.x = time * 4
+      Octahedron1.rotation.y = time * 4
 
       const canvas = renderer.domElement
       camera.aspect = canvas.clientWidth / canvas.clientHeight
       camera.updateProjectionMatrix()
       renderer.render(scene, camera)
-      if (resizeRendererToDisplaySize()) {
+      if (resizeRendererToDisplaySize(renderer)) {
         const canvas = renderer.domElement
         camera.aspect = canvas.clientWidth / canvas.clientHeight
         camera.updateProjectionMatrix()
       }
-
-      requestRef1.current = requestAnimationFrame(render)
+      requestAnimationFrame(render)
     }
     render()
 
-    function resizeRendererToDisplaySize() {
+    function resizeRendererToDisplaySize(renderer) {
       const canvas = renderer.domElement
       const width = canvas.clientWidth
       const height = canvas.clientHeight
@@ -581,8 +602,6 @@ const Intro = () => {
       }
       return needResize
     }
-    window.addEventListener('resize', resizeRendererToDisplaySize)
-    resizeRendererToDisplaySize()
   }
 
   Timer()
