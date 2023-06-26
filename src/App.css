@@ -540,6 +540,20 @@
   width: 25px;
   padding-inline: 1ch;
 }
+
+.edu:nth-child(2)::-webkit-scrollbar {
+    width: 6px;
+}
+
+.edu:nth-child(2)::-webkit-scrollbar-thumb {
+    background: rgba(64, 138, 118, 0.3);
+    
+    border-radius: 10px;
+}
+
+.edu:nth-child(2)::-webkit-scrollbar-track {
+    background: rgba(12, 73, 36, 0.2);
+}
 .text-btn {
   background:#09523c;
   display: inline-block;
@@ -555,7 +569,58 @@
   z-index: 10;
   display: inline-block;
 }
-.work {
+.work:nth-child(1) {
+  flex :1;
+  display: flex;
+  width: 100%;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 5%;
+}
+.work:nth-child(2) {
+  flex :1;
+  width: 50%;
+  height: 55%;
+  position: relative;
+  transform: translate(50%,10%);
+  display: block;
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  padding-top: 5px;
+  overflow-y: auto;
+  max-height: 55%;
+}
+.work:nth-child(2)::-webkit-scrollbar {
+  width: 6px;
+}
+.work:nth-child(2)::-webkit-scrollbar-thumb {
+  background: rgba(64, 138, 118, 0.3);
+  border-radius: 10px;
+}
+.work:nth-child(2)::-webkit-scrollbar-track {
+  background: rgba(12, 73, 36, 0.2);
+}
+.link{
+  font-size: 18px;
+  display: inline-block;
+  text-decoration: none;
+  background: linear-gradient(to right, #1e7c60, ivory);
+  position: relative;
+  color: transparent;
+  -webkit-background-clip: text;
+}
+.link:hover{
+  font-size: 18px;
+  display: inline-block;
+  text-decoration: none;
+  background: linear-gradient(to right, #1e7c60, #790909);
+  position: relative;
+  border-radius: 3px;
+  color: ivory;
+  /* -webkit-background-clip: text; */
 }
 .project {
   display: flex;
