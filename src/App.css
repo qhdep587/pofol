@@ -577,12 +577,12 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  top: 5%;
+  top: 3.5%;
 }
 .work:nth-child(2) {
   flex :1;
   width: 50%;
-  height: 55%;
+  height: 53%;
   position: relative;
   transform: translate(50%,10%);
   display: block;
@@ -591,7 +591,7 @@
   border-radius: 20px;
   padding-top: 5px;
   overflow-y: auto;
-  max-height: 55%;
+  max-height: 53%;
 }
 .work:nth-child(2)::-webkit-scrollbar {
   width: 6px;
@@ -611,6 +611,7 @@
   position: relative;
   color: transparent;
   -webkit-background-clip: text;
+  cursor: none;
 }
 .link:hover{
   font-size: 18px;
@@ -620,7 +621,7 @@
   position: relative;
   border-radius: 3px;
   color: ivory;
-  /* -webkit-background-clip: text; */
+  cursor: none;
 }
 .project {
   display: flex;

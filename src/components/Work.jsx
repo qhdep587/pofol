@@ -203,6 +203,7 @@ const Work = () => {
               &nbsp;&nbsp;&nbsp;2020.07 ~ 2020.09&nbsp;&nbsp;&nbsp;
             </span>
           </li>
+          <li className="list-item" style={{ height: '10px' }} />
           <li className="list-item list-item-sub" style={{ position: 'relative', Left: '4.2%' }}>
             <span style={{ color: '#1e7c60', fontWeight: 600 }}>
               &nbsp;&nbsp;&nbsp;&gt;&gt;&nbsp;&nbsp;&nbsp;
@@ -255,6 +256,7 @@ const Work = () => {
           </li>
           <li className="list-item">&nbsp;</li>
           <li className="list-item" style={{ height: '10px' }} />
+          <li className="list-item" style={{ height: '10px' }} />
           <li className="list-item">
             &nbsp;&nbsp;<strong>시드아이티</strong>
             &nbsp;&nbsp;&nbsp;&nbsp;<span style={{ color: '#1e7c60', fontWeight: 600 }}>[ </span>
@@ -274,6 +276,7 @@ const Work = () => {
             </span>
             &nbsp;&nbsp;&nbsp;
           </li>
+          <li className="list-item" style={{ height: '10px' }} />
           <li className="list-item list-item-sub" style={{ position: 'relative', Left: '4.2%' }}>
             <span style={{ color: '#1e7c60', fontWeight: 600 }}>
               &nbsp;&nbsp;&nbsp;&gt;&gt;&nbsp;&nbsp;&nbsp;
@@ -335,6 +338,7 @@ const Work = () => {
               &nbsp;&nbsp;&nbsp;담당업무&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;개발지원
             </span>
           </li>
+          <li className="list-item" style={{ height: '10px' }} />
           <li className="list-item list-item-sub" style={{ position: 'relative', Left: '4.2%' }}>
             <span style={{ fontSize: '15px', display: 'inline-block' }}>
               &nbsp;&nbsp;&nbsp;프로젝트&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;
