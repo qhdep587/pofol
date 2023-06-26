@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import * as THREE from 'three'
 import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const Work = () => {
   useEffect(() => {
@@ -151,6 +152,43 @@ const Work = () => {
         renderer.setSize(width, height, false)
       }
       return needResize
+    }
+  }
+
+  const navigate = useNavigate()
+  const linkFn = (target, num) => {
+    if (num > 0) {
+      for (let i = 1; i < 5; i++) {
+        document.getElementById('menu' + i).className = 'left-menu-item-content'
+      }
+      document.getElementById('menu' + num).className += ' active'
+      navRouter(num)
+    }
+  }
+
+  const navRouter = goto => {
+    if (goto === 'home') {
+      for (let i = 1; i < 5; i++) {
+        document.getElementById('menu' + i).className = 'left-menu-item-content'
+      }
+    }
+
+    switch (goto) {
+      case 1:
+        navigate('/intro')
+        break
+      case 2:
+        navigate('/edu')
+        break
+      case 3:
+        navigate('/work')
+        break
+      case 4:
+        navigate('/project')
+        break
+      default:
+        navigate('/')
+        break
     }
   }
 
@@ -375,7 +413,7 @@ const Work = () => {
             &nbsp;&nbsp;&nbsp;
           </li>
           <li className="list-item list-item-sub" style={{ position: 'relative', Left: '4.2%' }}>
-            <Link className="link" to="/project">
+            <Link className="link" to="/project" onClick={e => linkFn(e.target, 4)}>
               &nbsp;&nbsp;&nbsp;project &gt;&gt;&nbsp;&nbsp;&nbsp;
             </Link>
           </li>
