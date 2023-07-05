@@ -162,6 +162,13 @@ const Project = () => {
             <canvas className="mini-canvas-pro" id="mini-canvas"></canvas>
           </div>
           <div className="wrapper">
+            <i className="i1">
+              <img
+                className="angle-bracket"
+                src={require('../common/card/lc.png')}
+                alt="l-angle-bracket"
+              />
+            </i>
             <ul className="carousel">
               <li className="card-pro">
                 <div className="img">
@@ -197,6 +204,13 @@ const Project = () => {
                 <span>ㅁㄴㅇㅁㄴㅇ</span>
               </li>
             </ul>
+            <i className="i1">
+              <img
+                className="angle-bracket"
+                src={require('../common/card/rc.png')}
+                alt="r-angle-bracket"
+              />
+            </i>
           </div>
         </div>
         <div className="project-contents-SIDE">
@@ -205,6 +219,13 @@ const Project = () => {
             <canvas className="mini-canvas-pro" id="mini-canvas2"></canvas>
           </div>
           <div className="wrapper">
+            <i className="i2">
+              <img
+                className="angle-bracket2"
+                src={require('../common/card/lc.png')}
+                alt="l-angle-bracket"
+              />
+            </i>
             <ul className="carousel2">
               <li className="card-pro">
                 <div className="img">
@@ -255,6 +276,13 @@ const Project = () => {
                 <span>ㅁㄴㅇㅁㄴㅇ</span>
               </li>
             </ul>
+            <i className="i2">
+              <img
+                className="angle-bracket2"
+                src={require('../common/card/rc.png')}
+                alt="r-angle-bracket"
+              />
+            </i>
           </div>
         </div>
       </div>

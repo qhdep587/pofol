@@ -4,7 +4,6 @@
   font-weight: normal;
 }
 @import url("https://fonts.googleapis.com/css2?family=Cairo&display=swap");
-
 .mainBackground {
   font-family: "Cairo", "NanumGothic";
   text-align: center;
@@ -669,6 +668,71 @@
   gap: 16px;
   overflow: hidden;
 }
+.wrapper .carousel2 {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: calc((100% / 3) - 23px);
+  gap: 16px;
+  overflow: hidden;
+}
+.wrapper .i1 {
+  height: 40px;
+  width: 25px;
+  background: rgba(89, 156, 130, 0.7);
+  text-align: center;
+  line-height: 30px;
+  border-radius: 10%;
+  position: absolute;
+  top: 28%;
+  transform: translateY(-28%);
+  box-shadow: 0 0 8px rgba(5, 5, 5, 0.3);
+  display: flex;
+}
+.wrapper .i1:first-child {
+  left:9.2vw;
+}
+.wrapper .i1:last-child {
+  right:0px;
+}
+.wrapper .i1:hover{
+  background: rgba(175, 140, 140, 0.7);
+}
+.wrapper .i2 {
+  height: 40px;
+  width: 25px;
+  background: rgba(89, 156, 130, 0.7);
+  text-align: center;
+  line-height: 30px;
+  border-radius: 10%;
+  position: absolute;
+  top: 78%;
+  transform: translateY(-78%);
+  box-shadow: 0 0 8px rgba(5, 5, 5, 0.3);
+  display: flex;
+}
+.wrapper .i2:first-child {
+  left:9.2vw;
+}
+.wrapper .i2:last-child {
+  right:0px;
+}
+.wrapper .i2:hover{
+  background: rgba(175, 140, 140, 0.7);
+}
+.angle-bracket {
+  position: relative;
+  top:11px;
+  left: 4px;
+  height: 18px;
+  width: 18px;
+}
+.angle-bracket2 {
+  position: relative;
+  top:11px;
+  left: 4px;
+  height: 18px;
+  width: 18px;
+}
 .carousel{
   height: 100%;
   margin: 0px;
@@ -684,13 +748,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.wrapper .carousel2 {
-  display: grid;
-  grid-auto-flow: column;
-  grid-auto-columns: calc((100% / 3) - 23px);
-  gap: 16px;
-  overflow: hidden;
 }
 .carousel2{
   height: 100%;
