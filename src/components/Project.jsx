@@ -155,63 +155,107 @@ const Project = () => {
 
   return (
     <div className="project">
-      <div className="project-title">
-        <canvas className="mini-canvas-pro" id="mini-canvas"></canvas>
-        <span>PROJECT</span>
-        <canvas className="mini-canvas-pro" id="mini-canvas2"></canvas>
-      </div>
       <div className="project-contents">
         <div className="project-contents-COMPANY">
-          <div style={{ position: 'absolute' }}>COMPANY</div>
+          <div style={{ position: 'absolute' }}>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;COMPANY
+            <canvas className="mini-canvas-pro" id="mini-canvas"></canvas>
+          </div>
           <div className="wrapper">
             <ul className="carousel">
               <li className="card-pro">
                 <div className="img">
-                  <img src={require('../common/card/1.jpg')} alt="1" />
+                  <img src={require('../common/card/stx.png')} alt="stx-img" />
                 </div>
-                <h2>1번사진</h2>
-                <span>asdasd</span>
+                <h3>(STX) 계약직 계약/인사 관리시스템 구축</h3>
+                <span>
+                  <span style={{ color: '#1e7c60', fontWeight: 600 }}>[ </span>
+                  <span className="f15" style={{ color: 'ivory', fontWeight: 500 }}>
+                    <span className="f15" style={{ display: 'inline-block' }}>
+                      <div className="text-btn">role</div>&nbsp;&nbsp;
+                    </span>
+                    프론트엔드
+                  </span>
+                  <span style={{ color: '#1e7c60', fontWeight: 600 }}> ]</span>
+                </span>
+                <span>2020.10~2021.06 (9개월)</span>
               </li>
               <li className="card-pro">
                 <div className="img">
                   <img src={require('../common/card/2.jpg')} alt="2" />
                 </div>
-                <h2>2번사진</h2>
+                <h3>2번사진</h3>
+                <span>123123</span>
                 <span>123123</span>
               </li>
               <li className="card-pro">
                 <div className="img">
                   <img src={require('../common/card/3.jpg')} alt="3" />
                 </div>
-                <h2>3번사진</h2>
+                <h3>3번사진</h3>
+                <span>ㅁㄴㅇㅁㄴㅇ</span>
+                <span>ㅁㄴㅇㅁㄴㅇ</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="project-contents-SIDE">
+          <div style={{ position: 'absolute' }}>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SIDE
+            <canvas className="mini-canvas-pro" id="mini-canvas2"></canvas>
+          </div>
+          <div className="wrapper">
+            <ul className="carousel2">
+              <li className="card-pro">
+                <div className="img">
+                  <img src={require('../common/card/1.jpg')} alt="1" />
+                </div>
+                <h3>1번사진</h3>
+                <span>asdasd</span>
+                <span>asdasd</span>
+              </li>
+              <li className="card-pro">
+                <div className="img">
+                  <img src={require('../common/card/2.jpg')} alt="2" />
+                </div>
+                <h3>2번사진</h3>
+                <span>123123</span>
+                <span>123123</span>
+              </li>
+              <li className="card-pro">
+                <div className="img">
+                  <img src={require('../common/card/3.jpg')} alt="3" />
+                </div>
+                <h3>3번사진</h3>
+                <span>ㅁㄴㅇㅁㄴㅇ</span>
                 <span>ㅁㄴㅇㅁㄴㅇ</span>
               </li>
               <li className="card-pro">
                 <div className="img">
                   <img src={require('../common/card/4.jpg')} alt="4" />
                 </div>
-                <h2>4번사진</h2>
+                <h3>4번사진</h3>
+                <span>ㅁㄴㅇㅁㄴㅇ</span>
                 <span>ㅁㄴㅇㅁㄴㅇ</span>
               </li>
               <li className="card-pro">
                 <div className="img">
                   <img src={require('../common/card/5.jpg')} alt="5" />
                 </div>
-                <h2>5번사진</h2>
+                <h3>5번사진</h3>
+                <span>ㅁㄴㅇㅁㄴㅇ</span>
                 <span>ㅁㄴㅇㅁㄴㅇ</span>
               </li>
               <li className="card-pro">
                 <div className="img">
                   <img src={require('../common/card/6.jpg')} alt="6" />
                 </div>
-                <h2>6번사진</h2>
+                <h3>6번사진</h3>
+                <span>ㅁㄴㅇㅁㄴㅇ</span>
                 <span>ㅁㄴㅇㅁㄴㅇ</span>
               </li>
             </ul>
           </div>
-        </div>
-        <div className="project-contents-TOY">
-          <div style={{ position: 'absolute' }}>TOY</div>
         </div>
       </div>
     </div>
