@@ -77,8 +77,9 @@
 
 .left-menu {
   height: 100%;
-  width: 130px;
-  min-width: 130px;
+  width: 160px;
+  min-width: 160px;
+  max-width: 160px;
   min-height: 33px;
   position: relative;
   top: 0;
@@ -626,6 +627,10 @@
   flex-flow: column wrap;
   width: 100%;
   max-width: 100%;
+  -webkit-user-select:none;
+  -moz-user-select:none;
+  -ms-user-select:none;
+  user-select:none
 }
 
 .project-contents {
@@ -647,6 +652,7 @@
   align-items: center;
   vertical-align: middle;
   justify-content: center;
+  z-index: 1;
 }
 .project-contents-SIDE {
   width: 100%;
@@ -656,29 +662,36 @@
   align-items: center;
   vertical-align: middle;
   justify-content: center;
+  z-index: 1;
 }
 .wrapper {
-  width: 100%;
+  width: 100vw;
   height: 100%;
+  z-index: 1;
+  -webkit-user-drag: none;
 }
 .wrapper .carousel {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: calc((100% / 3) - 23px);
+  grid-auto-columns: calc((100vw / 3) - 70px);
   gap: 16px;
   overflow: hidden;
+  z-index: 1;
+  padding-right: 176px;
 }
 .wrapper .carousel2 {
   display: grid;
   grid-auto-flow: column;
-  grid-auto-columns: calc((100% / 3) - 23px);
+  grid-auto-columns: calc((100vw / 3) - 70px);
   gap: 16px;
   overflow: hidden;
+  z-index: 1;
+  padding-right: 176px;
 }
 .wrapper .i1 {
   height: 40px;
   width: 25px;
-  background: rgba(89, 156, 130, 0.7);
+  background: rgba(77, 136, 113, 0.7);
   text-align: center;
   line-height: 30px;
   border-radius: 10%;
@@ -687,20 +700,25 @@
   transform: translateY(-28%);
   box-shadow: 0 0 8px rgba(5, 5, 5, 0.3);
   display: flex;
+  z-index: 1;
 }
 .wrapper .i1:first-child {
-  left:9.2vw;
+  left:167px;
+  z-index: 2;
 }
 .wrapper .i1:last-child {
-  right:0px;
+  right:0.5vw;
+  z-index: 2;
 }
 .wrapper .i1:hover{
-  background: rgba(175, 140, 140, 0.7);
+  background: rgba(145, 116, 116, 0.7);
+  z-index: 2;
 }
 .wrapper .i2 {
+  z-index: 1;
   height: 40px;
   width: 25px;
-  background: rgba(89, 156, 130, 0.7);
+  background: rgba(77, 136, 113, 0.7);
   text-align: center;
   line-height: 30px;
   border-radius: 10%;
@@ -711,15 +729,19 @@
   display: flex;
 }
 .wrapper .i2:first-child {
-  left:9.2vw;
+  z-index: 2;
+  left:167px;
 }
 .wrapper .i2:last-child {
-  right:0px;
+  z-index: 2;
+  right:0.5vw;
 }
 .wrapper .i2:hover{
-  background: rgba(175, 140, 140, 0.7);
+  z-index: 2;
+  background: rgba(145, 116, 116, 0.7);
 }
 .angle-bracket {
+  z-index: 1;
   position: relative;
   top:11px;
   left: 4px;
@@ -727,6 +749,7 @@
   width: 18px;
 }
 .angle-bracket2 {
+  z-index: 1;
   position: relative;
   top:11px;
   left: 4px;
@@ -734,6 +757,7 @@
   width: 18px;
 }
 .carousel{
+  z-index: 1;
   height: 100%;
   margin: 0px;
   padding: 0px;
@@ -742,14 +766,15 @@
   justify-content: start;
   min-height: 100%;
   background: linear-gradient(to left top, #530606, #0e523d);
-  padding-left: 16px;
 }
 .carousel :where(.card-pro, .img) {
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .carousel2{
+  z-index: 1;
   height: 100%;
   margin: 0px;
   padding: 0px;
@@ -758,14 +783,15 @@
   justify-content: start;
   min-height: 100%;
   background: linear-gradient(to left top, #0e523d, #530606);
-  padding-left: 16px;
 }
 .carousel2 :where(.card-pro, .img) {
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .card-pro {
+  z-index: 1;
   list-style: none;
   background: rgba(0, 0, 0, 0.6);
   height: 75%;
@@ -777,27 +803,33 @@
   justify-content: center;
   flex-direction: column;
   margin-top: 16px;
+  min-width: 280px;
 }
 .card-pro:hover{
+  z-index: 1;
   background: rgba(31, 31, 31, 0.6);
   
 }
 .card-pro .img {
+  z-index: 1;
   background: rgba(0, 0, 0, 0);
   width: 230px;
   height: 180px;
   border-radius: 10px;
 }
 .card-pro h3 {
+  z-index: 1;
   font-weight: 500;
   font-size: 1.2rem;
   margin: 10px 0 0px;
 }
 .card-pro span {
+  z-index: 1;
   color: #a2a7a5;
   font-size: 1rem;
 }
 .card-pro .img img {
+  z-index: 1;
   width: 240px;
   height: 167px;
   object-fit: fill;
@@ -806,6 +838,7 @@
   top:5px;
 }
 .mini-canvas-pro {
+  z-index: 1;
   position: relative;
   width: 50px;
   height: 50px;

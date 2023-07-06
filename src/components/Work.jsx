@@ -205,15 +205,24 @@ const Work = () => {
           <span className="edu-title">◆</span>&nbsp;&nbsp;
           <span className="f20">핵심역량</span>
           <li style={{ fontSize: '10px' }}>&nbsp;</li>
-          <li className="list-item f15">&nbsp;&nbsp;- 많은 트래픽, 데이터 무게에 관한 이슈 경험</li>
-          <li className="list-item f15">
-            &nbsp;&nbsp;- kafka연동 / 계좌인증, 사업자인증 등의 외부 api 연동 경험
+          <li className="list-item" style={{ fontSize: '18px' }}>
+            &nbsp;&nbsp;- 많은 트래픽, 데이터 무게에 관한 이슈 경험
           </li>
-          <li className="list-item f15">
+          <li className="list-item" style={{ fontSize: '18px' }}>
+            &nbsp;&nbsp;- kafka연동 / 계좌인증, 사업자인증 등
+          </li>
+          <li className="list-item" style={{ fontSize: '18px' }}>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;외부 api 연동 경험
+          </li>
+          <li className="list-item" style={{ fontSize: '18px' }}>
             &nbsp;&nbsp;- rest api방식의 api생성 및 프론트 연동 경험
           </li>
-          <li className="list-item f15">&nbsp;&nbsp;- react 주요 기술 이해</li>
-          <li className="list-item f15">&nbsp;&nbsp;- agile경험</li>
+          <li className="list-item" style={{ fontSize: '18px' }}>
+            &nbsp;&nbsp;- react 주요 기술 이해
+          </li>
+          <li className="list-item" style={{ fontSize: '18px' }}>
+            &nbsp;&nbsp;- agile경험
+          </li>
           <li style={{ fontSize: '10px' }}>&nbsp;</li>
         </ul>
         <ul className="edu-text-box">
@@ -280,13 +289,23 @@ const Work = () => {
           <li className="list-item list-item-sub" style={{ position: 'relative', Left: '4.2%' }}>
             <span className="f15" style={{ display: 'inline-block' }}>
               &nbsp;&nbsp;&nbsp;데스크탑 디자인 기반의 솔루션
+            </span>
+          </li>
+          <li className="list-item list-item-sub" style={{ position: 'relative', Left: '4.2%' }}>
+            <span className="f15" style={{ display: 'inline-block' }}>
+              &nbsp;&nbsp;
               <span style={{ color: '#1e7c60', fontWeight: 600 }}> ( </span>
               백신,장비관리 등<span style={{ color: '#1e7c60', fontWeight: 600 }}> )</span>
             </span>
           </li>
           <li className="list-item list-item-sub" style={{ position: 'relative', Left: '4.2%' }}>
             <span className="f15" style={{ display: 'inline-block' }}>
-              &nbsp;&nbsp;&nbsp;퍼블, 프론트작업 / chart라이브러리 이용하여 대시보드 작업
+              &nbsp;&nbsp;&nbsp;퍼블, 프론트작업
+            </span>
+          </li>
+          <li className="list-item list-item-sub" style={{ position: 'relative', Left: '4.2%' }}>
+            <span className="f15" style={{ display: 'inline-block' }}>
+              &nbsp;&nbsp;&nbsp;chart라이브러리 이용하여 대시보드 작업
             </span>
           </li>
           <li className="list-item">&nbsp;</li>

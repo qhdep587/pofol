@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from 'react'
 import * as THREE from 'three'
 
@@ -153,6 +154,47 @@ const Project = () => {
     }
   }
 
+  let carousel = ''
+  let arrowBtns = ''
+  let startX = ''
+  let startScrollLeft = ''
+  let firstCardWidth = ''
+
+  useEffect(() => {
+    carousel = document.querySelector('.carousel')
+    arrowBtns = document.querySelectorAll('.i1')
+    firstCardWidth = carousel.querySelector('.card-pro').offsetWidth
+
+    arrowBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        let count = 0
+        if (count === 0) {
+          console.log(1)
+          carousel.scrollLeft += btn.id === 'left1' ? -(firstCardWidth + 38) : firstCardWidth + 38
+          count = 1
+        }
+        count = 0
+      })
+    })
+
+    let isDragging = false
+    const dragStart = e => {
+      isDragging = true
+      startX = e.pageX
+      startScrollLeft = carousel.scrollLeft
+    }
+    const dragging = e => {
+      if (!isDragging) return
+      carousel.scrollLeft = startScrollLeft - (e.pageX - startX)
+    }
+    const dragStop = e => {
+      isDragging = false
+    }
+    carousel.addEventListener('mousedown', dragStart)
+    carousel.addEventListener('mousemove', dragging)
+    carousel.addEventListener('mouseup', dragStop)
+  }, [])
+
   return (
     <div className="project">
       <div className="project-contents">
@@ -162,7 +204,7 @@ const Project = () => {
             <canvas className="mini-canvas-pro" id="mini-canvas"></canvas>
           </div>
           <div className="wrapper">
-            <i className="i1">
+            <i id="left1" className="i1">
               <img
                 className="angle-bracket"
                 src={require('../common/card/lc.png')}
@@ -170,9 +212,38 @@ const Project = () => {
               />
             </i>
             <ul className="carousel">
+              <li
+                className="card-pro"
+                style={{
+                  marginLeft: '16px',
+                }}
+              >
+                <div className="img">
+                  <img src={require('../common/card/1.jpg')} draggable="false" alt="1" />
+                </div>
+                <h3>쿠쿠</h3>
+                <span>123123</span>
+                <span>123123</span>
+              </li>
               <li className="card-pro">
                 <div className="img">
-                  <img src={require('../common/card/stx.png')} alt="stx-img" />
+                  <img src={require('../common/card/2.jpg')} draggable="false" alt="2" />
+                </div>
+                <h3>컬리 백</h3>
+                <span>ㅁㄴㅇㅁㄴㅇ</span>
+                <span>ㅁㄴㅇㅁㄴㅇ</span>
+              </li>
+              <li className="card-pro">
+                <div className="img">
+                  <img src={require('../common/card/3.jpg')} draggable="false" alt="3" />
+                </div>
+                <h3>컬리 프론트</h3>
+                <span>ㅁㄴㅇㅁㄴㅇ</span>
+                <span>ㅁㄴㅇㅁㄴㅇ</span>
+              </li>
+              <li className="card-pro">
+                <div className="img">
+                  <img src={require('../common/card/stx.png')} draggable="false" alt="stx-img" />
                 </div>
                 <h3>(STX) 계약직 계약/인사 관리시스템 구축</h3>
                 <span>
@@ -189,25 +260,18 @@ const Project = () => {
               </li>
               <li className="card-pro">
                 <div className="img">
-                  <img src={require('../common/card/2.jpg')} alt="2" />
+                  <img src={require('../common/card/5.jpg')} draggable="false" alt="5" />
                 </div>
-                <h3>2번사진</h3>
-                <span>123123</span>
-                <span>123123</span>
-              </li>
-              <li className="card-pro">
-                <div className="img">
-                  <img src={require('../common/card/3.jpg')} alt="3" />
-                </div>
-                <h3>3번사진</h3>
+                <h3>위젯누리꺼 모음</h3>
                 <span>ㅁㄴㅇㅁㄴㅇ</span>
                 <span>ㅁㄴㅇㅁㄴㅇ</span>
               </li>
             </ul>
-            <i className="i1">
+            <i id="right1" className="i1">
               <img
                 className="angle-bracket"
                 src={require('../common/card/rc.png')}
+                draggable="false"
                 alt="r-angle-bracket"
               />
             </i>
@@ -223,45 +287,51 @@ const Project = () => {
               <img
                 className="angle-bracket2"
                 src={require('../common/card/lc.png')}
+                draggable="false"
                 alt="l-angle-bracket"
               />
             </i>
             <ul className="carousel2">
-              <li className="card-pro">
+              <li
+                className="card-pro"
+                style={{
+                  marginLeft: '16px',
+                }}
+              >
                 <div className="img">
-                  <img src={require('../common/card/1.jpg')} alt="1" />
+                  <img src={require('../common/card/1.jpg')} draggable="false" alt="1" />
                 </div>
-                <h3>1번사진</h3>
-                <span>asdasd</span>
-                <span>asdasd</span>
+                <h3>포트폴리오 메이킹</h3>
+                <span>깃에도 정리(three컴포넌트 등)</span>
+                <span>구글애널리틱스/구글태그 표현</span>
               </li>
               <li className="card-pro">
                 <div className="img">
-                  <img src={require('../common/card/2.jpg')} alt="2" />
+                  <img src={require('../common/card/2.jpg')} draggable="false" alt="2" />
                 </div>
-                <h3>2번사진</h3>
+                <h3>ot</h3>
                 <span>123123</span>
                 <span>123123</span>
               </li>
               <li className="card-pro">
                 <div className="img">
-                  <img src={require('../common/card/3.jpg')} alt="3" />
+                  <img src={require('../common/card/3.jpg')} draggable="false" alt="3" />
                 </div>
-                <h3>3번사진</h3>
+                <h3>위시켓</h3>
                 <span>ㅁㄴㅇㅁㄴㅇ</span>
                 <span>ㅁㄴㅇㅁㄴㅇ</span>
               </li>
               <li className="card-pro">
                 <div className="img">
-                  <img src={require('../common/card/4.jpg')} alt="4" />
+                  <img src={require('../common/card/4.jpg')} draggable="false" alt="4" />
                 </div>
-                <h3>4번사진</h3>
+                <h3>알파카</h3>
                 <span>ㅁㄴㅇㅁㄴㅇ</span>
                 <span>ㅁㄴㅇㅁㄴㅇ</span>
               </li>
               <li className="card-pro">
                 <div className="img">
-                  <img src={require('../common/card/5.jpg')} alt="5" />
+                  <img src={require('../common/card/5.jpg')} draggable="false" alt="5" />
                 </div>
                 <h3>5번사진</h3>
                 <span>ㅁㄴㅇㅁㄴㅇ</span>
@@ -269,7 +339,7 @@ const Project = () => {
               </li>
               <li className="card-pro">
                 <div className="img">
-                  <img src={require('../common/card/6.jpg')} alt="6" />
+                  <img src={require('../common/card/6.jpg')} draggable="false" alt="6" />
                 </div>
                 <h3>6번사진</h3>
                 <span>ㅁㄴㅇㅁㄴㅇ</span>
