@@ -205,22 +205,22 @@ const Work = () => {
           <span className="edu-title">◆</span>&nbsp;&nbsp;
           <span className="f20">핵심역량</span>
           <li style={{ fontSize: '10px' }}>&nbsp;</li>
-          <li className="list-item" style={{ fontSize: '18px' }}>
+          <li className="list-item" style={{ fontSize: '17px' }}>
             &nbsp;&nbsp;- 많은 트래픽, 데이터 무게에 관한 이슈 경험
           </li>
-          <li className="list-item" style={{ fontSize: '18px' }}>
+          <li className="list-item" style={{ fontSize: '17px' }}>
             &nbsp;&nbsp;- kafka연동 / 계좌인증, 사업자인증 등
           </li>
-          <li className="list-item" style={{ fontSize: '18px' }}>
+          <li className="list-item" style={{ fontSize: '17px' }}>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;외부 api 연동 경험
           </li>
-          <li className="list-item" style={{ fontSize: '18px' }}>
+          <li className="list-item" style={{ fontSize: '17px' }}>
             &nbsp;&nbsp;- rest api방식의 api생성 및 프론트 연동 경험
           </li>
-          <li className="list-item" style={{ fontSize: '18px' }}>
+          <li className="list-item" style={{ fontSize: '17px' }}>
             &nbsp;&nbsp;- react 주요 기술 이해
           </li>
-          <li className="list-item" style={{ fontSize: '18px' }}>
+          <li className="list-item" style={{ fontSize: '17px' }}>
             &nbsp;&nbsp;- agile경험
           </li>
           <li style={{ fontSize: '10px' }}>&nbsp;</li>
