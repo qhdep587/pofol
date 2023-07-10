@@ -154,107 +154,105 @@ const Edu = () => {
   }
 
   return (
-    <div>
-      <div className="edu">
-        <div className="titleBox">
-          <canvas className="mini-canvas-edu" id="mini-canvas"></canvas>
-          <span>EDU</span>
-          <canvas className="mini-canvas-edu" id="mini-canvas2"></canvas>
-        </div>
-        <br></br>
-        {/* 학력 */}
-        <ul className="edu-text-box">
-          <span className="edu-title">◆</span>&nbsp;&nbsp;
-          <span className="f20">학력</span>
-          <li style={{ fontSize: '10px' }}>&nbsp;</li>
-          <li className="list-item">
-            &nbsp;&nbsp;<strong>성동공업고등학교</strong>
-            &nbsp;&nbsp;&nbsp;전자기계과&nbsp;&nbsp;&nbsp;&nbsp;
-          </li>
-          <li className="list-item list-item-sub" style={{ position: 'relative', Left: '4.2%' }}>
-            <span className="f15" style={{ display: 'inline-block' }}>
-              &nbsp;&nbsp;&nbsp;2008.02 ~ 2011.03&nbsp;&nbsp;&nbsp;
-              <div className="text-btn">졸업</div>
-            </span>
-          </li>
-          <li className="list-item">&nbsp;</li>
-          <li className="list-item2">
-            &nbsp;&nbsp;<strong>학점은행제</strong>
-            &nbsp;&nbsp;&nbsp;경역학과
-          </li>
-          <li className="list-item2">
-            &nbsp;&nbsp;
-            <span style={{ color: '#1e7c60', fontWeight: 600 }}>[ </span>
-            <span className="f15" style={{ color: 'ivory', fontWeight: 500 }}>
-              방송통신대 편입 목표
-            </span>
-            <span style={{ color: '#1e7c60', fontWeight: 600 }}> ]</span>
-          </li>
-          <li className="list-item list-item-sub" style={{ position: 'relative', Left: '4.2%' }}>
-            <span className="f15" style={{ display: 'inline-block' }}>
-              &nbsp;&nbsp;&nbsp;2023.01 ~&nbsp;&nbsp;&nbsp;
-              <div className="text-btn" style={{ background: '#660c0c' }}>
-                재학중
-              </div>
-            </span>
-          </li>
-          <li style={{ fontSize: '10px' }}>&nbsp;</li>
-        </ul>
-        {/* 교육 */}
-        <ul className="edu-text-box">
-          <span className="edu-title">◆</span>&nbsp;&nbsp;
-          <span className="f20">교육이수</span>
-          <li style={{ fontSize: '10px' }}>&nbsp;</li>
-          <li className="list-item">
-            &nbsp;&nbsp;<strong>KH정보교육원</strong>
-          </li>
-          <li className="list-item">
-            &nbsp;&nbsp;
-            <span style={{ color: '#1e7c60', fontWeight: 600 }}>[ </span>
-            <span className="f15" style={{ color: 'ivory', fontWeight: 500 }}>
-              Java/SpringFramework 개발자 양성과정
-            </span>
-            <span style={{ color: '#1e7c60', fontWeight: 600 }}> ]</span>
-            &nbsp;&nbsp;&nbsp;&nbsp;
-          </li>
-          <li className="list-item list-item-sub" style={{ position: 'relative', Left: '4.2%' }}>
-            <span className="f15" style={{ display: 'inline-block' }}>
-              &nbsp;&nbsp;&nbsp;2019.09 ~ 2020.05&nbsp;&nbsp;&nbsp;
-              <div className="text-btn" style={{ background: '#635506' }}>
-                수료
-              </div>
-            </span>
-          </li>
-          <li style={{ fontSize: '10px' }}>&nbsp;</li>
-        </ul>
-
-        {/* 어학 */}
-        <ul className="edu-text-box">
-          <span className="edu-title">◆</span>&nbsp;&nbsp;
-          <span className="f20">어학</span>
-          <li style={{ fontSize: '10px' }}>&nbsp;</li>
-          <li className="list-item">
-            &nbsp;&nbsp;<strong>워킹홀리데이</strong>
-            &nbsp;&nbsp;&nbsp;호주&nbsp;&nbsp;&nbsp;
-          </li>
-          <li className="list-item">
-            &nbsp;&nbsp;
-            <span style={{ color: '#1e7c60', fontWeight: 600 }}>[ </span>
-            <span className="f15" style={{ color: 'ivory', fontWeight: 500 }}>
-              어학연수 / 사회경험
-            </span>
-            <span style={{ color: '#1e7c60', fontWeight: 600 }}> ]</span>
-            &nbsp;&nbsp;&nbsp;&nbsp;
-          </li>
-          <li className="list-item list-item-sub" style={{ position: 'relative', Left: '4.2%' }}>
-            <span className="f15" style={{ display: 'inline-block' }}>
-              &nbsp;&nbsp;&nbsp;2018.08 ~ 2019.08&nbsp;&nbsp;&nbsp;
-            </span>
-          </li>
-          <li>&nbsp;</li>
-          <li>&nbsp;</li>
-        </ul>
+    <div className="edu">
+      <div className="titleBox">
+        <canvas className="mini-canvas-edu" id="mini-canvas"></canvas>
+        <span>EDU</span>
+        <canvas className="mini-canvas-edu" id="mini-canvas2"></canvas>
       </div>
+      <br></br>
+      {/* 학력 */}
+      <ul className="edu-text-box">
+        <span className="edu-title">◆</span>&nbsp;&nbsp;
+        <span className="f20">학력</span>
+        <li style={{ fontSize: '10px' }}>&nbsp;</li>
+        <li className="list-item">
+          &nbsp;&nbsp;<strong>성동공업고등학교</strong>
+          &nbsp;&nbsp;&nbsp;전자기계과&nbsp;&nbsp;&nbsp;&nbsp;
+        </li>
+        <li className="list-item list-item-sub" style={{ position: 'relative', Left: '4.2%' }}>
+          <span className="f15" style={{ display: 'inline-block' }}>
+            &nbsp;&nbsp;&nbsp;2008.02 ~ 2011.03&nbsp;&nbsp;&nbsp;
+            <div className="text-btn">졸업</div>
+          </span>
+        </li>
+        <li className="list-item">&nbsp;</li>
+        <li className="list-item2">
+          &nbsp;&nbsp;<strong>학점은행제</strong>
+          &nbsp;&nbsp;&nbsp;경역학과
+        </li>
+        <li className="list-item2">
+          &nbsp;&nbsp;
+          <span style={{ color: '#1e7c60', fontWeight: 600 }}>[ </span>
+          <span className="f15" style={{ color: 'ivory', fontWeight: 500 }}>
+            방송통신대 편입 목표
+          </span>
+          <span style={{ color: '#1e7c60', fontWeight: 600 }}> ]</span>
+        </li>
+        <li className="list-item list-item-sub" style={{ position: 'relative', Left: '4.2%' }}>
+          <span className="f15" style={{ display: 'inline-block' }}>
+            &nbsp;&nbsp;&nbsp;2023.01 ~&nbsp;&nbsp;&nbsp;
+            <div className="text-btn" style={{ background: '#660c0c' }}>
+              재학중
+            </div>
+          </span>
+        </li>
+        <li style={{ fontSize: '10px' }}>&nbsp;</li>
+      </ul>
+      {/* 교육 */}
+      <ul className="edu-text-box">
+        <span className="edu-title">◆</span>&nbsp;&nbsp;
+        <span className="f20">교육이수</span>
+        <li style={{ fontSize: '10px' }}>&nbsp;</li>
+        <li className="list-item">
+          &nbsp;&nbsp;<strong>KH정보교육원</strong>
+        </li>
+        <li className="list-item">
+          &nbsp;&nbsp;
+          <span style={{ color: '#1e7c60', fontWeight: 600 }}>[ </span>
+          <span className="f15" style={{ color: 'ivory', fontWeight: 500 }}>
+            Java/SpringFramework 개발자 양성과정
+          </span>
+          <span style={{ color: '#1e7c60', fontWeight: 600 }}> ]</span>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+        </li>
+        <li className="list-item list-item-sub" style={{ position: 'relative', Left: '4.2%' }}>
+          <span className="f15" style={{ display: 'inline-block' }}>
+            &nbsp;&nbsp;&nbsp;2019.09 ~ 2020.05&nbsp;&nbsp;&nbsp;
+            <div className="text-btn" style={{ background: '#635506' }}>
+              수료
+            </div>
+          </span>
+        </li>
+        <li style={{ fontSize: '10px' }}>&nbsp;</li>
+      </ul>
+
+      {/* 어학 */}
+      <ul className="edu-text-box">
+        <span className="edu-title">◆</span>&nbsp;&nbsp;
+        <span className="f20">어학</span>
+        <li style={{ fontSize: '10px' }}>&nbsp;</li>
+        <li className="list-item">
+          &nbsp;&nbsp;<strong>워킹홀리데이</strong>
+          &nbsp;&nbsp;&nbsp;호주&nbsp;&nbsp;&nbsp;
+        </li>
+        <li className="list-item">
+          &nbsp;&nbsp;
+          <span style={{ color: '#1e7c60', fontWeight: 600 }}>[ </span>
+          <span className="f15" style={{ color: 'ivory', fontWeight: 500 }}>
+            어학연수 / 사회경험
+          </span>
+          <span style={{ color: '#1e7c60', fontWeight: 600 }}> ]</span>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+        </li>
+        <li className="list-item list-item-sub" style={{ position: 'relative', Left: '4.2%' }}>
+          <span className="f15" style={{ display: 'inline-block' }}>
+            &nbsp;&nbsp;&nbsp;2018.08 ~ 2019.08&nbsp;&nbsp;&nbsp;
+          </span>
+        </li>
+        <li>&nbsp;</li>
+        <li>&nbsp;</li>
+      </ul>
     </div>
   )
 }

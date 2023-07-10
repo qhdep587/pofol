@@ -1902,7 +1902,7 @@
     min-width: 330px;
     min-height: 400px;
     background-color: rgba(0, 0, 0, 0.25);
-    height: 100vh;
+    height: 85vh;
   }
   .intro-text-box {
     display: block;
@@ -1936,7 +1936,6 @@
     background-color: rgba(0, 0, 0, 0.2);
     overflow-y: auto;
     max-height: 99vh;
-    top: 39px;
   }
   .titleBox {
     align-items: center;
@@ -1998,7 +1997,7 @@
     position: relative;
     width: 50px;
     height: 50px;
-    z-index: 10;
+    z-index:10;
     display: inline-block;
   }
   .f20 {
@@ -2012,7 +2011,7 @@
   .work:nth-child(1) {
     flex: 1;
     width: 100%;
-    height: 99vh;
+    height: 100vh;
     position: relative;
     transform: translate(0%, 0%);
     display: block;
@@ -2020,8 +2019,6 @@
     background-color: rgba(0, 0, 0, 0.3);
     border-radius: 20px;
     overflow-y: auto;
-    max-height: 99vh;
-    top: 39px;
   }
   .work:nth-child(1)::-webkit-scrollbar {
     width: 6px;
@@ -2063,7 +2060,6 @@
     -moz-user-select:none;
     -ms-user-select:none;
     user-select:none;
-    top: 39px;
   }
   
   .project-contents {
