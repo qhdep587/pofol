@@ -159,43 +159,87 @@ const Project = () => {
   let startX = ''
   let startScrollLeft = ''
   let firstCardWidth = ''
+  let mCheck = false
 
   useEffect(() => {
-    carousel = document.querySelector('.carousel')
-    arrowBtns = document.querySelectorAll('.i1')
-    firstCardWidth = carousel.querySelector('.card-pro').offsetWidth
+    const isMobile = () => {
+      const user = navigator.userAgent
+      mCheck = false
 
-    arrowBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        let count = 0
-        if (count === 0) {
-          console.log(1)
-          carousel.scrollLeft += btn.id === 'left1' ? -(firstCardWidth + 38) : firstCardWidth + 38
-          count = 1
-        }
-        count = 0
+      if (user.indexOf('iPhone') > -1 || user.indexOf('Android') > -1) {
+        mCheck = true
+      }
+
+      return mCheck
+    }
+    isMobile()
+
+    if (mCheck) {
+      ///모바일 일 때
+      carousel = document.querySelector('.carousel')
+      firstCardWidth = carousel.querySelector('.card-pro').offsetWidth
+      arrowBtns = document.querySelectorAll('.i1')
+
+      let isDragging = false
+      const dragStart = e => {
+        isDragging = true
+        startX = e.pageX
+        startScrollLeft = carousel.scrollLeft
+      }
+      const dragging = e => {
+        if (!isDragging) return
+        carousel.scrollLeft = startScrollLeft - (e.pageX - startX)
+      }
+      const dragStop = e => {
+        isDragging = false
+      }
+      carousel.addEventListener('touchstart', dragStart)
+      carousel.addEventListener('touchmove', dragging)
+      carousel.addEventListener('touchend', dragStop)
+      arrowBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          let count = 0
+          if (count === 0) {
+            carousel.scrollLeft += btn.id === 'left1' ? -(firstCardWidth + 25) : firstCardWidth + 25
+            count = 1
+          }
+          count = 0
+        })
       })
-    })
+    } else {
+      //pc일때
+      carousel = document.querySelector('.carousel')
+      firstCardWidth = carousel.querySelector('.card-pro').offsetWidth
+      arrowBtns = document.querySelectorAll('.i1')
 
-    let isDragging = false
-    const dragStart = e => {
-      isDragging = true
-      startX = e.pageX
-      startScrollLeft = carousel.scrollLeft
+      arrowBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          let count = 0
+          if (count === 0) {
+            carousel.scrollLeft += btn.id === 'left1' ? -(firstCardWidth + 25) : firstCardWidth + 25
+            count = 1
+          }
+          count = 0
+        })
+      })
+
+      let isDragging = false
+      const dragStart = e => {
+        isDragging = true
+        startX = e.pageX
+        startScrollLeft = carousel.scrollLeft
+      }
+      const dragging = e => {
+        if (!isDragging) return
+        carousel.scrollLeft = startScrollLeft - (e.pageX - startX) - 160
+      }
+      const dragStop = e => {
+        isDragging = false
+      }
+      carousel.addEventListener('mousedown', dragStart)
+      carousel.addEventListener('mousemove', dragging)
+      carousel.addEventListener('mouseup', dragStop)
     }
-    const dragging = e => {
-      if (!isDragging) return
-      carousel.scrollLeft = startScrollLeft - (e.pageX - startX)
-    }
-    const dragStop = e => {
-      isDragging = false
-    }
-    carousel.addEventListener('mousedown', dragStart)
-    carousel.addEventListener('mousemove', dragging)
-    carousel.addEventListener('mouseup', dragStop)
-    carousel.addEventListener('touchstart', dragStart)
-    carousel.addEventListener('touchmove', dragging)
-    carousel.addEventListener('touchend', dragStop)
   }, [])
 
   return (
@@ -232,7 +276,7 @@ const Project = () => {
                 <div className="img">
                   <img src={require('../common/card/2.jpg')} draggable="false" alt="2" />
                 </div>
-                <h3>컬리 백</h3>
+                <h3>컬리 back-end</h3>
                 <span>ㅁㄴㅇㅁㄴㅇ</span>
                 <span>ㅁㄴㅇㅁㄴㅇ</span>
               </li>
@@ -240,7 +284,7 @@ const Project = () => {
                 <div className="img">
                   <img src={require('../common/card/3.jpg')} draggable="false" alt="3" />
                 </div>
-                <h3>컬리 프론트</h3>
+                <h3>컬리 front-end</h3>
                 <span>ㅁㄴㅇㅁㄴㅇ</span>
                 <span>ㅁㄴㅇㅁㄴㅇ</span>
               </li>

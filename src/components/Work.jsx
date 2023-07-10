@@ -433,6 +433,21 @@ const Work = () => {
             &nbsp;&nbsp;&nbsp;
           </li>
           <li className="list-item list-item-sub" style={{ position: 'relative', Left: '4.2%' }}>
+            <span className="f15" style={{ display: 'inline-block' }}>
+              &nbsp;&nbsp;&nbsp;- <span style={{ color: '#1e7c60', fontWeight: 600 }}> ( </span>
+              쿠쿠
+              <span style={{ color: '#1e7c60', fontWeight: 600 }}> )</span> 쿠쿠 UI/UX 개선 사업
+            </span>
+          </li>
+          <li className="list-item list-item-sub" style={{ position: 'relative', Left: '4.2%' }}>
+            <span className="f15" style={{ display: 'inline-block' }}>
+              &nbsp;&nbsp;&nbsp;2021.05 ~ 2023.07
+              <span style={{ color: '#1e7c60', fontWeight: 600 }}> ( </span>3 개월
+              <span style={{ color: '#1e7c60', fontWeight: 600 }}> )</span>
+            </span>
+            &nbsp;&nbsp;&nbsp;
+          </li>
+          <li className="list-item list-item-sub" style={{ position: 'relative', Left: '4.2%' }}>
             <Link className="link" to="/project" onClick={e => linkFn(e.target, 4)}>
               &nbsp;&nbsp;&nbsp;project &gt;&gt;&nbsp;&nbsp;&nbsp;
             </Link>

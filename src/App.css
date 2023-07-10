@@ -1902,6 +1902,7 @@
     min-width: 330px;
     min-height: 400px;
     background-color: rgba(0, 0, 0, 0.25);
+    height: 100vh;
   }
   .intro-text-box {
     display: block;
@@ -2061,7 +2062,8 @@
     -webkit-user-select:none;
     -moz-user-select:none;
     -ms-user-select:none;
-    user-select:none
+    user-select:none;
+    top: 39px;
   }
   
   .project-contents {
@@ -2104,20 +2106,20 @@
   .wrapper .carousel {
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: calc((100vw / 1) - 70px);
+    grid-auto-columns: calc((100vw / 1) - 16px);
     gap: 16px;
     overflow: hidden;
     z-index: 1;
-    padding-right: 176px;
+    padding-right: 16px;
   }
   .wrapper .carousel2 {
     display: grid;
     grid-auto-flow: column;
-    grid-auto-columns: calc((100vw / 1) - 70px);
+    grid-auto-columns: calc((100vw / 1) - 16px);
     gap: 16px;
     overflow: hidden;
     z-index: 1;
-    padding-right: 176px;
+    padding-right: 16px;
   }
   .wrapper .i1 {
     height: 40px;
@@ -2127,14 +2129,14 @@
     line-height: 30px;
     border-radius: 10%;
     position: absolute;
-    top: 28%;
-    transform: translateY(-28%);
+    top: 23%;
+    transform: translateY(-23%);
     box-shadow: 0 0 8px rgba(5, 5, 5, 0.3);
-    display: none;
+    display: flex;
     z-index: 1;
   }
   .wrapper .i1:first-child {
-    left:167px;
+    left:0.5vw;
     z-index: 2;
   }
   .wrapper .i1:last-child {
@@ -2142,7 +2144,7 @@
     z-index: 2;
   }
   .wrapper .i1:hover{
-    background: rgba(145, 116, 116, 0.7);
+    background: rgba(77, 136, 113, 0.7);
     z-index: 2;
   }
   .wrapper .i2 {
@@ -2157,11 +2159,11 @@
     top: 78%;
     transform: translateY(-78%);
     box-shadow: 0 0 8px rgba(5, 5, 5, 0.3);
-    display: none;
+    display: flex;
   }
   .wrapper .i2:first-child {
     z-index: 2;
-    left:167px;
+    left:0.5vw;
   }
   .wrapper .i2:last-child {
     z-index: 2;
@@ -2169,7 +2171,7 @@
   }
   .wrapper .i2:hover{
     z-index: 2;
-    background: rgba(145, 116, 116, 0.7);
+    background: rgba(77, 136, 113, 0.7);
   }
   .angle-bracket {
     z-index: 1;
@@ -2238,8 +2240,7 @@
   }
   .card-pro:hover{
     z-index: 1;
-    background: rgba(31, 31, 31, 0.6);
-    
+    background: rgba(0, 0, 0, 0.6);
   }
   .card-pro .img {
     z-index: 1;
