@@ -712,10 +712,6 @@
   right:0.5vw;
   z-index: 2;
 }
-.wrapper .i1:hover{
-  background: rgba(145, 116, 116, 0.7);
-  z-index: 2;
-}
 .wrapper .i2 {
   z-index: 1;
   height: 40px;
@@ -737,10 +733,6 @@
 .wrapper .i2:last-child {
   z-index: 2;
   right:0.5vw;
-}
-.wrapper .i2:hover{
-  z-index: 2;
-  background: rgba(145, 116, 116, 0.7);
 }
 .opa5 {
   opacity: 0.4;
@@ -1079,10 +1071,6 @@
     right:0.5vw;
     z-index: 2;
   }
-  .wrapper .i1:hover{
-    background: rgba(145, 116, 116, 0.7);
-    z-index: 2;
-  }
   .wrapper .i2 {
     z-index: 1;
     height: 40px;
@@ -1104,10 +1092,6 @@
   .wrapper .i2:last-child {
     z-index: 2;
     right:0.5vw;
-  }
-  .wrapper .i2:hover{
-    z-index: 2;
-    background: rgba(145, 116, 116, 0.7);
   }
   .angle-bracket {
     z-index: 1;
@@ -2176,10 +2160,6 @@
     right:0.5vw;
     z-index: 2;
   }
-  .wrapper .i1:hover{
-    background: rgba(77, 136, 113, 0.7);
-    z-index: 2;
-  }
   .wrapper .i2 {
     z-index: 1;
     height: 40px;
@@ -2201,10 +2181,6 @@
   .wrapper .i2:last-child {
     z-index: 2;
     right:0.5vw;
-  }
-  .wrapper .i2:hover{
-    z-index: 2;
-    background: rgba(77, 136, 113, 0.7);
   }
   .angle-bracket {
     z-index: 1;
