@@ -394,37 +394,37 @@
 }
 @keyframes loop {
   0% {
-    left: 31%;
+    left: 30%;
   }
   5% {
-    left: 31%;
+    left: 30%;
   }
   25% {
-    left: 34%;
+    left: 33%;
   }
   45% {
-    left: 31%;
-    top: 10%;
+    left: 30%;
+    top: 50px;
   }
   55% {
-    left: 31%;
-    top: 10%;
+    left: 30%;
+    top: 50px;
   }
   75% {
-    left: 31%;
-    top: 15%;
+    left: 30%;
+    top: 65px;
   }
   100% {
-    left: 31%;
-    top: 10%;
+    left: 30%;
+    top: 50px;
   }
 }
 .alim-move {
   position: absolute;
-  top: 10%;
-  left: 31%;
-  width: 35px;
-  height: 35px;
+  top: 50px;
+  left: 30%;
+  width: 45px;
+  height: 45px;
   animation: loop 1.8s forwards;
   z-index: 100;
   opacity: 0.7;
@@ -459,13 +459,11 @@
   border-right: 2px solid rgba(29, 116, 83, 0.6);
   border-radius: 20px;
   width: 50%;
-  height: 62vh;
+  height: 60vh;
   max-height: 700px;
   transform: translateX(50%);
   padding-top: 8%;
-  /* padding-left: 10px; */
-  /* padding-right: 10px; */
-  padding-bottom: 3%;
+  padding-bottom: 0%;
   margin-top: 7%;
   font-size: 16.5px;
   line-height: 2.5;
@@ -576,6 +574,10 @@
 }
 .f15 {
   font-size: 14px;
+  color: ivory;
+}
+.f17 {
+  font-size: 16.5px;
   color: ivory;
 }
 .work:nth-child(1) {
@@ -740,6 +742,9 @@
   z-index: 2;
   background: rgba(145, 116, 116, 0.7);
 }
+.opa5 {
+  opacity: 0.4;
+}
 .angle-bracket {
   z-index: 1;
   position: relative;
@@ -850,6 +855,33 @@
   top: -2px;
   left: -5px;
 }
+@keyframes loopro {
+  0% {
+    left: 51%;
+  }
+  25% {
+    left: 54%;
+  }
+  50% {
+    left: 51%;
+  }
+  75% {
+    left: 48%;
+  }
+  100% {
+    left: 51%;
+  }
+}
+.alim-move-pro {
+  position: absolute;
+  top: 65px;
+  left: 51%;
+  width: 50px;
+  height: 50px;
+  animation: loopro 1.8s forwards;
+  z-index: 100;
+  opacity: 0.7;
+}
 
 @media screen and (max-width: 1250px) {
   .intro {
@@ -877,27 +909,27 @@
     }
     45% {
       left: 34%;
-      top: 10%;
+      top: 50px;
     }
     55% {
       left: 34%;
-      top: 10%;
+      top: 50px;
     }
     75% {
       left: 34%;
-      top: 15%;
+      top: 65px;
     }
     100% {
       left: 34%;
-      top: 10%;
+      top: 50px;
     }
   }
   .alim-move {
     position: absolute;
-    top: 10%;
+    top: 50px;
     left: 34%;
-    width: 35px;
-    height: 35px;
+    width: 45px;
+    height: 45px;
     animation: loop 1.8s forwards;
     z-index: 100;
     opacity: 0.7;
@@ -1214,27 +1246,27 @@
     }
     45% {
       left: 34%;
-      top: 10%;
+      top: 50px;
     }
     55% {
       left: 34%;
-      top: 10%;
+      top: 50px;
     }
     75% {
       left: 34%;
-      top: 15%;
+      top: 65px;
     }
     100% {
       left: 34%;
-      top: 10%;
+      top: 50px;
     }
   }
   .alim-move {
     position: absolute;
-    top: 10%;
+    top: 50px;
     left: 34%;
-    width: 35px;
-    height: 35px;
+    width: 40px;
+    height: 40px;
     animation: loop 1.8s forwards;
     z-index: 100;
     opacity: 0.7;
@@ -1424,6 +1456,11 @@
 }
 /* //////////////////////////////////////////////////////////여기부터 단말기////////////////////////////////////////////////////////////  */
 @media screen and (max-width: 780px) {
+  
+  .f17 {
+    font-size: 15px;
+    color: ivory;
+  }
   @keyframes loop {
     0% {
       left: 27%;
@@ -1454,8 +1491,8 @@
   .alim-move {
     position: absolute;
     top: 17px;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     animation: loop 1.8s forwards;
     z-index: 100;
     opacity: 0.7;
@@ -2278,6 +2315,33 @@
     top: -2px;
     left: -5px;
   }
+  @keyframes loopro {
+    0% {
+      left: 40%;
+    }
+    25% {
+      left: 47%;
+    }
+    50% {
+      left: 40%;
+    }
+    75% {
+      left: 33%;
+    }
+    100% {
+      left: 40%;
+    }
+  }
+  .alim-move-pro {
+    position: absolute;
+    top: 15px;
+    left: 40%;
+    width: 40px;
+    height: 40px;
+    animation: loopro 1.8s forwards;
+    z-index: 100;
+    opacity: 0.7;
+  }
 }
 
 @media screen and (max-width: 629px) {
@@ -2312,8 +2376,8 @@
     position: absolute;
     top: 17px;
     transform: translateX(-50%);
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     animation: loop 1.8s forwards;
     z-index: 100;
     opacity: 0.7;
@@ -2412,8 +2476,8 @@
     position: absolute;
     top: 15px;
     transform: translateX(-50%);
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     animation: loop 1.8s forwards;
     z-index: 100;
     opacity: 0.7;
@@ -2939,8 +3003,8 @@
     position: absolute;
     top: 17% !important;
     left: 34% !important;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     animation: loop 1.8s infinite;
     z-index: 100;
     opacity: 0.7;
@@ -3142,8 +3206,8 @@
     position: absolute;
     top: 17% !important;
     left: 34% !important;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     animation: loop 1.8s infinite;
     z-index: 100;
     opacity: 0.7;
@@ -3355,8 +3419,8 @@
     position: absolute;
     top: 17% !important;
     left: 34% !important;
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     animation: loop 1.8s infinite;
     z-index: 100;
     opacity: 0.7;

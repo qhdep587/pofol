@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import * as THREE from 'three'
 
 const Project = () => {
@@ -179,6 +179,9 @@ const Project = () => {
       carousel = document.querySelector('.carousel')
       firstCardWidth = carousel.querySelector('.card-pro').offsetWidth
       arrowBtns = document.querySelectorAll('.i1')
+      let carousel_scrollWidth = document.querySelector('.carousel').scrollWidth
+      let carousel_clientWidth = document.querySelector('.carousel').clientWidth
+      let carousel_width = carousel_scrollWidth - carousel_clientWidth
 
       let isDragging = false
       const dragStart = e => {
@@ -189,6 +192,14 @@ const Project = () => {
       const dragging = e => {
         if (!isDragging) return
         carousel.scrollLeft = startScrollLeft - (e.pageX - startX)
+        if (carousel.scrollLeft < 3) {
+          document.querySelector('#left1').classList.add('opa5')
+        } else if (carousel.scrollLeft > carousel_width - 30) {
+          document.querySelector('#right1').classList.add('opa5')
+        } else {
+          document.querySelector('#left1').classList.remove('opa5')
+          document.querySelector('#right1').classList.remove('opa5')
+        }
       }
       const dragStop = e => {
         isDragging = false
@@ -196,32 +207,35 @@ const Project = () => {
       carousel.addEventListener('touchstart', dragStart)
       carousel.addEventListener('touchmove', dragging)
       carousel.addEventListener('touchend', dragStop)
-      arrowBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          let count = 0
-          if (count === 0) {
-            carousel.scrollLeft += btn.id === 'left1' ? -(firstCardWidth + 25) : firstCardWidth + 25
-            count = 1
-          }
-          count = 0
-        })
-      })
+      // arrowBtns.forEach(btn => {
+      //   btn.addEventListener('click', () => {
+      //     let count = 0
+      //     if (count === 0) {
+      //       carousel.scrollLeft += btn.id === 'left1' ? -(firstCardWidth + 25) : firstCardWidth + 25
+      //       count = 1
+      //     }
+      //     count = 0
+      //   })
+      // })
     } else {
       //pc일때
       carousel = document.querySelector('.carousel')
+      let carousel_scrollWidth = document.querySelector('.carousel').scrollWidth
+      let carousel_clientWidth = document.querySelector('.carousel').clientWidth
+      let carousel_width = carousel_scrollWidth - carousel_clientWidth
       firstCardWidth = carousel.querySelector('.card-pro').offsetWidth
       arrowBtns = document.querySelectorAll('.i1')
 
-      arrowBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-          let count = 0
-          if (count === 0) {
-            carousel.scrollLeft += btn.id === 'left1' ? -(firstCardWidth + 25) : firstCardWidth + 25
-            count = 1
-          }
-          count = 0
-        })
-      })
+      // arrowBtns.forEach(btn => {
+      //   btn.addEventListener('click', () => {
+      //     let count = 0
+      //     if (count === 0) {
+      //       carousel.scrollLeft += btn.id === 'left1' ? -(firstCardWidth + 25) : firstCardWidth + 25
+      //       count = 1
+      //     }
+      //     count = 0
+      //   })
+      // })
 
       let isDragging = false
       const dragStart = e => {
@@ -232,6 +246,14 @@ const Project = () => {
       const dragging = e => {
         if (!isDragging) return
         carousel.scrollLeft = startScrollLeft - (e.pageX - startX) - 160
+        if (carousel.scrollLeft < 3) {
+          document.querySelector('#left1').classList.add('opa5')
+        } else if (carousel.scrollLeft > carousel_width - 30) {
+          document.querySelector('#right1').classList.add('opa5')
+        } else {
+          document.querySelector('#left1').classList.remove('opa5')
+          document.querySelector('#right1').classList.remove('opa5')
+        }
       }
       const dragStop = e => {
         isDragging = false
@@ -242,6 +264,13 @@ const Project = () => {
     }
   }, [])
 
+  Timer()
+  const [tf, setTf] = useState(true)
+  function Timer() {
+    setTimeout(() => {
+      if (tf) setTf(!tf)
+    }, 2200)
+  }
   return (
     <div className="project">
       <div className="project-contents">
@@ -251,13 +280,20 @@ const Project = () => {
             <canvas className="mini-canvas-pro" id="mini-canvas"></canvas>
           </div>
           <div className="wrapper">
-            <i id="left1" className="i1">
+            <i id="left1" className="i1 opa5">
               <img
                 className="angle-bracket"
                 src={require('../common/card/lc.png')}
                 alt="l-angle-bracket"
               />
             </i>
+            <div className="alim-move-pro" style={{ display: tf ? '' : 'none' }}>
+              <img
+                className="alim-move-pro"
+                src={require('../common/image/pointer.png')}
+                alt="pointer_img"
+              />
+            </div>
             <ul className="carousel">
               <li
                 className="card-pro"
