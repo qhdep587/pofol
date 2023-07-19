@@ -20,6 +20,9 @@ const App = () => {
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
       <div className="mainBackground">
+        <div className="widthView">
+          <div className="widthView-sub">모바일 가로모드는 지원하지 않습니다.</div>
+        </div>
         <div className="mainBackgroundBlur container">
           <div className="cursor"></div>
           <LeftMenu />

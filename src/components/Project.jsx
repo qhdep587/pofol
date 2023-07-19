@@ -204,19 +204,16 @@ const Project = () => {
       const dragStop = e => {
         isDragging = false
       }
+
+      if (isDragging) {
+        document.querySelector('.project').classList.add('stop-scrollY')
+      } else {
+        document.querySelector('.project').classList.remove('stop-scrollY')
+      }
+
       carousel.addEventListener('touchstart', dragStart)
       carousel.addEventListener('touchmove', dragging)
       carousel.addEventListener('touchend', dragStop)
-      // arrowBtns.forEach(btn => {
-      //   btn.addEventListener('click', () => {
-      //     let count = 0
-      //     if (count === 0) {
-      //       carousel.scrollLeft += btn.id === 'left1' ? -(firstCardWidth + 25) : firstCardWidth + 25
-      //       count = 1
-      //     }
-      //     count = 0
-      //   })
-      // })
     } else {
       //pc일때
       carousel = document.querySelector('.carousel')
@@ -225,17 +222,6 @@ const Project = () => {
       let carousel_width = carousel_scrollWidth - carousel_clientWidth
       firstCardWidth = carousel.querySelector('.card-pro').offsetWidth
       arrowBtns = document.querySelectorAll('.i1')
-
-      // arrowBtns.forEach(btn => {
-      //   btn.addEventListener('click', () => {
-      //     let count = 0
-      //     if (count === 0) {
-      //       carousel.scrollLeft += btn.id === 'left1' ? -(firstCardWidth + 25) : firstCardWidth + 25
-      //       count = 1
-      //     }
-      //     count = 0
-      //   })
-      // })
 
       let isDragging = false
       const dragStart = e => {

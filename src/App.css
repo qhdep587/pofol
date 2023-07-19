@@ -49,6 +49,60 @@
   overflow: hidden;
   cursor: none;
 }
+.widthView{
+  width: 100%;
+  min-width: 100%;
+  height: 100%;
+  min-height: 100%;
+  background: repeating-linear-gradient(
+      190deg,
+      rgba(59, 136, 119, 0.5) 40px,
+      rgba(30, 107, 65, 0.5) 80px,
+      rgba(22, 180, 128, 0.5) 120px,
+      rgba(19, 99, 72, 0.5) 160px,
+      rgba(38, 92, 71, 0.5) 200px,
+      rgba(17, 114, 69, 0.5) 240px,
+      rgba(84, 158, 127, 0.5) 280px,
+      rgba(78, 139, 116, 0.5) 300px
+    ),
+    repeating-linear-gradient(
+      -190deg,
+      rgba(90, 216, 168, 0.5) 30px,
+      rgba(52, 204, 146, 0.5) 60px,
+      rgba(66, 161, 141, 0.5) 90px,
+      rgba(20, 141, 111, 0.5) 120px,
+      rgba(57, 139, 105, 0.5) 150px,
+      rgba(22, 95, 91, 0.5) 180px,
+      rgba(44, 119, 103, 0.5) 210px,
+      rgba(17, 90, 50, 0.5) 230px
+    ),
+    repeating-linear-gradient(
+      23deg,
+      rgb(17, 85, 68) 50px,
+      rgb(62, 95, 76) 100px,
+      rgb(22, 90, 67) 150px,
+      rgb(40, 71, 40) 200px,
+      rgb(27, 66, 53) 250px,
+      rgb(26, 77, 72) 300px,
+      rgb(39, 78, 63) 350px,
+      rgb(23, 60, 65) 370px
+    );
+    display: flex;
+    align-content: center;
+  justify-items: center;
+  text-align: center;
+}
+.widthView-sub{
+  flex:1;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  align-items: center;
+  justify-self: center;
+  vertical-align: middle;
+  color: ivory;
+  font-size: 20px;
+}
 .mainBackgroundBlur {
   width: 100vw;
   height: 100vh;
@@ -874,6 +928,10 @@
   z-index: 100;
   opacity: 0.7;
 }
+.stop-scrollY {
+  overflow-y: hidden;
+  touch-action: none; 
+}
 
 @media screen and (max-width: 1250px) {
   .intro {
@@ -1656,7 +1714,6 @@
   }
 
   .MainCompItem.header {
-    padding: 3px 5px 5px 5px;
     max-height: 40px !important;
     font-size: 3vw;
     align-content: center;
@@ -1664,6 +1721,7 @@
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
+    background-color: #142721;
   }
   .header-item {
     max-width: 140px;
@@ -2644,6 +2702,7 @@
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
+    background-color: #142721;
   }
   .header-item {
     max-width: 140px;
