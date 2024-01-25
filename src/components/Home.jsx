@@ -153,23 +153,23 @@ const Home = () => {
             getBeforeInit={(instance) => {
               instance
                 .type(
-                  '<text class="red"> @</text><text class="green">}-----</text> '
+                  '<span class="red"> @</span><span class="green">}-----</span> '
                 )
                 .pause(1500)
                 .delete(9)
                 .pause(1500)
                 .type(
-                  "Every <text class='text-rose'>flower</text> blooms in it's <text class='text-bold'>own time. </text>"
+                  "Every <span class='text-rose'>flower</span> blooms in it's <text class='text-bold'>own time. </span>"
                 )
                 .pause(1100)
                 .delete(38, {
                   delay: 1000,
                 })
                 .pause(700)
-                .type('모든 <text class="text-rose">꽃은</text> , ')
+                .type('모든 <span class="text-rose">꽃은</span> , ')
                 .pause(700)
                 .type(
-                  '&nbsp; 각자의 <text class="text-bold">시기에</text> 피어난다. '
+                  '&nbsp; 각자의 <span class="text-bold">시기에</span> 피어난다. '
                 )
                 .pause(1500)
                 .delete(2)
@@ -187,12 +187,12 @@ const Home = () => {
                 })
                 .pause(300)
                 .move(-12)
-                .type('&nbsp;<text class="text-bold">Front-end</text>&nbsp;')
+                .type('&nbsp;<span class="text-bold">Front-end</span>&nbsp;')
                 .pause(300)
                 .move(12)
                 .type("dle", { delay: 190 })
                 .delete(3, { delay: 200 })
-                .type('<text class="text-rose">이대윤</text>입니다. ', {
+                .type('<span class="text-rose">이대윤</span>입니다. ', {
                   delay: 100,
                 })
                 .pause(1000);

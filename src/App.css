@@ -932,6 +932,125 @@
   touch-action: none;
 }
 
+.modal-view {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 300;
+  display: none;
+}
+
+@keyframes opaAni {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.modal-view-card {
+  position: relative;
+  animation: opaAni 0.3s forwards;
+  left: -77px;
+  width: 48%;
+  height: 70%;
+  background-color: rgba(1, 19, 13, 1);
+  transform: translate(48%, 12%);
+  border: 3px solid rgba(14, 101, 72, 0.4);
+  border-radius: 1%;
+  align-items: center;
+  vertical-align: middle;
+  justify-items: center;
+  padding: 1%;
+  color: ivory;
+}
+.modal-view-card-title {
+  position: relative;
+  align-items: center;
+  vertical-align: middle;
+  justify-items: center;
+  padding: 1%;
+  color: ivory;
+  background-color: rgba(1, 19, 13, 1);
+  top: -1.8vh;
+  height: 3vh;
+  left: 1.5vw;
+  display: inline-block;
+}
+.modal-view-card-cont {
+  position: relative;
+  height: fit-content;
+  align-items: center;
+  vertical-align: middle;
+  justify-items: center;
+  padding-top: 1%;
+  color: ivory;
+  width: 100%;
+  height: 93.8%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  top: -0.9vh;
+}
+.cont-li {
+  float: left;
+  padding-left: 5%;
+}
+.x-btn {
+  cursor: none;
+  display: inline-block;
+  float: right;
+  background: rgba(0, 0, 0, 0);
+  color: ivory;
+  font-size: 14;
+  border-radius: 50%;
+  border: 1px solid ivory;
+  position: relative;
+  top: 0.5vh;
+}
+.imgBtn {
+  cursor: none;
+  display: inline-block;
+  background: rgba(0, 0, 0, 0);
+  color: ivory;
+  font-size: 1em;
+  border-radius: 5%;
+  border: 1px solid #0e523d;
+  background: linear-gradient(to left top, #0e523d, #530606);
+  position: relative;
+  top: -1vh;
+}
+
+.modal-view-card-cont-skill {
+  color: snow;
+  font-size: 15px;
+  overflow: hidden;
+}
+
+.modal-view-card-cont-img {
+  position: relative;
+  top: -1vh;
+  width: 74%;
+  height: 33vh;
+  max-height: 33vh;
+  border-radius: 1%;
+}
+
+.modal-view-card-cont::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modal-view-card-cont::-webkit-scrollbar-thumb {
+  background: rgba(64, 138, 118, 0.3);
+
+  border-radius: 10px;
+}
+
+.modal-view-card-cont::-webkit-scrollbar-track {
+  background: rgba(12, 73, 36, 0.2);
+}
+
 @media screen and (max-width: 1250px) {
   .intro {
     display: flex;
