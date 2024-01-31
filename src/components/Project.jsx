@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import * as THREE from "three";
 
 const Project = () => {
@@ -10,7 +10,6 @@ const Project = () => {
   }, []);
 
   const [goStop, setGoStop] = useState(true);
-  const scrollRef = useRef();
   function MiniCanvas(num) {
     //장면
     const scene = new THREE.Scene();
@@ -106,14 +105,11 @@ const Project = () => {
     }
   }
 
-  let carousel = "";
-  // let arrowBtns = "";
-  let startX = "";
-  let startScrollLeft = "";
-  // let firstCardWidth = "";
-  let mCheck = false;
-
   useEffect(() => {
+    let carousel = "";
+    let startX = "";
+    let startScrollLeft = "";
+    let mCheck = false;
     const isMobile = () => {
       const user = navigator.userAgent;
       mCheck = false;
@@ -128,13 +124,11 @@ const Project = () => {
 
     if (mCheck) {
       ///모바일 일 때
-      carousel = document.querySelector(".carousel");
-      // firstCardWidth = carousel.querySelector(".card-pro").offsetWidth;
-      // arrowBtns = document.querySelectorAll(".i1");
+      carousel = document.querySelector(".carousel")[0];
       let carousel_scrollWidth =
-        document.querySelector(".carousel").scrollWidth;
+        document.querySelector(".carousel")[0].scrollWidth;
       let carousel_clientWidth =
-        document.querySelector(".carousel").clientWidth;
+        document.querySelector(".carousel")[0].clientWidth;
       let carousel_width = carousel_scrollWidth - carousel_clientWidth;
 
       let isDragging = false;
@@ -178,8 +172,6 @@ const Project = () => {
       let carousel_clientWidth =
         document.querySelector(".carousel").clientWidth;
       let carousel_width = carousel_scrollWidth - carousel_clientWidth;
-      // firstCardWidth = carousel.querySelector(".card-pro").offsetWidth;
-      // arrowBtns = document.querySelectorAll(".i1");
 
       let isDragging = false;
       const dragStart = (e) => {
@@ -198,6 +190,102 @@ const Project = () => {
         } else {
           document.querySelector("#left1").classList.remove("opa5");
           document.querySelector("#right1").classList.remove("opa5");
+        }
+        setGoStop(false);
+      };
+      const dragStop = (e) => {
+        isDragging = false;
+      };
+      carousel.addEventListener("mousedown", dragStart);
+      carousel.addEventListener("mousemove", dragging);
+      carousel.addEventListener("mouseup", dragStop);
+    }
+  }, []);
+  useEffect(() => {
+    let carousel = "";
+    let startX = "";
+    let startScrollLeft = "";
+    let mCheck = false;
+    const isMobile = () => {
+      const user = navigator.userAgent;
+      mCheck = false;
+
+      if (user.indexOf("iPhone") > -1 || user.indexOf("Android") > -1) {
+        mCheck = true;
+      }
+
+      return mCheck;
+    };
+    isMobile();
+
+    if (mCheck) {
+      ///모바일 일 때
+      carousel = document.querySelector(".carousel2");
+      let carousel_scrollWidth =
+        document.querySelector(".carousel2").scrollWidth;
+      let carousel_clientWidth =
+        document.querySelector(".carousel2").clientWidth;
+      let carousel_width = carousel_scrollWidth - carousel_clientWidth;
+
+      let isDragging = false;
+      const dragStart = (e) => {
+        setGoStop(true);
+        isDragging = true;
+        startX = e.pageX;
+        startScrollLeft = carousel.scrollLeft;
+      };
+      const dragging = (e) => {
+        if (!isDragging) return;
+        carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
+        if (carousel.scrollLeft < 3) {
+          document.querySelector("#left1").classList.add("opa5");
+        } else if (carousel.scrollLeft > carousel_width - 30) {
+          document.querySelector("#right1").classList.add("opa5");
+        } else {
+          document.querySelector("#left1").classList.remove("opa5");
+          document.querySelector("#right1").classList.remove("opa5");
+        }
+        setGoStop(false);
+      };
+      const dragStop = (e) => {
+        isDragging = false;
+      };
+
+      if (isDragging) {
+        document.querySelector(".project").classList.add("stop-scrollY");
+      } else {
+        document.querySelector(".project").classList.remove("stop-scrollY");
+      }
+
+      carousel.addEventListener("touchstart", dragStart);
+      carousel.addEventListener("touchmove", dragging);
+      carousel.addEventListener("touchend", dragStop);
+    } else {
+      //pc일때
+      carousel = document.querySelector(".carousel2");
+      let carousel_scrollWidth =
+        document.querySelector(".carousel2").scrollWidth;
+      let carousel_clientWidth =
+        document.querySelector(".carousel2").clientWidth;
+      let carousel_width = carousel_scrollWidth - carousel_clientWidth;
+
+      let isDragging = false;
+      const dragStart = (e) => {
+        setGoStop(true);
+        isDragging = true;
+        startX = e.pageX;
+        startScrollLeft = carousel.scrollLeft;
+      };
+      const dragging = (e) => {
+        if (!isDragging) return;
+        carousel.scrollLeft = startScrollLeft - (e.pageX - startX) - 160;
+        if (carousel.scrollLeft < 3) {
+          document.querySelector("#left2").classList.add("opa5");
+        } else if (carousel.scrollLeft > carousel_width - 30) {
+          document.querySelector("#right2").classList.add("opa5");
+        } else {
+          document.querySelector("#left2").classList.remove("opa5");
+          document.querySelector("#right2").classList.remove("opa5");
         }
         setGoStop(false);
       };
@@ -247,7 +335,7 @@ const Project = () => {
           setProjectCate("COMPANY");
           setProjectTitle("cuckoo(쿠쿠)");
           setProjectSubTitle("UI/UX 개선 사업");
-          setProjectInfo("2021.05 ~ 2023.07 (3개월) / 프론트엔드 / 모바일화면");
+          setProjectInfo("2021.05 ~ 2023.07 (3개월) / FE / 모바일화면");
           setProjectSkill([
             "Html",
             "Expression Language Tag",
@@ -270,7 +358,7 @@ const Project = () => {
           setProjectCate("COMPANY");
           setProjectTitle("마켓컬리");
           setProjectSubTitle("3p 파트너센터 / 파트너어드민");
-          setProjectInfo("2021.07 ~ 2023.06 (23개월) / 백,프론트");
+          setProjectInfo("2021.07 ~ 2023.06 (23개월) / BE,FE");
           setProjectSkill([
             "Java",
             "SpringBoot",
@@ -296,9 +384,12 @@ const Project = () => {
               판매자 및 상품을 관리하는 RM, MD 등 <br></br>관리자가 이용하는
               파트너 어드민이 있습니다.<br></br>
               <br></br>
-              파트너 / 계정 / 상품 / 배송 / <br></br>주문 / 정산 / 대시보드 등의{" "}
-              <br></br>도메인이 있으며<br></br>
-              git과 젠킨스 자동빌드를 사용, aws서버입니다.<br></br>
+              파트너 / 계정 / 상품 / 배송 / <br></br>주문 / 정산 / 대시보드 /
+              보안상 이력 등의 <br></br>여러 도메인이 있었고 모든 부분에
+              참여했습니다.<br></br>
+              git과 젠킨스 자동빌드를 사용하였고,<br></br>
+              aws서버에 배포 전 리뷰를 받고 진행하는 과정까지 맡았습니다.
+              <br></br>
               <br></br>
               초기 view구축이 급한 단계에는 프론트 담당으로<br></br>
               여러 라이브러리로 그리드 위주의 화면을 만들고 <br></br>
@@ -324,6 +415,78 @@ const Project = () => {
               등에 의해서<br></br>
               많은 트래픽, 조회 건 수 등 데이터 무게에 관한<br></br>이슈 경험을
               한 것이 가장 유익했습니다.
+            </>
+          );
+          break;
+        case 13: //stx
+          setProjectCate("COMPANY");
+          setProjectTitle("STX");
+          setProjectSubTitle("계약직 계약/인사 관리시스템 구축");
+          setProjectInfo("2020.10 ~ 2021.06 (9개월) / BE, FE");
+          setProjectSkill(["Java", "Spring", "JS", "Github"]);
+          setEndNum(1);
+          setPhotoUrl("stx-main");
+          setContent(
+            <>
+              인사 시스템과 <br></br>업무 포탈 시스템을 담당 하였습니다.
+              <br></br>
+              <br></br>
+              계약직 근로자의 <br></br>복무, 교육, 급여, 당직<br></br>, 총무,
+              기타 등등을 관리하는 시스템으로<br></br>특정 권한으로 들어갈 수
+              있는<br></br>관리자 페이지에서 따로 관리를 할 수 있습니다.
+              <br></br>
+              <br></br>사용 중 데이터가 잘못되거나<br></br>시스템 상 오류가
+              생기면<br></br>
+              로그를 보고 이슈를 해결하는<br></br>업무를 주로 하였습니다.
+              <br></br>
+              <br></br>
+              업무포탈은 spring / jsp 기반이며 <br></br>ajax 이용하여 api 연동
+              하였고<br></br>
+              형상관리는 git 을 이용하였습니다.
+            </>
+          );
+          break;
+        case 14: //위젯누리
+          setProjectCate("COMPANY");
+          setProjectTitle("위젯누리");
+          setProjectSubTitle("자사 솔루션 프로그램");
+          setProjectInfo("2020.06 ~ 2020.09 (4개월) / FE");
+          setProjectSkill(["ExtJs", "ChartJs"]);
+          setEndNum(7);
+          setPhotoUrl("wn-main");
+          setContent(
+            <>
+              ExtJs 이용하여 <br></br>데스크탑 디자인 기반의<br></br>
+              자사 솔루션 <br></br>( 화이트리스트, 장비관리시스템 등 )<br></br>
+              디자인, 퍼블, 프론트 부분 담당하였고<br></br>
+              <br></br>대시보드는 chart라이브러리 이용하였습니다.
+            </>
+          );
+          break;
+        case 21: //포폴메이킹
+          setProjectCate("SIDE");
+          setProjectTitle("Portfolio 메이킹");
+          setProjectSubTitle("프론트앤드 Portfolio");
+          setProjectInfo("제작 기간 (6개월)");
+          setProjectSkill([
+            "React",
+            "ReduxToolkit",
+            "JavaScript",
+            "ThreeJs",
+            "Html",
+            "Css",
+            "github",
+            "GoogleAnalytics",
+          ]);
+          setEndNum(7);
+          setPhotoUrl("pofol-main");
+          setContent(
+            <>
+              새로운 디자인트랜드로 그라디언트가 각광받아<br></br>
+              포트폴리오 컨셉을 그라디언트로 잡았고, <br></br>고급스러운
+              분위기의 진한녹색과, <br></br>메인 문구처럼 나의 개화를 계획하며
+              <br></br>꽃 = 마스코트 느낌으로 작업했다!
+              <br></br>메포폴 작업 과정 및 기술설명
             </>
           );
           break;
@@ -388,17 +551,35 @@ const Project = () => {
             <br></br>
             <div className="modal-view-card-cont-skill">
               <span style={{ color: "#1e7c60", fontWeight: 400, fontSize: 13 }}>
-                &nbsp; [&nbsp;
+                &nbsp;[&nbsp;
               </span>
               <span>
                 {projectSkill.map((item, idx) => {
                   if (idx + 1 === projectSkill.length) {
                     return <>{item}</>;
+                  } else if (idx + 1 === 5 || idx + 1 === 10) {
+                    return (
+                      <>
+                        {item}
+                        <span
+                          key={"skill" + idx}
+                          style={{
+                            color: "#1e7c60",
+                            fontWeight: 400,
+                            fontSize: 13,
+                          }}
+                        >
+                          &nbsp;&nbsp;/&nbsp;&nbsp;
+                        </span>
+                        <br></br>
+                      </>
+                    );
                   } else {
                     return (
                       <>
                         {item}
                         <span
+                          key={"skill" + idx}
                           style={{
                             color: "#1e7c60",
                             fontWeight: 400,
@@ -413,7 +594,7 @@ const Project = () => {
                 })}
               </span>
               <span style={{ color: "#1e7c60", fontWeight: 400, fontSize: 13 }}>
-                &nbsp; ]
+                &nbsp;]
               </span>
             </div>
             <br></br>
@@ -529,7 +710,7 @@ const Project = () => {
                     <span className="f15" style={{ display: "inline-block" }}>
                       <div className="text-btn">role</div>&nbsp;&nbsp;
                     </span>
-                    프론트엔드
+                    FE
                   </span>
                   <span style={{ color: "#1e7c60", fontWeight: 600 }}> ]</span>
                 </span>
@@ -558,7 +739,7 @@ const Project = () => {
                     <span className="f15" style={{ display: "inline-block" }}>
                       <div className="text-btn">role</div>&nbsp;&nbsp;
                     </span>
-                    백,프론트
+                    BE, FE
                   </span>
                   <span style={{ color: "#1e7c60", fontWeight: 600 }}> ]</span>
                 </span>
@@ -567,17 +748,17 @@ const Project = () => {
               <li
                 className="card-pro"
                 onClick={(e) => {
-                  cardClick(e, 14);
+                  cardClick(e, 13);
                 }}
               >
                 <div className="img">
                   <img
-                    src={require("../common/card/stx.png")}
+                    src={require("../common/project/stx-main1.png")}
                     draggable="false"
                     alt="stx-img"
                   />
                 </div>
-                <h3>(STX) 계약직 계약/인사 관리시스템 구축</h3>
+                <h3>STX</h3>
                 <span>
                   <span style={{ color: "#1e7c60", fontWeight: 600 }}>[ </span>
                   <span
@@ -587,28 +768,40 @@ const Project = () => {
                     <span className="f15" style={{ display: "inline-block" }}>
                       <div className="text-btn">role</div>&nbsp;&nbsp;
                     </span>
-                    프론트엔드
+                    BE, FE
                   </span>
                   <span style={{ color: "#1e7c60", fontWeight: 600 }}> ]</span>
                 </span>
-                <span>2020.10~2021.06 (9개월)</span>
+                <span>2020.10 ~ 2021.06 (9개월)</span>
               </li>
               <li
                 className="card-pro"
                 onClick={(e) => {
-                  cardClick(e, 15);
+                  cardClick(e, 14);
                 }}
               >
                 <div className="img">
                   <img
-                    src={require("../common/card/5.jpg")}
+                    src={require("../common/project/wn-main6.png")}
                     draggable="false"
                     alt="5"
                   />
                 </div>
-                <h3>위젯누리꺼 모음</h3>
-                <span>ㅁㄴㅇㅁㄴㅇ</span>
-                <span>ㅁㄴㅇㅁㄴㅇ</span>
+                <h3>위젯누리</h3>
+                <span>
+                  <span style={{ color: "#1e7c60", fontWeight: 600 }}>[ </span>
+                  <span
+                    className="f15"
+                    style={{ color: "ivory", fontWeight: 500 }}
+                  >
+                    <span className="f15" style={{ display: "inline-block" }}>
+                      <div className="text-btn">role</div>&nbsp;&nbsp;
+                    </span>
+                    FE
+                  </span>
+                  <span style={{ color: "#1e7c60", fontWeight: 600 }}> ]</span>
+                </span>
+                <span>2020.06 ~ 2020.09 (4개월)</span>
               </li>
             </ul>
             <i id="right1" className="i1">
@@ -627,7 +820,7 @@ const Project = () => {
             <canvas className="mini-canvas-pro" id="mini-canvas2"></canvas>
           </div>
           <div className="wrapper">
-            <i className="i2">
+            <i id="left2" className="i2 opa5">
               <img
                 className="angle-bracket2"
                 src={require("../common/card/lc.png")}
@@ -647,14 +840,28 @@ const Project = () => {
               >
                 <div className="img">
                   <img
-                    src={require("../common/card/1.jpg")}
+                    src={require("../common/project/pofol-main1.png")}
                     draggable="false"
                     alt="1"
                   />
                 </div>
-                <h3>포트폴리오 메이킹</h3>
-                <span>깃에도 정리(three컴포넌트 등)</span>
-                <span>구글애널리틱스/구글태그 표현</span>
+                <h3>Portfolio 메이킹</h3>
+                {/* <span>깃에도 정리(three컴포넌트 등)</span>
+                <span>구글애널리틱스/구글태그 표현</span> */}
+                <span>
+                  <span style={{ color: "#1e7c60", fontWeight: 600 }}>[ </span>
+                  <span
+                    className="f15"
+                    style={{ color: "ivory", fontWeight: 500 }}
+                  >
+                    <span className="f15" style={{ display: "inline-block" }}>
+                      <div className="text-btn">role</div>&nbsp;&nbsp;
+                    </span>
+                    All
+                  </span>
+                  <span style={{ color: "#1e7c60", fontWeight: 600 }}> ]</span>
+                </span>
+                <span>제작 기간 (총 6개월)</span>
               </li>
               <li
                 className="card-pro"
@@ -742,7 +949,7 @@ const Project = () => {
                 <span>ㅁㄴㅇㅁㄴㅇ</span>
               </li>
             </ul>
-            <i className="i2">
+            <i id="right2" className="i2">
               <img
                 className="angle-bracket2"
                 src={require("../common/card/rc.png")}

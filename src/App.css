@@ -570,6 +570,9 @@
   background: linear-gradient(to right, #31a783, #790909);
   color: transparent;
   -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -ms-background-clip: text;
+  background-clip: text;
   position: relative;
 }
 .edu-text-box > li {
@@ -665,6 +668,9 @@
   position: relative;
   color: transparent;
   -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -ms-background-clip: text;
+  background-clip: text;
   cursor: none;
 }
 .link:hover {
@@ -870,7 +876,7 @@
 .card-pro h3 {
   z-index: 1;
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin: 10px 0 0px;
 }
 .card-pro span {
@@ -999,7 +1005,6 @@
 }
 .x-btn {
   cursor: none;
-  display: inline-block;
   float: right;
   background: rgba(0, 0, 0, 0);
   color: ivory;
@@ -1034,7 +1039,7 @@
   width: 74%;
   height: 33vh;
   max-height: 33vh;
-  border-radius: 1%;
+  border-radius: 3%;
 }
 
 .modal-view-card-cont::-webkit-scrollbar {
@@ -1348,7 +1353,7 @@
   .card-pro h3 {
     z-index: 1;
     font-weight: 500;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin: 10px 0 0px;
   }
   .card-pro span {
@@ -1509,6 +1514,9 @@
     background: linear-gradient(to right, #31a783, #790909);
     color: transparent;
     -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -ms-background-clip: text;
+    background-clip: text;
     position: relative;
   }
   .edu-text-box > li {
@@ -1600,6 +1608,9 @@
     position: relative;
     color: transparent;
     -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -ms-background-clip: text;
+    background-clip: text;
     cursor: none;
   }
   .link:hover {
@@ -2143,6 +2154,9 @@
     background: linear-gradient(to right, #31a783, #790909);
     color: transparent;
     -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -ms-background-clip: text;
+    background-clip: text;
     position: relative;
   }
   .edu-text-box > li {
@@ -2233,6 +2247,9 @@
     position: relative;
     color: transparent;
     -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -ms-background-clip: text;
+    background-clip: text;
     cursor: none;
   }
   .link:hover {
@@ -2435,7 +2452,7 @@
   .card-pro h3 {
     z-index: 1;
     font-weight: 500;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin: 10px 0 0px;
   }
   .card-pro span {
