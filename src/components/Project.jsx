@@ -348,8 +348,8 @@ const Project = () => {
             <>
               <p>
                 Thymeleaf 태그 사용하는<br></br>ui/ux 고도화 작업 프로젝트
-                였으며, pc화면 mobile화 및타임딜 기능 개발, 객체화 작업 등
-                진행했습니다.협업은 jira, github 이용했습니다.
+                였으며,<br></br>pc화면 mobile화 및타임딜 기능 개발, 객체화 작업
+                등 진행했습니다.협업은 jira, github 이용했습니다.
               </p>
             </>
           );
