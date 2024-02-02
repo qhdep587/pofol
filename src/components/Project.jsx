@@ -378,6 +378,7 @@ const Project = () => {
           setContent(
             <>
               기획 단계 이후 바로 투입되어<br></br>
+              오픈 및 QA, 프로젝트 마무리까지<br></br>
               agile방식으로 진행 했던 프로젝트입니다.<br></br>
               <br></br>
               마켓컬리의 판매자가 이용하는 파트너 센터와<br></br>
@@ -482,11 +483,47 @@ const Project = () => {
           setPhotoUrl("pofol-main");
           setContent(
             <>
-              새로운 디자인트랜드로 그라디언트가 각광받아<br></br>
-              포트폴리오 컨셉을 그라디언트로 잡았고, <br></br>고급스러운
-              분위기의 진한녹색과, <br></br>메인 문구처럼 나의 개화를 계획하며
-              <br></br>꽃 = 마스코트 느낌으로 작업했다!
-              <br></br>메포폴 작업 과정 및 기술설명
+              프론트엔드 포지션으로의<br></br>
+              새로운 시작을 준비하며<br></br>
+              포트폴리오를 제작했습니다.<br></br>
+              <br></br>
+              24년 새로운 디자인트렌드 중<br></br>
+              그라디언트와 3d렌더링이 주목받아,<br></br>
+              포트폴리오 테마에 그라디언트를 적용하고
+              <br></br>threeJs로 3d작업 후 삽입했습니다.
+              <br></br>메인에 쓰인 문구에서 처럼<br></br>저의 개화시기를
+              계획하며
+              <br></br>꽃으로 포인트를 잡았으며,
+              <br></br>포인트와 어울릴<br></br>은은한 분위기의 진한녹색을
+              <br></br>
+              메인컬러로 사용했습니다.<br></br>
+              <br></br>spa로 제작하였고<br></br>
+              메인페이지는<br></br>처음 방문하여 보시는 분에게<br></br>
+              테마와 컨셉이 눈에 바로 담기도록 <br></br>디자인 했습니다.
+              <br></br>
+              intro페이지에는 3d아이템을<br></br>
+              직접 움직여 볼 수 있도록 작업하여<br></br>
+              재미를 첨가 했습니다.<br></br>
+              edu, work에는 정보 위주의<br></br>
+              심플한 화면으로 제작했고<br></br>
+              project화면에는 슬라이드와 모달을 제작하여<br></br>
+              정보를 담았습니다.<br></br>
+              <br></br>
+              그외 i18n과 ReduxToolkit을 이용하여<br></br>
+              슬라이스로 변수를 관리하고
+              <br></br>GoogleAnalytics를 적용하기 위하여<br></br>
+              Gtag를 넣어
+              <br></br>
+              사이트 분석 및 관리 기능을<br></br>
+              참고 삼아 적용해봤습니다.<br></br>
+              <br></br>git :{" "}
+              <a
+                href="https://github.com/qhdep587/pofol"
+                target="_blank"
+                rel="noreferrer"
+              >
+                https://github.com/qhdep587/pofol
+              </a>
             </>
           );
           break;
@@ -876,9 +913,24 @@ const Project = () => {
                     alt="2"
                   />
                 </div>
-                <h3>ot</h3>
-                <span>123123</span>
-                <span>123123</span>
+                <h3>
+                  ot(모달 안에 이미지 맨위로올리고,글들 밑으로 그리고 설명쪽은
+                  왼쪽정렬 )
+                </h3>
+                <span>
+                  <span style={{ color: "#1e7c60", fontWeight: 600 }}>[ </span>
+                  <span
+                    className="f15"
+                    style={{ color: "ivory", fontWeight: 500 }}
+                  >
+                    <span className="f15" style={{ display: "inline-block" }}>
+                      <div className="text-btn">role</div>&nbsp;&nbsp;
+                    </span>
+                    All
+                  </span>
+                  <span style={{ color: "#1e7c60", fontWeight: 600 }}> ]</span>
+                </span>
+                <span>제작 기간 (총 6개월)</span>
               </li>
               <li
                 className="card-pro"
@@ -893,9 +945,21 @@ const Project = () => {
                     alt="3"
                   />
                 </div>
-                <h3>위시켓</h3>
-                <span>ㅁㄴㅇㅁㄴㅇ</span>
-                <span>ㅁㄴㅇㅁㄴㅇ</span>
+                <h3>alpaka키우기</h3>
+                <span>
+                  <span style={{ color: "#1e7c60", fontWeight: 600 }}>[ </span>
+                  <span
+                    className="f15"
+                    style={{ color: "ivory", fontWeight: 500 }}
+                  >
+                    <span className="f15" style={{ display: "inline-block" }}>
+                      <div className="text-btn">role</div>&nbsp;&nbsp;
+                    </span>
+                    All
+                  </span>
+                  <span style={{ color: "#1e7c60", fontWeight: 600 }}> ]</span>
+                </span>
+                <span>제작 기간 (총 6개월)</span>
               </li>
               <li
                 className="card-pro"
@@ -910,9 +974,21 @@ const Project = () => {
                     alt="4"
                   />
                 </div>
-                <h3>알파카</h3>
-                <span>ㅁㄴㅇㅁㄴㅇ</span>
-                <span>ㅁㄴㅇㅁㄴㅇ</span>
+                <h3>winwin</h3>
+                <span>
+                  <span style={{ color: "#1e7c60", fontWeight: 600 }}>[ </span>
+                  <span
+                    className="f15"
+                    style={{ color: "ivory", fontWeight: 500 }}
+                  >
+                    <span className="f15" style={{ display: "inline-block" }}>
+                      <div className="text-btn">role</div>&nbsp;&nbsp;
+                    </span>
+                    All
+                  </span>
+                  <span style={{ color: "#1e7c60", fontWeight: 600 }}> ]</span>
+                </span>
+                <span>제작 기간 (총 6개월)</span>
               </li>
               <li
                 className="card-pro"
