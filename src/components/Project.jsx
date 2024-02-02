@@ -346,11 +346,11 @@ const Project = () => {
           setPhotoUrl("cuckoo-main");
           setContent(
             <>
-              Thymeleaf 태그 사용하는 <br></br> ui/ux 고도화 작업 프로젝트
-              였으며,
-              <br></br>pc화면 mobile화 및<br></br>타임딜 기능 개발, 객체화 작업
-              등 진행했습니다.<br></br>협업은 jira, github 이용했습니다.
-              <br></br>
+              <p>
+                Thymeleaf 태그 사용하는<br></br>ui/ux 고도화 작업 프로젝트
+                였으며, pc화면 mobile화 및타임딜 기능 개발, 객체화 작업 등
+                진행했습니다.협업은 jira, github 이용했습니다.
+              </p>
             </>
           );
           break;
@@ -363,7 +363,7 @@ const Project = () => {
             "Java",
             "SpringBoot",
             "React",
-            "JS",
+            "JavaScript",
             "MySQL",
             "Kafka",
             "Redis",
@@ -424,7 +424,7 @@ const Project = () => {
           setProjectTitle("STX");
           setProjectSubTitle("계약직 계약/인사 관리시스템 구축");
           setProjectInfo("2020.10 ~ 2021.06 (9개월) / BE, FE");
-          setProjectSkill(["Java", "Spring", "JS", "Github"]);
+          setProjectSkill(["Java", "Spring", "JavaScript", "Github"]);
           setEndNum(1);
           setPhotoUrl("stx-main");
           setContent(
@@ -497,7 +497,7 @@ const Project = () => {
               <br></br>포인트와 어울릴<br></br>은은한 분위기의 진한녹색을
               <br></br>
               메인컬러로 사용했습니다.<br></br>
-              <br></br>spa로 제작하였고<br></br>
+              <br></br>spa로 제작하였고 반응형입니다.<br></br>
               메인페이지는<br></br>처음 방문하여 보시는 분에게<br></br>
               테마와 컨셉이 눈에 바로 담기도록 <br></br>디자인 했습니다.
               <br></br>
@@ -516,6 +516,154 @@ const Project = () => {
               <br></br>
               사이트 분석 및 관리 기능을<br></br>
               참고 삼아 적용해봤습니다.<br></br>
+              <br></br>git :{" "}
+              <a
+                href="https://github.com/qhdep587/pofol"
+                target="_blank"
+                rel="noreferrer"
+              >
+                https://github.com/qhdep587/pofol
+              </a>
+            </>
+          );
+          break;
+        case 22: //ot.
+          setProjectCate("SIDE");
+          setProjectTitle("OT.(옷.)");
+          setProjectSubTitle("의류 쇼핑몰");
+          setProjectInfo("제작 기간 (3개월)");
+          setProjectSkill([
+            "Java",
+            "Spring",
+            "jsp",
+            "JavaScript",
+            "JQuery",
+            "Oracle",
+            "Html",
+            "Css",
+            "github",
+          ]);
+          setEndNum(25);
+          setPhotoUrl("ot-main");
+          setContent(
+            <>
+              교육기관에서 팀으로 진행했던 프로젝트입니다.<br></br>
+              구성 기획 후 디비설계 진행하였으며<br></br>
+              디자인은 블랙업(여성의류 쇼핑몰)을 참고했습니다.<br></br>
+              git관리,뷰,디자인,구성,디비설계,메인,상품,리뷰 쪽을 담당.
+              CRUD,게시판,옷 게시물들의 여러
+              정렬,리뷰등록,리뷰정렬,신고,출석이벤트,실시간 상담채팅 등 구현
+              <br></br>git :{" "}
+              <a
+                href="https://github.com/qhdep587/pofol"
+                target="_blank"
+                rel="noreferrer"
+              >
+                https://github.com/qhdep587/pofol
+              </a>
+            </>
+          );
+          break;
+        case 23: //alpaka
+          setProjectCate("SIDE");
+          setProjectTitle("OT.(옷.)");
+          setProjectSubTitle("의류 쇼핑몰");
+          setProjectInfo("제작 기간 (3개월)");
+          setProjectSkill([
+            "Java",
+            "Spring",
+            "jsp",
+            "JavaScript",
+            "JQuery",
+            "Oracle",
+            "Html",
+            "Css",
+            "github",
+          ]);
+          setEndNum(29);
+          setPhotoUrl("alpaka-main");
+          setContent(
+            <>
+              교육기관에서 팀으로 진행했던 프로젝트입니다.<br></br>
+              구성 기획 후 디비설계 진행하였으며<br></br>
+              디자인은 블랙업(여성의류 쇼핑몰)을 참고했습니다.<br></br>
+              git관리,뷰,디자인,구성,디비설계,메인,상품,리뷰 쪽을 담당.
+              CRUD,게시판,옷 게시물들의 여러
+              정렬,리뷰등록,리뷰정렬,신고,출석이벤트,실시간 상담채팅 등 구현
+              <br></br>git :{" "}
+              <a
+                href="https://github.com/qhdep587/pofol"
+                target="_blank"
+                rel="noreferrer"
+              >
+                https://github.com/qhdep587/pofol
+              </a>
+            </>
+          );
+          break;
+        case 24: //wish
+          setProjectCate("SIDE");
+          setProjectTitle("OT.(옷.)");
+          setProjectSubTitle("의류 쇼핑몰");
+          setProjectInfo("제작 기간 (3개월)");
+          setProjectSkill([
+            "Java",
+            "Spring",
+            "jsp",
+            "JavaScript",
+            "JQuery",
+            "Oracle",
+            "Html",
+            "Css",
+            "github",
+          ]);
+          setEndNum(27);
+          setPhotoUrl("wish-main");
+          setContent(
+            <>
+              교육기관에서 팀으로 진행했던 프로젝트입니다.<br></br>
+              구성 기획 후 디비설계 진행하였으며<br></br>
+              디자인은 블랙업(여성의류 쇼핑몰)을 참고했습니다.<br></br>
+              git관리,뷰,디자인,구성,디비설계,메인,상품,리뷰 쪽을 담당.
+              CRUD,게시판,옷 게시물들의 여러
+              정렬,리뷰등록,리뷰정렬,신고,출석이벤트,실시간 상담채팅 등 구현
+              <br></br>git :{" "}
+              <a
+                href="https://github.com/qhdep587/pofol"
+                target="_blank"
+                rel="noreferrer"
+              >
+                https://github.com/qhdep587/pofol
+              </a>
+            </>
+          );
+          break;
+        case 25: //todo
+          setProjectCate("SIDE");
+          setProjectTitle("OT.(옷.)");
+          setProjectSubTitle("의류 쇼핑몰");
+          setProjectInfo("제작 기간 (3개월)");
+          setProjectSkill([
+            "Java",
+            "Spring",
+            "jsp",
+            "JavaScript",
+            "JQuery",
+            "Oracle",
+            "Html",
+            "Css",
+            "github",
+          ]);
+          setEndNum(1);
+          setPhotoUrl("todo-main");
+          setContent(
+            <>
+              교육기관에서 팀으로 진행했던 프로젝트입니다.<br></br>
+              구성 기획 후 디비설계 진행하였으며<br></br>
+              디자인은 블랙업(여성의류 쇼핑몰)을 참고했습니다.<br></br>
+              git관리,뷰,디자인,구성,디비설계,메인,상품,리뷰 쪽을 담당.
+              CRUD,게시판,옷 게시물들의 여러
+              정렬,리뷰등록,리뷰정렬,신고,출석이벤트,실시간 상담채팅 등 구현
               <br></br>git :{" "}
               <a
                 href="https://github.com/qhdep587/pofol"
@@ -582,6 +730,58 @@ const Project = () => {
             </span>
             <br></br>
             <br></br>
+            <img
+              className="modal-view-card-cont-img"
+              src={require("../common/project/" +
+                photoUrl +
+                currentNum +
+                ".png")}
+              draggable="false"
+              alt={{ projectTitle } + "photo" + { currentNum }}
+            />
+            <div
+              style={{
+                width: "100%",
+                height: "1.5vh",
+                display: "inline-block",
+              }}
+            >
+              <button
+                className="imgBtn"
+                onClick={() => {
+                  if (currentNum > 1) setCurrentNum(() => currentNum - 1);
+                  else if (currentNum === 1) {
+                    setCurrentNum(endNum);
+                  }
+                }}
+              >
+                {"<"}
+              </button>
+              &nbsp;
+              <span style={{ position: "relative", top: "-1vh", fontSize: 15 }}>
+                &nbsp;{currentNum} / {endNum}&nbsp;
+              </span>
+              &nbsp;
+              <button
+                className="imgBtn"
+                onClick={() => {
+                  if (currentNum < endNum) setCurrentNum(() => currentNum + 1);
+                  else if (currentNum === endNum) {
+                    setCurrentNum(1);
+                  }
+                }}
+              >
+                {">"}
+              </button>
+            </div>
+            <br></br>
+            <hr
+              style={{
+                display: "block",
+                border: "1px solid rgba(14, 101, 72, 0.4)",
+                width: "50%",
+              }}
+            ></hr>
             <span style={{ color: "#a2a7a5", fontSize: "0.8em" }}>
               {projectInfo}
             </span>
@@ -635,61 +835,7 @@ const Project = () => {
               </span>
             </div>
             <br></br>
-            <img
-              className="modal-view-card-cont-img"
-              src={require("../common/project/" +
-                photoUrl +
-                currentNum +
-                ".png")}
-              draggable="false"
-              alt={{ projectTitle } + "photo" + { currentNum }}
-            />
-            <div
-              style={{
-                width: "100%",
-                height: "1.5vh",
-                display: "inline-block",
-              }}
-            >
-              <button
-                className="imgBtn"
-                onClick={() => {
-                  if (currentNum > 1) setCurrentNum(() => currentNum - 1);
-                  else if (currentNum === 1) {
-                    setCurrentNum(endNum);
-                  }
-                }}
-              >
-                {"<"}
-              </button>
-              &nbsp;
-              <span style={{ position: "relative", top: "-1vh", fontSize: 15 }}>
-                &nbsp;{currentNum} / {endNum}&nbsp;
-              </span>
-              &nbsp;
-              <button
-                className="imgBtn"
-                onClick={() => {
-                  if (currentNum < endNum) setCurrentNum(() => currentNum + 1);
-                  else if (currentNum === endNum) {
-                    setCurrentNum(1);
-                  }
-                }}
-              >
-                {">"}
-              </button>
-            </div>
-            <br></br>
-            <div
-              style={{
-                width: "60%",
-                paddingLeft: "20%",
-                paddingTop: "2%",
-                paddingBottom: "2%",
-              }}
-            >
-              {content}
-            </div>
+            <div className="cont-box">{content}</div>
             <br></br>
           </div>
         </div>
@@ -908,14 +1054,14 @@ const Project = () => {
               >
                 <div className="img">
                   <img
-                    src={require("../common/card/2.jpg")}
+                    src={require("../common/project/ot-main1.png")}
                     draggable="false"
                     alt="2"
                   />
                 </div>
                 <h3>
-                  ot(모달 안에 이미지 맨위로올리고,글들 밑으로 그리고 설명쪽은
-                  왼쪽정렬 )
+                  ot.(옷.) (모달 안에 이미지 맨위로올리고,글들 밑으로 그리고
+                  설명쪽은 왼쪽정렬 )
                 </h3>
                 <span>
                   <span style={{ color: "#1e7c60", fontWeight: 600 }}>[ </span>
@@ -930,7 +1076,7 @@ const Project = () => {
                   </span>
                   <span style={{ color: "#1e7c60", fontWeight: 600 }}> ]</span>
                 </span>
-                <span>제작 기간 (총 6개월)</span>
+                <span>교육기관 project / 의류쇼핑몰</span>
               </li>
               <li
                 className="card-pro"
@@ -940,12 +1086,12 @@ const Project = () => {
               >
                 <div className="img">
                   <img
-                    src={require("../common/card/3.jpg")}
+                    src={require("../common/project/alpaka-main1.png")}
                     draggable="false"
                     alt="3"
                   />
                 </div>
-                <h3>alpaka키우기</h3>
+                <h3>alpaka살리기</h3>
                 <span>
                   <span style={{ color: "#1e7c60", fontWeight: 600 }}>[ </span>
                   <span
@@ -959,7 +1105,7 @@ const Project = () => {
                   </span>
                   <span style={{ color: "#1e7c60", fontWeight: 600 }}> ]</span>
                 </span>
-                <span>제작 기간 (총 6개월)</span>
+                <span>교육기관 project / 게임</span>
               </li>
               <li
                 className="card-pro"
@@ -969,12 +1115,12 @@ const Project = () => {
               >
                 <div className="img">
                   <img
-                    src={require("../common/card/4.jpg")}
+                    src={require("../common/project/wish-main1.png")}
                     draggable="false"
                     alt="4"
                   />
                 </div>
-                <h3>winwin</h3>
+                <h3>WinWin</h3>
                 <span>
                   <span style={{ color: "#1e7c60", fontWeight: 600 }}>[ </span>
                   <span
@@ -988,7 +1134,7 @@ const Project = () => {
                   </span>
                   <span style={{ color: "#1e7c60", fontWeight: 600 }}> ]</span>
                 </span>
-                <span>제작 기간 (총 6개월)</span>
+                <span>교육기관 project / IT아웃소싱 플랫폼</span>
               </li>
               <li
                 className="card-pro"
@@ -998,16 +1144,28 @@ const Project = () => {
               >
                 <div className="img">
                   <img
-                    src={require("../common/card/5.jpg")}
+                    src={require("../common/project/todo-main1.png")}
                     draggable="false"
                     alt="5"
                   />
                 </div>
-                <h3>5번사진</h3>
-                <span>ㅁㄴㅇㅁㄴㅇ</span>
-                <span>ㅁㄴㅇㅁㄴㅇ</span>
+                <h3>todolist</h3>
+                <span>
+                  <span style={{ color: "#1e7c60", fontWeight: 600 }}>[ </span>
+                  <span
+                    className="f15"
+                    style={{ color: "ivory", fontWeight: 500 }}
+                  >
+                    <span className="f15" style={{ display: "inline-block" }}>
+                      <div className="text-btn">role</div>&nbsp;&nbsp;
+                    </span>
+                    All
+                  </span>
+                  <span style={{ color: "#1e7c60", fontWeight: 600 }}> ]</span>
+                </span>
+                <span>toy project / todolist</span>
               </li>
-              <li
+              {/* <li
                 className="card-pro"
                 onClick={(e) => {
                   cardClick(e, 26);
@@ -1023,7 +1181,7 @@ const Project = () => {
                 <h3>6번사진</h3>
                 <span>ㅁㄴㅇㅁㄴㅇ</span>
                 <span>ㅁㄴㅇㅁㄴㅇ</span>
-              </li>
+              </li> */}
             </ul>
             <i id="right2" className="i2">
               <img

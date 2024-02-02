@@ -1003,6 +1003,24 @@
   float: left;
   padding-left: 5%;
 }
+
+.cont-box {
+  align-items: center;
+  vertical-align: middle;
+  justify-items: center;
+  width: 71.5%;
+  margin-left: 13%;
+  padding: 1%;
+  text-align: start;
+  background-color: rgba(4, 52, 30, 0.1);
+  border: 3px solid transparent;
+  border-image: linear-gradient(to right bottom, #0e523d 0%, #530606 100%);
+  border-image-slice: 1;
+  font-size: 1.1rem;
+}
+.cont-box > p {
+  margin: 0;
+}
 .x-btn {
   cursor: none;
   float: right;
