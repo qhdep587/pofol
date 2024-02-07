@@ -338,7 +338,8 @@ const Project = () => {
           setProjectInfo("2021.05 ~ 2023.07 (3개월) / FE / 모바일화면");
           setProjectSkill([
             "Html",
-            "Expression Language Tag",
+            "Thymeleaf",
+            "JavaScript",
             "Jira",
             "Github",
           ]);
@@ -348,8 +349,9 @@ const Project = () => {
             <>
               <p>
                 Thymeleaf 태그 사용하는<br></br>ui/ux 고도화 작업 프로젝트
-                였으며,<br></br>pc화면 mobile화 및타임딜 기능 개발, 객체화 작업
-                등 진행했습니다.협업은 jira, github 이용했습니다.
+                였으며,<br></br>pc화면 mobile화 및 타임딜 기능 개발,<br></br>
+                객체화 작업 등 진행했습니다.<br></br>
+                <br></br>협업은 jira, github 이용했습니다.
               </p>
             </>
           );
@@ -494,9 +496,9 @@ const Project = () => {
               <br></br>메인에 쓰인 문구에서 처럼<br></br>저의 개화시기를
               계획하며
               <br></br>꽃으로 포인트를 잡았으며,
-              <br></br>포인트와 어울릴<br></br>은은한 분위기의 진한녹색을
+              <br></br>포인트와 어울릴<br></br>은은한 분위기의 진한녹색과
               <br></br>
-              메인컬러로 사용했습니다.<br></br>
+              장미색을 메인컬러로 사용했습니다.<br></br>
               <br></br>spa로 제작하였고 반응형입니다.<br></br>
               메인페이지는<br></br>처음 방문하여 보시는 분에게<br></br>
               테마와 컨셉이 눈에 바로 담기도록 <br></br>디자인 했습니다.
@@ -883,7 +885,7 @@ const Project = () => {
                     alt="1"
                   />
                 </div>
-                <h3>쿠쿠</h3>
+                <h3>쿠쿠(사진 발리껄로 한번 바꿔바 intro)</h3>
                 <span>
                   <span style={{ color: "#1e7c60", fontWeight: 600 }}>[ </span>
                   <span
@@ -1044,7 +1046,7 @@ const Project = () => {
                   </span>
                   <span style={{ color: "#1e7c60", fontWeight: 600 }}> ]</span>
                 </span>
-                <span>제작 기간 (총 6개월)</span>
+                <span>개인 project / 포트폴리오</span>
               </li>
               <li
                 className="card-pro"
@@ -1059,10 +1061,7 @@ const Project = () => {
                     alt="2"
                   />
                 </div>
-                <h3>
-                  ot.(옷.) (모달 안에 이미지 맨위로올리고,글들 밑으로 그리고
-                  설명쪽은 왼쪽정렬 )
-                </h3>
+                <h3>OT. (옷.)</h3>
                 <span>
                   <span style={{ color: "#1e7c60", fontWeight: 600 }}>[ </span>
                   <span
@@ -1091,7 +1090,7 @@ const Project = () => {
                     alt="3"
                   />
                 </div>
-                <h3>alpaka살리기</h3>
+                <h3>알파카 살리기</h3>
                 <span>
                   <span style={{ color: "#1e7c60", fontWeight: 600 }}>[ </span>
                   <span
@@ -1163,7 +1162,7 @@ const Project = () => {
                   </span>
                   <span style={{ color: "#1e7c60", fontWeight: 600 }}> ]</span>
                 </span>
-                <span>toy project / todolist</span>
+                <span>개인 project / todolist</span>
               </li>
               {/* <li
                 className="card-pro"
