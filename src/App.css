@@ -1647,8 +1647,8 @@
     width: 74%;
     height: 33vh;
     max-height: 33vh;
-    min-width: 350px;
-    min-height: 210px;
+    min-width: 74%;
+    min-height: 33vh;
     border-radius: 3%;
   }
   .modal-view-card-title {
@@ -2701,8 +2701,8 @@
     width: 74%;
     height: 33vh;
     max-height: 33vh;
-    min-width: 400px;
-    min-height: 250px;
+    min-width: 74%;
+    min-height: 33vh;
     border-radius: 3%;
   }
 }
