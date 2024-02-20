@@ -175,9 +175,11 @@ const Intro = () => {
     );
     const texture2 = new THREE.TextureLoader().load(
       require("../common/image/res.jpg")
+      // require("../common/card/danny-main2.jpg")
     );
     const texture2_pic = new THREE.TextureLoader().load(
       require("../common/image/resItem.png")
+      // require("../common/card/danny-main1.png")
     );
     const blackCarpet = new THREE.TextureLoader().load(
       require("../common/image/blackCarpet.jpg")
@@ -271,6 +273,7 @@ const Intro = () => {
     scene.add(pic2);
     //작은액자 사진2
     const pic_geometry2_pic = new THREE.PlaneGeometry(17.8, 17.8);
+    // const pic_geometry2_pic = new THREE.PlaneGeometry(5.3, 16);
     const pic_material2_pic = new THREE.MeshLambertMaterial({
       map: texture2_pic,
       transparent: true,
@@ -278,7 +281,8 @@ const Intro = () => {
       alphaToCoverage: false,
     });
     const pic2_pic = new THREE.Mesh(pic_geometry2_pic, pic_material2_pic);
-    pic2_pic.position.set(4.4, -2.55, 5);
+    pic2_pic.position.set(4.4, -2.59, 5);
+    // pic2_pic.position.set(4.4, -3.55, 5);
     pic2_pic.rotation.set(0, 0, 0);
     scene.add(pic2_pic);
 

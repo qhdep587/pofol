@@ -555,59 +555,37 @@ const Project = () => {
               git관리,뷰,디자인,구성,디비설계,메인,상품,리뷰 쪽을 담당.
               CRUD,게시판,옷 게시물들의 여러
               정렬,리뷰등록,리뷰정렬,신고,출석이벤트,실시간 상담채팅 등 구현
-              <br></br>git :{" "}
-              <a
-                href="https://github.com/qhdep587/pofol"
-                target="_blank"
-                rel="noreferrer"
-              >
-                https://github.com/qhdep587/pofol
-              </a>
             </>
           );
           break;
         case 23: //alpaka
           setProjectCate("SIDE");
-          setProjectTitle("OT.(옷.)");
-          setProjectSubTitle("의류 쇼핑몰");
-          setProjectInfo("제작 기간 (3개월)");
+          setProjectTitle("SAVE ALPAKA");
+          setProjectSubTitle("알파카 다마고치");
+          setProjectInfo("제작 기간 (1개월 반)");
           setProjectSkill([
             "Java",
-            "Spring",
             "jsp",
             "JavaScript",
             "JQuery",
             "Oracle",
             "Html",
             "Css",
-            "github",
           ]);
           setEndNum(29);
           setPhotoUrl("alpaka-main");
           setContent(
             <>
-              교육기관에서 팀으로 진행했던 프로젝트입니다.<br></br>
-              구성 기획 후 디비설계 진행하였으며<br></br>
-              디자인은 블랙업(여성의류 쇼핑몰)을 참고했습니다.<br></br>
-              git관리,뷰,디자인,구성,디비설계,메인,상품,리뷰 쪽을 담당.
-              CRUD,게시판,옷 게시물들의 여러
-              정렬,리뷰등록,리뷰정렬,신고,출석이벤트,실시간 상담채팅 등 구현
-              <br></br>git :{" "}
-              <a
-                href="https://github.com/qhdep587/pofol"
-                target="_blank"
-                rel="noreferrer"
-              >
-                https://github.com/qhdep587/pofol
-              </a>
+              교육기관 프로젝트로 진행했던<br></br>알파카 다마고치 게임입니다.
+              <br></br>게임 속 여러 타이머, 디자인, 미니게임들, BGM 등 구현
             </>
           );
           break;
         case 24: //wish
           setProjectCate("SIDE");
-          setProjectTitle("OT.(옷.)");
-          setProjectSubTitle("의류 쇼핑몰");
-          setProjectInfo("제작 기간 (3개월)");
+          setProjectTitle("WinWin");
+          setProjectSubTitle("IT 아웃소싱 플랫폼");
+          setProjectInfo("제작 기간 (2개월)");
           setProjectSkill([
             "Java",
             "Spring",
@@ -618,62 +596,42 @@ const Project = () => {
             "Html",
             "Css",
             "github",
+            "Bootstrap",
           ]);
           setEndNum(27);
           setPhotoUrl("wish-main");
           setContent(
             <>
-              교육기관에서 팀으로 진행했던 프로젝트입니다.<br></br>
-              구성 기획 후 디비설계 진행하였으며<br></br>
-              디자인은 블랙업(여성의류 쇼핑몰)을 참고했습니다.<br></br>
-              git관리,뷰,디자인,구성,디비설계,메인,상품,리뷰 쪽을 담당.
-              CRUD,게시판,옷 게시물들의 여러
-              정렬,리뷰등록,리뷰정렬,신고,출석이벤트,실시간 상담채팅 등 구현
-              <br></br>git :{" "}
-              <a
-                href="https://github.com/qhdep587/pofol"
-                target="_blank"
-                rel="noreferrer"
-              >
-                https://github.com/qhdep587/pofol
-              </a>
+              교육기관에서 팀으로 진행했던<br></br>WinWin이라는 IT아웃소싱
+              플랫폼 제작 프로젝트 입니다<br></br>
+              기획 진행 후 admin을 맡아 진행하였습니다.<br></br>
+              wishcat을 레퍼런스로 두고 작업하였습니다.<br></br>
+              회계 테이블, 매출 테이블, 통계, 유인율, 통계보드, 알림기능,
+              <br></br>공지사항 등 여러 게시판, 댓글검사, 신고관리,
+              <br></br>프로젝트 / 포트폴리오 검수단계, 회원관리, 기업관리 구현
             </>
           );
           break;
         case 25: //todo
           setProjectCate("SIDE");
-          setProjectTitle("OT.(옷.)");
-          setProjectSubTitle("의류 쇼핑몰");
-          setProjectInfo("제작 기간 (3개월)");
+          setProjectTitle("to do list");
+          setProjectSubTitle("할일작성 / 메모");
+          setProjectInfo("제작 기간 (1개월)");
           setProjectSkill([
             "Java",
-            "Spring",
             "jsp",
             "JavaScript",
             "JQuery",
-            "Oracle",
             "Html",
             "Css",
-            "github",
           ]);
           setEndNum(1);
           setPhotoUrl("todo-main");
           setContent(
             <>
-              교육기관에서 팀으로 진행했던 프로젝트입니다.<br></br>
-              구성 기획 후 디비설계 진행하였으며<br></br>
-              디자인은 블랙업(여성의류 쇼핑몰)을 참고했습니다.<br></br>
-              git관리,뷰,디자인,구성,디비설계,메인,상품,리뷰 쪽을 담당.
-              CRUD,게시판,옷 게시물들의 여러
-              정렬,리뷰등록,리뷰정렬,신고,출석이벤트,실시간 상담채팅 등 구현
-              <br></br>git :{" "}
-              <a
-                href="https://github.com/qhdep587/pofol"
-                target="_blank"
-                rel="noreferrer"
-              >
-                https://github.com/qhdep587/pofol
-              </a>
+              해야 할 일을 편하게 관리할 수 있는 To Do List 입니다.<br></br>
+              공지, 날짜설정, 할일작성, 끝난일로보내기,<br></br>
+              로컬스토리지(데이터저장) 기능이 있습니다.
             </>
           );
           break;
@@ -789,10 +747,13 @@ const Project = () => {
             </span>
             <br></br>
             <div className="modal-view-card-cont-skill">
-              <span style={{ color: "#1e7c60", fontWeight: 400, fontSize: 13 }}>
+              <span
+                style={{ color: "#1e7c60", fontWeight: 400, fontSize: 13 }}
+                key={"span" + 1}
+              >
                 &nbsp;[&nbsp;
               </span>
-              <span>
+              <span key={"span" + 2}>
                 {projectSkill.map((item, idx) => {
                   if (idx + 1 === projectSkill.length) {
                     return <>{item}</>;
@@ -885,7 +846,7 @@ const Project = () => {
                     alt="1"
                   />
                 </div>
-                <h3>쿠쿠(사진 발리껄로 한번 바꿔바 intro)</h3>
+                <h3>쿠쿠</h3>
                 <span>
                   <span style={{ color: "#1e7c60", fontWeight: 600 }}>[ </span>
                   <span
@@ -1046,7 +1007,7 @@ const Project = () => {
                   </span>
                   <span style={{ color: "#1e7c60", fontWeight: 600 }}> ]</span>
                 </span>
-                <span>개인 project / 포트폴리오</span>
+                <span>제작기간 (6개월) / 포트폴리오</span>
               </li>
               <li
                 className="card-pro"
@@ -1075,7 +1036,7 @@ const Project = () => {
                   </span>
                   <span style={{ color: "#1e7c60", fontWeight: 600 }}> ]</span>
                 </span>
-                <span>교육기관 project / 의류쇼핑몰</span>
+                <span>제작기간 (3개월) / 의류쇼핑몰</span>
               </li>
               <li
                 className="card-pro"
@@ -1104,7 +1065,7 @@ const Project = () => {
                   </span>
                   <span style={{ color: "#1e7c60", fontWeight: 600 }}> ]</span>
                 </span>
-                <span>교육기관 project / 게임</span>
+                <span>제작기간 (1개월 반) / 게임</span>
               </li>
               <li
                 className="card-pro"
@@ -1133,7 +1094,7 @@ const Project = () => {
                   </span>
                   <span style={{ color: "#1e7c60", fontWeight: 600 }}> ]</span>
                 </span>
-                <span>교육기관 project / IT아웃소싱 플랫폼</span>
+                <span>제작기간 (2개월) / IT아웃소싱 플랫폼</span>
               </li>
               <li
                 className="card-pro"
@@ -1148,7 +1109,7 @@ const Project = () => {
                     alt="5"
                   />
                 </div>
-                <h3>todolist</h3>
+                <h3>to do list</h3>
                 <span>
                   <span style={{ color: "#1e7c60", fontWeight: 600 }}>[ </span>
                   <span
@@ -1162,7 +1123,7 @@ const Project = () => {
                   </span>
                   <span style={{ color: "#1e7c60", fontWeight: 600 }}> ]</span>
                 </span>
-                <span>개인 project / todolist</span>
+                <span>제작기간 (1개월) / to do list</span>
               </li>
               {/* <li
                 className="card-pro"
