@@ -113,7 +113,6 @@ const Project = () => {
     const isMobile = () => {
       const user = navigator.userAgent;
       mCheck = false;
-      console.log(user);
       if (user.indexOf("iPhone") > -1 || user.indexOf("Android") > -1) {
         mCheck = true;
       }
@@ -123,7 +122,6 @@ const Project = () => {
     isMobile();
 
     if (mCheck) {
-      console.log(123123);
       ///모바일 일 때
       carousel = document.querySelector(".carousel");
       console.log(carousel);
@@ -135,14 +133,12 @@ const Project = () => {
 
       let isDragging = false;
       const dragStart = (e) => {
-        console.log(111);
         setGoStop(true);
         isDragging = true;
         startX = e.pageX;
         startScrollLeft = carousel.scrollLeft;
       };
       const dragging = (e) => {
-        console.log(222);
         if (!isDragging) return;
         carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
         if (carousel.scrollLeft < 3) {
@@ -156,7 +152,6 @@ const Project = () => {
         setGoStop(false);
       };
       const dragStop = (e) => {
-        console.log(333);
         isDragging = false;
       };
 
@@ -170,10 +165,8 @@ const Project = () => {
       carousel.addEventListener("touchmove", dragging);
       carousel.addEventListener("touchend", dragStop);
     } else {
-      console.log(321321);
       //pc일때
       carousel = document.querySelector(".carousel");
-      console.log(carousel);
       let carousel_scrollWidth =
         document.querySelector(".carousel").scrollWidth;
       let carousel_clientWidth =
@@ -182,14 +175,12 @@ const Project = () => {
 
       let isDragging = false;
       const dragStart = (e) => {
-        console.log(1111);
         setGoStop(true);
         isDragging = true;
         startX = e.pageX;
         startScrollLeft = carousel.scrollLeft;
       };
       const dragging = (e) => {
-        console.log(2222);
         if (!isDragging) return;
         carousel.scrollLeft = startScrollLeft - (e.pageX - startX) - 160;
         if (carousel.scrollLeft < 3) {
@@ -203,7 +194,6 @@ const Project = () => {
         setGoStop(false);
       };
       const dragStop = (e) => {
-        console.log(3333);
         isDragging = false;
       };
       carousel.addEventListener("mousedown", dragStart);
