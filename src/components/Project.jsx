@@ -113,7 +113,7 @@ const Project = () => {
     const isMobile = () => {
       const user = navigator.userAgent;
       mCheck = false;
-
+      console.log(user);
       if (user.indexOf("iPhone") > -1 || user.indexOf("Android") > -1) {
         mCheck = true;
       }
@@ -123,50 +123,10 @@ const Project = () => {
     isMobile();
 
     if (mCheck) {
+      console.log(123123);
       ///모바일 일 때
-      carousel = document.querySelector(".carousel")[0];
-      let carousel_scrollWidth =
-        document.querySelector(".carousel")[0].scrollWidth;
-      let carousel_clientWidth =
-        document.querySelector(".carousel")[0].clientWidth;
-      let carousel_width = carousel_scrollWidth - carousel_clientWidth;
-
-      let isDragging = false;
-      const dragStart = (e) => {
-        setGoStop(true);
-        isDragging = true;
-        startX = e.pageX;
-        startScrollLeft = carousel.scrollLeft;
-      };
-      const dragging = (e) => {
-        if (!isDragging) return;
-        carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
-        if (carousel.scrollLeft < 3) {
-          document.querySelector("#left1").classList.add("opa5");
-        } else if (carousel.scrollLeft > carousel_width - 30) {
-          document.querySelector("#right1").classList.add("opa5");
-        } else {
-          document.querySelector("#left1").classList.remove("opa5");
-          document.querySelector("#right1").classList.remove("opa5");
-        }
-        setGoStop(false);
-      };
-      const dragStop = (e) => {
-        isDragging = false;
-      };
-
-      if (isDragging) {
-        document.querySelector(".project").classList.add("stop-scrollY");
-      } else {
-        document.querySelector(".project").classList.remove("stop-scrollY");
-      }
-
-      carousel.addEventListener("touchstart", dragStart);
-      carousel.addEventListener("touchmove", dragging);
-      carousel.addEventListener("touchend", dragStop);
-    } else {
-      //pc일때
       carousel = document.querySelector(".carousel");
+      console.log(carousel);
       let carousel_scrollWidth =
         document.querySelector(".carousel").scrollWidth;
       let carousel_clientWidth =
@@ -175,12 +135,61 @@ const Project = () => {
 
       let isDragging = false;
       const dragStart = (e) => {
+        console.log(111);
         setGoStop(true);
         isDragging = true;
         startX = e.pageX;
         startScrollLeft = carousel.scrollLeft;
       };
       const dragging = (e) => {
+        console.log(222);
+        if (!isDragging) return;
+        carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
+        if (carousel.scrollLeft < 3) {
+          document.querySelector("#left1").classList.add("opa5");
+        } else if (carousel.scrollLeft > carousel_width - 30) {
+          document.querySelector("#right1").classList.add("opa5");
+        } else {
+          document.querySelector("#left1").classList.remove("opa5");
+          document.querySelector("#right1").classList.remove("opa5");
+        }
+        setGoStop(false);
+      };
+      const dragStop = (e) => {
+        console.log(333);
+        isDragging = false;
+      };
+
+      if (isDragging) {
+        document.querySelector(".project").classList.add("stop-scrollY");
+      } else {
+        document.querySelector(".project").classList.remove("stop-scrollY");
+      }
+
+      carousel.addEventListener("touchstart", dragStart);
+      carousel.addEventListener("touchmove", dragging);
+      carousel.addEventListener("touchend", dragStop);
+    } else {
+      console.log(321321);
+      //pc일때
+      carousel = document.querySelector(".carousel");
+      console.log(carousel);
+      let carousel_scrollWidth =
+        document.querySelector(".carousel").scrollWidth;
+      let carousel_clientWidth =
+        document.querySelector(".carousel").clientWidth;
+      let carousel_width = carousel_scrollWidth - carousel_clientWidth;
+
+      let isDragging = false;
+      const dragStart = (e) => {
+        console.log(1111);
+        setGoStop(true);
+        isDragging = true;
+        startX = e.pageX;
+        startScrollLeft = carousel.scrollLeft;
+      };
+      const dragging = (e) => {
+        console.log(2222);
         if (!isDragging) return;
         carousel.scrollLeft = startScrollLeft - (e.pageX - startX) - 160;
         if (carousel.scrollLeft < 3) {
@@ -194,6 +203,7 @@ const Project = () => {
         setGoStop(false);
       };
       const dragStop = (e) => {
+        console.log(3333);
         isDragging = false;
       };
       carousel.addEventListener("mousedown", dragStart);
@@ -202,25 +212,25 @@ const Project = () => {
     }
   }, []);
   useEffect(() => {
-    let carousel = "";
+    let carousel2 = "";
     let startX = "";
     let startScrollLeft = "";
-    let mCheck = false;
+    let mCheck2 = false;
     const isMobile = () => {
       const user = navigator.userAgent;
-      mCheck = false;
+      mCheck2 = false;
 
       if (user.indexOf("iPhone") > -1 || user.indexOf("Android") > -1) {
-        mCheck = true;
+        mCheck2 = true;
       }
 
-      return mCheck;
+      return mCheck2;
     };
     isMobile();
 
-    if (mCheck) {
+    if (mCheck2) {
       ///모바일 일 때
-      carousel = document.querySelector(".carousel2");
+      carousel2 = document.querySelector(".carousel2");
       let carousel_scrollWidth =
         document.querySelector(".carousel2").scrollWidth;
       let carousel_clientWidth =
@@ -232,14 +242,14 @@ const Project = () => {
         setGoStop(true);
         isDragging = true;
         startX = e.pageX;
-        startScrollLeft = carousel.scrollLeft;
+        startScrollLeft = carousel2.scrollLeft;
       };
       const dragging = (e) => {
         if (!isDragging) return;
-        carousel.scrollLeft = startScrollLeft - (e.pageX - startX);
-        if (carousel.scrollLeft < 3) {
+        carousel2.scrollLeft = startScrollLeft - (e.pageX - startX);
+        if (carousel2.scrollLeft < 3) {
           document.querySelector("#left1").classList.add("opa5");
-        } else if (carousel.scrollLeft > carousel_width - 30) {
+        } else if (carousel2.scrollLeft > carousel_width - 30) {
           document.querySelector("#right1").classList.add("opa5");
         } else {
           document.querySelector("#left1").classList.remove("opa5");
@@ -257,12 +267,12 @@ const Project = () => {
         document.querySelector(".project").classList.remove("stop-scrollY");
       }
 
-      carousel.addEventListener("touchstart", dragStart);
-      carousel.addEventListener("touchmove", dragging);
-      carousel.addEventListener("touchend", dragStop);
+      carousel2.addEventListener("touchstart", dragStart);
+      carousel2.addEventListener("touchmove", dragging);
+      carousel2.addEventListener("touchend", dragStop);
     } else {
       //pc일때
-      carousel = document.querySelector(".carousel2");
+      carousel2 = document.querySelector(".carousel2");
       let carousel_scrollWidth =
         document.querySelector(".carousel2").scrollWidth;
       let carousel_clientWidth =
@@ -274,14 +284,14 @@ const Project = () => {
         setGoStop(true);
         isDragging = true;
         startX = e.pageX;
-        startScrollLeft = carousel.scrollLeft;
+        startScrollLeft = carousel2.scrollLeft;
       };
       const dragging = (e) => {
         if (!isDragging) return;
-        carousel.scrollLeft = startScrollLeft - (e.pageX - startX) - 160;
-        if (carousel.scrollLeft < 3) {
+        carousel2.scrollLeft = startScrollLeft - (e.pageX - startX) - 160;
+        if (carousel2.scrollLeft < 3) {
           document.querySelector("#left2").classList.add("opa5");
-        } else if (carousel.scrollLeft > carousel_width - 30) {
+        } else if (carousel2.scrollLeft > carousel_width - 30) {
           document.querySelector("#right2").classList.add("opa5");
         } else {
           document.querySelector("#left2").classList.remove("opa5");
@@ -292,9 +302,9 @@ const Project = () => {
       const dragStop = (e) => {
         isDragging = false;
       };
-      carousel.addEventListener("mousedown", dragStart);
-      carousel.addEventListener("mousemove", dragging);
-      carousel.addEventListener("mouseup", dragStop);
+      carousel2.addEventListener("mousedown", dragStart);
+      carousel2.addEventListener("mousemove", dragging);
+      carousel2.addEventListener("mouseup", dragStop);
     }
   }, []);
 
@@ -434,7 +444,7 @@ const Project = () => {
               인사 시스템과 <br></br>업무 포탈 시스템을 담당 하였습니다.
               <br></br>
               <br></br>
-              계약직 근로자의 <br></br>복무, 교육, 급여, 당직<br></br>, 총무,
+              계약직 근로자의 <br></br>복무, 교육, 급여, 당직,<br></br>총무,
               기타 등등을 관리하는 시스템으로<br></br>특정 권한으로 들어갈 수
               있는<br></br>관리자 페이지에서 따로 관리를 할 수 있습니다.
               <br></br>
