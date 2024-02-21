@@ -6,6 +6,10 @@ import { BrowserRouter } from "react-router-dom";
 const App = () => {
   window.addEventListener("scroll", cursor);
   window.addEventListener("mousemove", cursor);
+  window.addEventListener("contextmenu", function (e) {
+    e.preventDefault();
+    return false;
+  });
   window.addEventListener("keydown", function (e) {
     if (
       // CMD + Alt + I (Chrome, Firefox, Safari)
