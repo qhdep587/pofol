@@ -310,7 +310,7 @@ const Project = () => {
   const [projectTitle, setProjectTitle] = useState("cuckoo(쿠쿠)"); //프로젝트 제목
   const [projectSubTitle, setProjectSubTitle] = useState("UI/UX 개선 사업"); //프로젝트 부제목
   const [projectInfo, setProjectInfo] = useState(
-    "2021.05 ~ 2023.07 (3개월) / 프론트엔드 / 모바일화면"
+    "2023.05 ~ 2023.07 (3개월) / 프론트엔드 / 모바일화면"
   ); //프로젝트 소개
   const [projectSkill, setProjectSkill] = useState([
     "Html",
@@ -334,7 +334,7 @@ const Project = () => {
           setProjectCate("COMPANY");
           setProjectTitle("cuckoo(쿠쿠)");
           setProjectSubTitle("UI/UX 개선 사업");
-          setProjectInfo("2021.05 ~ 2023.07 (3개월) / FE / 모바일화면");
+          setProjectInfo("2023.05 ~ 2023.07 (3개월) / FE / 모바일화면");
           setProjectSkill([
             "Html",
             "Thymeleaf",
@@ -854,7 +854,7 @@ const Project = () => {
                   </span>
                   <span style={{ color: "#1e7c60", fontWeight: 600 }}> ]</span>
                 </span>
-                <span>2021.05 ~ 2023.07 (3개월)</span>
+                <span>2023.05 ~ 2023.07 (3개월)</span>
               </li>
               <li
                 className="card-pro"
