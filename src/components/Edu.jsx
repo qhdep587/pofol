@@ -57,7 +57,6 @@ const Edu = () => {
 
     function render(time) {
       time *= 0.0005; // 회전 속도
-
       //회전
       rose.rotation.z -= 0.005;
       Octahedron1.rotation.z = time * 4;
@@ -102,20 +101,6 @@ const Edu = () => {
         <span className="edu-title">◆</span>&nbsp;&nbsp;
         <span className="f20">학력</span>
         <li style={{ fontSize: "10px" }}>&nbsp;</li>
-        <li className="list-item">
-          &nbsp;&nbsp;<strong>성동공업고등학교</strong>
-          &nbsp;&nbsp;&nbsp;전자기계과&nbsp;&nbsp;&nbsp;&nbsp;
-        </li>
-        <li
-          className="list-item list-item-sub"
-          style={{ position: "relative", Left: "4.2%" }}
-        >
-          <span className="f15" style={{ display: "inline-block" }}>
-            &nbsp;&nbsp;&nbsp;2008.02 ~ 2011.03&nbsp;&nbsp;&nbsp;
-            <div className="text-btn">졸업</div>
-          </span>
-        </li>
-        <li className="list-item">&nbsp;</li>
         <li className="list-item2">
           &nbsp;&nbsp;<strong>학점은행제</strong>
           &nbsp;&nbsp;&nbsp;경역학과
@@ -137,6 +122,20 @@ const Edu = () => {
             <div className="text-btn" style={{ background: "#660c0c" }}>
               재학중
             </div>
+          </span>
+        </li>
+        <li className="list-item">&nbsp;</li>
+        <li className="list-item">
+          &nbsp;&nbsp;<strong>성동공업고등학교</strong>
+          &nbsp;&nbsp;&nbsp;전자기계과&nbsp;&nbsp;&nbsp;&nbsp;
+        </li>
+        <li
+          className="list-item list-item-sub"
+          style={{ position: "relative", Left: "4.2%" }}
+        >
+          <span className="f15" style={{ display: "inline-block" }}>
+            &nbsp;&nbsp;&nbsp;2008.02 ~ 2011.03&nbsp;&nbsp;&nbsp;
+            <div className="text-btn">졸업</div>
           </span>
         </li>
         <li style={{ fontSize: "10px" }}>&nbsp;</li>

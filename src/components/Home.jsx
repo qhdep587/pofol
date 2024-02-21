@@ -6,8 +6,6 @@ const Home = () => {
   useEffect(() => {
     MyCanvas();
   }, []);
-  ///////////////////////////////////////////싹다 마지막에 리팩토링
-  ////////////////////////////////////무조건해 쓰리 다 밖으로모아서 코드이쁘게해
   function MyCanvas() {
     //장면
     const scene = new THREE.Scene();
@@ -98,7 +96,6 @@ const Home = () => {
 
     function render(time) {
       time *= 0.0005; // 회전 속도
-
       //회전
       rose.rotation.z -= 0.005;
       Octahedron1.rotation.z = time * 4;

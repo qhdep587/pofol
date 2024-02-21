@@ -1,7 +1,5 @@
 import React, { useEffect } from "react";
 import * as THREE from "three";
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 
 const Work = () => {
   useEffect(() => {
@@ -91,45 +89,6 @@ const Work = () => {
     }
   }
 
-  const navigate = useNavigate();
-  const linkFn = (target, num) => {
-    if (num > 0) {
-      for (let i = 1; i < 5; i++) {
-        document.getElementById("menu" + i).className =
-          "left-menu-item-content";
-      }
-      document.getElementById("menu" + num).className += " active";
-      navRouter(num);
-    }
-  };
-
-  const navRouter = (goto) => {
-    if (goto === "home") {
-      for (let i = 1; i < 5; i++) {
-        document.getElementById("menu" + i).className =
-          "left-menu-item-content";
-      }
-    }
-
-    switch (goto) {
-      case 1:
-        navigate("/intro");
-        break;
-      case 2:
-        navigate("/edu");
-        break;
-      case 3:
-        navigate("/work");
-        break;
-      case 4:
-        navigate("/project");
-        break;
-      default:
-        navigate("/");
-        break;
-    }
-  };
-
   return (
     <div className="work">
       <div className="titleBox">
@@ -162,113 +121,6 @@ const Work = () => {
         <span className="edu-title">◆</span>&nbsp;&nbsp;
         <span className="f20">경력</span>
         <li style={{ fontSize: "10px" }}>&nbsp;</li>
-        <li className="list-item">
-          &nbsp;&nbsp;<strong>위젯누리</strong>
-          &nbsp;&nbsp;&nbsp;&nbsp;
-          <span style={{ color: "#1e7c60", fontWeight: 600 }}>[ </span>
-          <span className="f15" style={{ color: "ivory", fontWeight: 500 }}>
-            <span className="f15" style={{ display: "inline-block" }}>
-              <div className="text-btn">role</div>&nbsp;&nbsp;
-            </span>
-            퍼블리시 / 프론트엔드
-          </span>
-          <span style={{ color: "#1e7c60", fontWeight: 600 }}> ]</span>
-          &nbsp;&nbsp;&nbsp;&nbsp;
-        </li>
-        <li
-          className="list-item list-item-sub"
-          style={{ position: "relative", Left: "4.2%" }}
-        >
-          <span className="f15" style={{ display: "inline-block" }}>
-            &nbsp;&nbsp;&nbsp;2020.07 ~ 2020.09&nbsp;&nbsp;&nbsp;
-          </span>
-        </li>
-        <li className="list-item" style={{ height: "10px" }} />
-        <li
-          className="list-item list-item-sub"
-          style={{ position: "relative", Left: "4.2%" }}
-        >
-          <span style={{ color: "#1e7c60", fontWeight: 600 }}>
-            &nbsp;&nbsp;&nbsp;&gt;&gt;&nbsp;&nbsp;&nbsp;
-          </span>
-          <div className="text-btn" style={{ background: "#82097e" }}>
-            HTML5
-          </div>
-          &nbsp;
-          <div className="text-btn" style={{ background: "#635506" }}>
-            CSS3
-          </div>
-          &nbsp;
-          <div className="text-btn" style={{ background: "#0e646e" }}>
-            JavaScript
-          </div>
-          &nbsp;
-        </li>
-        <li
-          className="list-item list-item-sub"
-          style={{ position: "relative", Left: "4.2%" }}
-        >
-          &nbsp;&nbsp;&nbsp;
-          <div className="text-btn" style={{ background: "#226e0b" }}>
-            JQuery
-          </div>
-          &nbsp;
-          <div className="text-btn" style={{ background: "#660c0c" }}>
-            ExtJS
-          </div>
-          &nbsp;
-          <div className="text-btn" style={{ background: "#580663" }}>
-            PhotoShop
-          </div>
-          &nbsp;
-        </li>
-        <li className="list-item" style={{ height: "10px" }} />
-        <li
-          className="list-item list-item-sub"
-          style={{ position: "relative", Left: "4.2%" }}
-        >
-          <span className="f15" style={{ display: "inline-block" }}>
-            &nbsp;&nbsp;&nbsp;담당업무&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;extJs이용하여
-          </span>
-        </li>
-        <li
-          className="list-item list-item-sub"
-          style={{ position: "relative", Left: "4.2%" }}
-        >
-          <span className="f15" style={{ display: "inline-block" }}>
-            &nbsp;&nbsp;&nbsp;데스크탑 디자인 기반의 솔루션
-          </span>
-        </li>
-        <li
-          className="list-item list-item-sub"
-          style={{ position: "relative", Left: "4.2%" }}
-        >
-          <span className="f15" style={{ display: "inline-block" }}>
-            &nbsp;&nbsp;
-            <span style={{ color: "#1e7c60", fontWeight: 600 }}> ( </span>
-            백신,장비관리 등
-            <span style={{ color: "#1e7c60", fontWeight: 600 }}> )</span>
-          </span>
-        </li>
-        <li
-          className="list-item list-item-sub"
-          style={{ position: "relative", Left: "4.2%" }}
-        >
-          <span className="f15" style={{ display: "inline-block" }}>
-            &nbsp;&nbsp;&nbsp;퍼블, 프론트작업
-          </span>
-        </li>
-        <li
-          className="list-item list-item-sub"
-          style={{ position: "relative", Left: "4.2%" }}
-        >
-          <span className="f15" style={{ display: "inline-block" }}>
-            &nbsp;&nbsp;&nbsp;chart라이브러리 이용하여 대시보드 작업
-          </span>
-        </li>
-        <li className="list-item">&nbsp;</li>
-        <li className="list-item" style={{ height: "10px" }} />
-        <li className="list-item" style={{ height: "10px" }} />
         <li className="list-item">
           &nbsp;&nbsp;<strong>시드아이티</strong>
           &nbsp;&nbsp;&nbsp;&nbsp;
@@ -385,11 +237,9 @@ const Work = () => {
           <span className="f15" style={{ display: "inline-block" }}>
             &nbsp;&nbsp;&nbsp;-{" "}
             <span style={{ color: "#1e7c60", fontWeight: 600 }}> ( </span>
-            STX<span style={{ color: "#1e7c60", fontWeight: 600 }}>
-              {" "}
-              )
-            </span>{" "}
-            계약직 계약/인사 관리시스템 구축
+            쿠쿠
+            <span style={{ color: "#1e7c60", fontWeight: 600 }}> )</span> 쿠쿠
+            UI/UX 개선 사업
           </span>
         </li>
         <li
@@ -397,8 +247,8 @@ const Work = () => {
           style={{ position: "relative", Left: "4.2%" }}
         >
           <span className="f15" style={{ display: "inline-block" }}>
-            &nbsp;&nbsp;&nbsp;2020.10 ~ 2021.06
-            <span style={{ color: "#1e7c60", fontWeight: 600 }}> ( </span>9 개월
+            &nbsp;&nbsp;&nbsp;2023.05 ~ 2023.07
+            <span style={{ color: "#1e7c60", fontWeight: 600 }}> ( </span>3 개월
             <span style={{ color: "#1e7c60", fontWeight: 600 }}> )</span>
           </span>
           &nbsp;&nbsp;&nbsp;
@@ -434,9 +284,11 @@ const Work = () => {
           <span className="f15" style={{ display: "inline-block" }}>
             &nbsp;&nbsp;&nbsp;-{" "}
             <span style={{ color: "#1e7c60", fontWeight: 600 }}> ( </span>
-            쿠쿠
-            <span style={{ color: "#1e7c60", fontWeight: 600 }}> )</span> 쿠쿠
-            UI/UX 개선 사업
+            STX<span style={{ color: "#1e7c60", fontWeight: 600 }}>
+              {" "}
+              )
+            </span>{" "}
+            계약직 계약/인사 관리시스템 구축
           </span>
         </li>
         <li
@@ -444,12 +296,120 @@ const Work = () => {
           style={{ position: "relative", Left: "4.2%" }}
         >
           <span className="f15" style={{ display: "inline-block" }}>
-            &nbsp;&nbsp;&nbsp;2023.05 ~ 2023.07
-            <span style={{ color: "#1e7c60", fontWeight: 600 }}> ( </span>3 개월
+            &nbsp;&nbsp;&nbsp;2020.10 ~ 2021.06
+            <span style={{ color: "#1e7c60", fontWeight: 600 }}> ( </span>9 개월
             <span style={{ color: "#1e7c60", fontWeight: 600 }}> )</span>
           </span>
           &nbsp;&nbsp;&nbsp;
         </li>
+        <li className="list-item">&nbsp;</li>
+        <li className="list-item" style={{ height: "10px" }} />
+        <li className="list-item" style={{ height: "10px" }} />
+        <li className="list-item">
+          &nbsp;&nbsp;<strong>위젯누리</strong>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <span style={{ color: "#1e7c60", fontWeight: 600 }}>[ </span>
+          <span className="f15" style={{ color: "ivory", fontWeight: 500 }}>
+            <span className="f15" style={{ display: "inline-block" }}>
+              <div className="text-btn">role</div>&nbsp;&nbsp;
+            </span>
+            퍼블리시 / 프론트엔드
+          </span>
+          <span style={{ color: "#1e7c60", fontWeight: 600 }}> ]</span>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+        </li>
+        <li
+          className="list-item list-item-sub"
+          style={{ position: "relative", Left: "4.2%" }}
+        >
+          <span className="f15" style={{ display: "inline-block" }}>
+            &nbsp;&nbsp;&nbsp;2020.07 ~ 2020.09&nbsp;&nbsp;&nbsp;
+          </span>
+        </li>
+        <li className="list-item" style={{ height: "10px" }} />
+        <li
+          className="list-item list-item-sub"
+          style={{ position: "relative", Left: "4.2%" }}
+        >
+          <span style={{ color: "#1e7c60", fontWeight: 600 }}>
+            &nbsp;&nbsp;&nbsp;&gt;&gt;&nbsp;&nbsp;&nbsp;
+          </span>
+          <div className="text-btn" style={{ background: "#82097e" }}>
+            HTML5
+          </div>
+          &nbsp;
+          <div className="text-btn" style={{ background: "#635506" }}>
+            CSS3
+          </div>
+          &nbsp;
+          <div className="text-btn" style={{ background: "#0e646e" }}>
+            JavaScript
+          </div>
+          &nbsp;
+        </li>
+        <li
+          className="list-item list-item-sub"
+          style={{ position: "relative", Left: "4.2%" }}
+        >
+          &nbsp;&nbsp;&nbsp;
+          <div className="text-btn" style={{ background: "#226e0b" }}>
+            JQuery
+          </div>
+          &nbsp;
+          <div className="text-btn" style={{ background: "#660c0c" }}>
+            ExtJS
+          </div>
+          &nbsp;
+          <div className="text-btn" style={{ background: "#580663" }}>
+            PhotoShop
+          </div>
+          &nbsp;
+        </li>
+        <li className="list-item" style={{ height: "10px" }} />
+        <li
+          className="list-item list-item-sub"
+          style={{ position: "relative", Left: "4.2%" }}
+        >
+          <span className="f15" style={{ display: "inline-block" }}>
+            &nbsp;&nbsp;&nbsp;담당업무&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;extJs이용하여
+          </span>
+        </li>
+        <li
+          className="list-item list-item-sub"
+          style={{ position: "relative", Left: "4.2%" }}
+        >
+          <span className="f15" style={{ display: "inline-block" }}>
+            &nbsp;&nbsp;&nbsp;데스크탑 디자인 기반의 솔루션
+          </span>
+        </li>
+        <li
+          className="list-item list-item-sub"
+          style={{ position: "relative", Left: "4.2%" }}
+        >
+          <span className="f15" style={{ display: "inline-block" }}>
+            &nbsp;&nbsp;
+            <span style={{ color: "#1e7c60", fontWeight: 600 }}> ( </span>
+            백신,장비관리 등
+            <span style={{ color: "#1e7c60", fontWeight: 600 }}> )</span>
+          </span>
+        </li>
+        <li
+          className="list-item list-item-sub"
+          style={{ position: "relative", Left: "4.2%" }}
+        >
+          <span className="f15" style={{ display: "inline-block" }}>
+            &nbsp;&nbsp;&nbsp;퍼블, 프론트작업
+          </span>
+        </li>
+        <li
+          className="list-item list-item-sub"
+          style={{ position: "relative", Left: "4.2%" }}
+        >
+          <span className="f15" style={{ display: "inline-block" }}>
+            &nbsp;&nbsp;&nbsp;chart라이브러리 이용하여 대시보드 작업
+          </span>
+        </li>
+        {/* <li className="list-item" style={{ height: "10px" }} />
         <li
           className="list-item list-item-sub"
           style={{ position: "relative", Left: "4.2%" }}
@@ -461,8 +421,7 @@ const Work = () => {
           >
             &nbsp;&nbsp;&nbsp;project &gt;&gt;&nbsp;&nbsp;&nbsp;
           </Link>
-        </li>
-        <li style={{ fontSize: "10px" }}>&nbsp;</li>
+        </li> */}
         <li>&nbsp;</li>
         <li>&nbsp;</li>
       </ul>

@@ -124,7 +124,6 @@ const Project = () => {
     if (mCheck) {
       ///모바일 일 때
       carousel = document.querySelector(".carousel");
-      console.log(carousel);
       let carousel_scrollWidth =
         document.querySelector(".carousel").scrollWidth;
       let carousel_clientWidth =
@@ -747,22 +746,18 @@ const Project = () => {
             </span>
             <br></br>
             <div className="modal-view-card-cont-skill">
-              <span
-                style={{ color: "#1e7c60", fontWeight: 400, fontSize: 13 }}
-                key={"span" + 1}
-              >
+              <span style={{ color: "#1e7c60", fontWeight: 400, fontSize: 13 }}>
                 &nbsp;[&nbsp;
               </span>
-              <span key={"span" + 2}>
+              <span>
                 {projectSkill.map((item, idx) => {
                   if (idx + 1 === projectSkill.length) {
-                    return <>{item}</>;
+                    return <span key={idx}>{item}</span>;
                   } else if (idx + 1 === 5 || idx + 1 === 10) {
                     return (
-                      <>
+                      <span key={idx}>
                         {item}
                         <span
-                          key={"skill" + idx}
                           style={{
                             color: "#1e7c60",
                             fontWeight: 400,
@@ -772,14 +767,13 @@ const Project = () => {
                           &nbsp;&nbsp;/&nbsp;&nbsp;
                         </span>
                         <br></br>
-                      </>
+                      </span>
                     );
                   } else {
                     return (
-                      <>
+                      <span key={idx}>
                         {item}
                         <span
-                          key={"skill" + idx}
                           style={{
                             color: "#1e7c60",
                             fontWeight: 400,
@@ -788,7 +782,7 @@ const Project = () => {
                         >
                           &nbsp;&nbsp;/&nbsp;&nbsp;
                         </span>
-                      </>
+                      </span>
                     );
                   }
                 })}

@@ -2624,7 +2624,7 @@
     background-color: rgba(1, 19, 13, 1);
     top: -1.8vh;
     height: 12px;
-    left: 1.5vw;
+    left: 3.5vw;
     display: inline-block;
     font-size: 1rem;
   }
@@ -2674,7 +2674,8 @@
     border-radius: 50%;
     border: 1px solid ivory;
     position: relative;
-    top: 0.7vh;
+    top: 1.1vh;
+    right: 3px;
   }
   .imgBtn {
     cursor: none;
