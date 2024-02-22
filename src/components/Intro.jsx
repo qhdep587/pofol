@@ -132,6 +132,7 @@ const Intro = () => {
     function render(time) {
       time *= 0.0005; // 회전 속도
 
+      renderer.dispose();
       const canvas = renderer.domElement;
       camera.aspect = canvas.clientWidth / canvas.clientHeight;
       camera.updateProjectionMatrix();

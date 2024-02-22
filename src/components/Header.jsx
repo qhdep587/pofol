@@ -30,7 +30,7 @@ const Header = () => {
       );
       setTemp(res.data.main.temp.toFixed(0));
       setCity("seoul");
-      setIcon(res.data.weather[0].description.replaceAll(" ", ""));
+      setIcon(res.data.weather[0].main.replaceAll(" ", ""));
     } catch (error) {
       console.error(error);
     }
