@@ -38,10 +38,7 @@ const Project = () => {
     //도형
     const Octahedron1_geometry = new THREE.OctahedronGeometry(0.3, 0);
     const Octahedron1_material = new THREE.MeshNormalMaterial({});
-    const Octahedron1 = new THREE.Mesh(
-      Octahedron1_geometry,
-      Octahedron1_material
-    );
+    const Octahedron1 = new THREE.Mesh(Octahedron1_geometry, Octahedron1_material);
     scene.add(Octahedron1);
     Octahedron1.position.set(0, 0, 0);
 
@@ -124,10 +121,8 @@ const Project = () => {
     if (mCheck) {
       ///모바일 일 때
       carousel = document.querySelector(".carousel");
-      let carousel_scrollWidth =
-        document.querySelector(".carousel").scrollWidth;
-      let carousel_clientWidth =
-        document.querySelector(".carousel").clientWidth;
+      let carousel_scrollWidth = document.querySelector(".carousel").scrollWidth;
+      let carousel_clientWidth = document.querySelector(".carousel").clientWidth;
       let carousel_width = carousel_scrollWidth - carousel_clientWidth;
 
       let isDragging = false;
@@ -166,10 +161,8 @@ const Project = () => {
     } else {
       //pc일때
       carousel = document.querySelector(".carousel");
-      let carousel_scrollWidth =
-        document.querySelector(".carousel").scrollWidth;
-      let carousel_clientWidth =
-        document.querySelector(".carousel").clientWidth;
+      let carousel_scrollWidth = document.querySelector(".carousel").scrollWidth;
+      let carousel_clientWidth = document.querySelector(".carousel").clientWidth;
       let carousel_width = carousel_scrollWidth - carousel_clientWidth;
 
       let isDragging = false;
@@ -220,10 +213,8 @@ const Project = () => {
     if (mCheck2) {
       ///모바일 일 때
       carousel2 = document.querySelector(".carousel2");
-      let carousel_scrollWidth =
-        document.querySelector(".carousel2").scrollWidth;
-      let carousel_clientWidth =
-        document.querySelector(".carousel2").clientWidth;
+      let carousel_scrollWidth = document.querySelector(".carousel2").scrollWidth;
+      let carousel_clientWidth = document.querySelector(".carousel2").clientWidth;
       let carousel_width = carousel_scrollWidth - carousel_clientWidth;
 
       let isDragging = false;
@@ -262,10 +253,8 @@ const Project = () => {
     } else {
       //pc일때
       carousel2 = document.querySelector(".carousel2");
-      let carousel_scrollWidth =
-        document.querySelector(".carousel2").scrollWidth;
-      let carousel_clientWidth =
-        document.querySelector(".carousel2").clientWidth;
+      let carousel_scrollWidth = document.querySelector(".carousel2").scrollWidth;
+      let carousel_clientWidth = document.querySelector(".carousel2").clientWidth;
       let carousel_width = carousel_scrollWidth - carousel_clientWidth;
 
       let isDragging = false;
@@ -309,22 +298,15 @@ const Project = () => {
   const [projectCate, setProjectCate] = useState("COMPANY"); //프로젝트 카테고리
   const [projectTitle, setProjectTitle] = useState("cuckoo(쿠쿠)"); //프로젝트 제목
   const [projectSubTitle, setProjectSubTitle] = useState("UI/UX 개선 사업"); //프로젝트 부제목
-  const [projectInfo, setProjectInfo] = useState(
-    "2023.05 ~ 2023.07 (3개월) / 프론트엔드 / 모바일화면"
-  ); //프로젝트 소개
-  const [projectSkill, setProjectSkill] = useState([
-    "Html",
-    "Expression Language Tag",
-    "Jira",
-    "Github",
-  ]); //프로젝트 스킬
+  const [projectInfo, setProjectInfo] = useState("2023.05 ~ 2023.07 (3개월) / 프론트엔드 / 모바일화면"); //프로젝트 소개
+  const [projectSkill, setProjectSkill] = useState(["Html", "Expression Language Tag", "Jira", "Github"]); //프로젝트 스킬
   const [endNum, setEndNum] = useState(3); //사진갯수
   const [currentNum, setCurrentNum] = useState(1); //현재사진 카운트
   const [photoUrl, setPhotoUrl] = useState("cuckoo-main"); //사진url
   const [content, setContent] = useState(
     <>
-      Thymeleaf 태그 사용하여 작업했습니다. <br></br> ui/ux 고도화업무 및 협업
-      jira, github 이용 <br></br>객체화 및 타임딜 기능 개발"
+      Thymeleaf 태그 사용하여 작업했습니다. <br></br> ui/ux 고도화업무 및 협업 jira, github 이용 <br></br>객체화 및
+      타임딜 기능 개발"
     </>
   );
   const cardClick = (e, num) => {
@@ -335,20 +317,14 @@ const Project = () => {
           setProjectTitle("cuckoo(쿠쿠)");
           setProjectSubTitle("UI/UX 개선 사업");
           setProjectInfo("2023.05 ~ 2023.07 (3개월) / FE / 모바일화면");
-          setProjectSkill([
-            "Html",
-            "Thymeleaf",
-            "JavaScript",
-            "Jira",
-            "Github",
-          ]);
+          setProjectSkill(["Html", "Thymeleaf", "JavaScript", "Jira", "Github"]);
           setEndNum(3);
           setPhotoUrl("cuckoo-main");
           setContent(
             <>
               <p>
-                Thymeleaf 태그 사용하는<br></br>ui/ux 고도화 작업 프로젝트
-                였으며,<br></br>pc화면 mobile화 및 타임딜 기능 개발,<br></br>
+                Thymeleaf 태그 사용하는<br></br>ui/ux 고도화 작업 프로젝트 였으며,<br></br>pc화면 mobile화 및 타임딜
+                기능 개발,<br></br>
                 객체화 작업 등 진행했습니다.<br></br>
                 <br></br>협업은 jira, github 이용했습니다.
               </p>
@@ -383,12 +359,10 @@ const Project = () => {
               agile방식으로 진행 했던 프로젝트입니다.<br></br>
               <br></br>
               마켓컬리의 판매자가 이용하는 파트너 센터와<br></br>
-              판매자 및 상품을 관리하는 RM, MD 등 <br></br>관리자가 이용하는
-              파트너 어드민이 있습니다.<br></br>
+              판매자 및 상품을 관리하는 RM, MD 등 <br></br>관리자가 이용하는 파트너 어드민이 있습니다.<br></br>
               <br></br>
-              파트너 / 계정 / 상품 / 배송 / <br></br>주문 / 정산 / 대시보드 /
-              보안상 이력 등의 <br></br>여러 도메인이 있었고 모든 부분에
-              참여했습니다.<br></br>
+              파트너 / 계정 / 상품 / 배송 / <br></br>주문 / 정산 / 대시보드 / 보안상 이력 등의 <br></br>여러 도메인이
+              있었고 모든 부분에 참여했습니다.<br></br>
               git과 젠킨스 자동빌드를 사용하였고,<br></br>
               aws서버에 배포 전 리뷰를 받고 진행하는 과정까지 맡았습니다.
               <br></br>
@@ -396,27 +370,23 @@ const Project = () => {
               초기 view구축이 급한 단계에는 프론트 담당으로<br></br>
               여러 라이브러리로 그리드 위주의 화면을 만들고 <br></br>
               axios이용 rest api방식의 연동을 했습니다.<br></br>
-              ssr, csr, seo, component, props, hooks, <br></br>router, life
-              cycle 등의 이해를 동반하며 작업했습니다.<br></br>
+              ssr, csr, seo, component, props, hooks, <br></br>router, life cycle 등의 이해를 동반하며 작업했습니다.
+              <br></br>
               <br></br>
               화면이 진행된 후 <br></br>백엔드와 프론트를 같이 담당했습니다.
               <br></br>
               spring boot와 mysql이용하여 api 생성 및 수정 작업<br></br>
-              kafka연동 / 계좌인증, 사업자인증 등<br></br>외부 api도
-              연동하였습니다.<br></br>
+              kafka연동 / 계좌인증, 사업자인증 등<br></br>외부 api도 연동하였습니다.<br></br>
               <br></br>
-              보수 단계에서는 마켓컬리의 기획자 및<br></br>PM분과 slack으로
-              소통하며 작업했고,<br></br>
+              보수 단계에서는 마켓컬리의 기획자 및<br></br>PM분과 slack으로 소통하며 작업했고,<br></br>
               협업 툴은 jira, confluence, slack, swagger, datadog 등<br></br>
               이용했습니다.
               <br></br>
               <br></br>
               DB테이블과 기획의<br></br>많은 재수정을 경험해서 유익했고,
               <br></br>
-              마켓컬리의 많은 판매자 수와<br></br>많은 상품옵션 및 상세이미지
-              등에 의해서<br></br>
-              많은 트래픽, 조회 건 수 등 데이터 무게에 관한<br></br>이슈 경험을
-              한 것이 가장 유익했습니다.
+              마켓컬리의 많은 판매자 수와<br></br>많은 상품옵션 및 상세이미지 등에 의해서<br></br>
+              많은 트래픽, 조회 건 수 등 데이터 무게에 관한<br></br>이슈 경험을 한 것이 가장 유익했습니다.
             </>
           );
           break;
@@ -433,17 +403,14 @@ const Project = () => {
               인사 시스템과 <br></br>업무 포탈 시스템을 담당 하였습니다.
               <br></br>
               <br></br>
-              계약직 근로자의 <br></br>복무, 교육, 급여, 당직,<br></br>총무,
-              기타 등등을 관리하는 시스템으로<br></br>특정 권한으로 들어갈 수
-              있는<br></br>관리자 페이지에서 따로 관리를 할 수 있습니다.
+              계약직 근로자의 <br></br>복무, 교육, 급여, 당직,<br></br>총무, 기타 등등을 관리하는 시스템으로<br></br>
+              특정 권한으로 들어갈 수 있는<br></br>관리자 페이지에서 따로 관리를 할 수 있습니다.
               <br></br>
-              <br></br>사용 중 데이터가 잘못되거나<br></br>시스템 상 오류가
-              생기면<br></br>
+              <br></br>사용 중 데이터가 잘못되거나<br></br>시스템 상 오류가 생기면<br></br>
               로그를 보고 이슈를 해결하는<br></br>업무를 주로 하였습니다.
               <br></br>
               <br></br>
-              업무포탈은 spring / jsp 기반이며 <br></br>ajax 이용하여 api 연동
-              하였고<br></br>
+              업무포탈은 spring / jsp 기반이며 <br></br>ajax 이용하여 api 연동 하였고<br></br>
               형상관리는 git 을 이용하였습니다.
             </>
           );
@@ -492,8 +459,7 @@ const Project = () => {
               그라디언트와 3d렌더링이 주목받아,<br></br>
               포트폴리오 테마에 그라디언트를 적용하고
               <br></br>threeJs로 3d작업 후 삽입했습니다.
-              <br></br>메인에 쓰인 문구에서 처럼<br></br>저의 개화시기를
-              계획하며
+              <br></br>메인에 쓰인 문구에서 처럼<br></br>저의 개화시기를 계획하며
               <br></br>꽃으로 포인트를 잡았으며,
               <br></br>포인트와 어울릴<br></br>은은한 분위기의 진한녹색과
               <br></br>
@@ -518,13 +484,25 @@ const Project = () => {
               사이트 분석 및 관리 기능을<br></br>
               참고 삼아 적용해봤습니다.<br></br>
               <br></br>git :{" "}
-              <a
-                href="https://github.com/qhdep587/pofol"
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a href="https://github.com/qhdep587/pofol" target="_blank" rel="noreferrer">
                 https://github.com/qhdep587/pofol
               </a>
+            </>
+          );
+          break;
+        case 31: //포켓몬도감
+          setProjectCate("SIDE");
+          setProjectTitle("포켓몬도감");
+          setProjectSubTitle("openApi 사용 토이프로젝트");
+          setProjectInfo("제작 기간 (1개월)");
+          setProjectSkill(["React", "ReduxToolkit", "TypeScript", "Html", "Sass", "React-intersection-observer"]);
+          setEndNum(4);
+          setPhotoUrl("poke-main");
+          setContent(
+            <>
+              포켓몬 openApi 이용하여<br></br>
+              포켓몬 도감 만드는 토이 프로젝트.<br></br>
+              포켓몬 검색기능, 카드 클릭 시 디테일화면, 무한스크롤 등
             </>
           );
           break;
@@ -533,17 +511,7 @@ const Project = () => {
           setProjectTitle("OT.(옷.)");
           setProjectSubTitle("의류 쇼핑몰");
           setProjectInfo("제작 기간 (3개월)");
-          setProjectSkill([
-            "Java",
-            "Spring",
-            "jsp",
-            "JavaScript",
-            "JQuery",
-            "Oracle",
-            "Html",
-            "Css",
-            "github",
-          ]);
+          setProjectSkill(["Java", "Spring", "jsp", "JavaScript", "JQuery", "Oracle", "Html", "Css", "github"]);
           setEndNum(25);
           setPhotoUrl("ot-main");
           setContent(
@@ -551,8 +519,7 @@ const Project = () => {
               교육기관에서 팀으로 진행했던 프로젝트입니다.<br></br>
               구성 기획 후 디비설계 진행하였으며<br></br>
               디자인은 블랙업(여성의류 쇼핑몰)을 참고했습니다.<br></br>
-              git관리,뷰,디자인,구성,디비설계,메인,상품,리뷰 쪽을 담당.
-              CRUD,게시판,옷 게시물들의 여러
+              git관리,뷰,디자인,구성,디비설계,메인,상품,리뷰 쪽을 담당. CRUD,게시판,옷 게시물들의 여러
               정렬,리뷰등록,리뷰정렬,신고,출석이벤트,실시간 상담채팅 등 구현
             </>
           );
@@ -562,15 +529,7 @@ const Project = () => {
           setProjectTitle("SAVE ALPAKA");
           setProjectSubTitle("알파카 다마고치");
           setProjectInfo("제작 기간 (1개월 반)");
-          setProjectSkill([
-            "Java",
-            "jsp",
-            "JavaScript",
-            "JQuery",
-            "Oracle",
-            "Html",
-            "Css",
-          ]);
+          setProjectSkill(["Java", "jsp", "JavaScript", "JQuery", "Oracle", "Html", "Css"]);
           setEndNum(29);
           setPhotoUrl("alpaka-main");
           setContent(
@@ -601,8 +560,7 @@ const Project = () => {
           setPhotoUrl("wish-main");
           setContent(
             <>
-              교육기관에서 팀으로 진행했던<br></br>WinWin이라는 IT아웃소싱
-              플랫폼 제작 프로젝트 입니다<br></br>
+              교육기관에서 팀으로 진행했던<br></br>WinWin이라는 IT아웃소싱 플랫폼 제작 프로젝트 입니다<br></br>
               기획 진행 후 admin을 맡아 진행하였습니다.<br></br>
               wishcat을 레퍼런스로 두고 작업하였습니다.<br></br>
               회계 테이블, 매출 테이블, 통계, 유인율, 통계보드, 알림기능,
@@ -616,14 +574,7 @@ const Project = () => {
           setProjectTitle("to do list");
           setProjectSubTitle("할일작성 / 메모");
           setProjectInfo("제작 기간 (1개월)");
-          setProjectSkill([
-            "Java",
-            "jsp",
-            "JavaScript",
-            "JQuery",
-            "Html",
-            "Css",
-          ]);
+          setProjectSkill(["Java", "jsp", "JavaScript", "JQuery", "Html", "Css"]);
           setEndNum(1);
           setPhotoUrl("todo-main");
           setContent(
@@ -647,14 +598,10 @@ const Project = () => {
       <div className="modal-view">
         <div className="modal-view-card">
           {/* 모달 */}
-          <div
-            style={{ width: "100%", height: "1.5vh", display: "inline-block" }}
-          >
+          <div style={{ width: "100%", height: "1.5vh", display: "inline-block" }}>
             <div className="modal-view-card-title">
               <canvas className="mini-canvas-pro" id="mini-canvas3"></canvas>
-              <span style={{ color: "ivory", fontSize: 13 }}>
-                {projectCate}{" "}
-              </span>
+              <span style={{ color: "ivory", fontSize: 13 }}>{projectCate} </span>
               PROJECT&nbsp;
               <canvas className="mini-canvas-pro" id="mini-canvas4"></canvas>
             </div>
@@ -678,23 +625,14 @@ const Project = () => {
           <div className="modal-view-card-cont">
             <span className="edu-title">◆</span>
             &nbsp;&nbsp;{projectTitle}&nbsp;&nbsp;
-            <span style={{ color: "#1e7c60", fontWeight: 400, fontSize: 13 }}>
-              &nbsp; [&nbsp;
-            </span>
-            <span style={{ color: "snow", fontSize: 13 }}>
-              {projectSubTitle}
-            </span>
-            <span style={{ color: "#1e7c60", fontWeight: 400, fontSize: 13 }}>
-              &nbsp; ]
-            </span>
+            <span style={{ color: "#1e7c60", fontWeight: 400, fontSize: 13 }}>&nbsp; [&nbsp;</span>
+            <span style={{ color: "snow", fontSize: 13 }}>{projectSubTitle}</span>
+            <span style={{ color: "#1e7c60", fontWeight: 400, fontSize: 13 }}>&nbsp; ]</span>
             <br></br>
             <br></br>
             <img
               className="modal-view-card-cont-img"
-              src={require("../common/project/" +
-                photoUrl +
-                currentNum +
-                ".png")}
+              src={require("../common/project/" + photoUrl + currentNum + ".png")}
               draggable="false"
               alt={{ projectTitle } + "photo" + { currentNum }}
             />
@@ -741,14 +679,10 @@ const Project = () => {
                 width: "50%",
               }}
             ></hr>
-            <span style={{ color: "#a2a7a5", fontSize: "0.8em" }}>
-              {projectInfo}
-            </span>
+            <span style={{ color: "#a2a7a5", fontSize: "0.8em" }}>{projectInfo}</span>
             <br></br>
             <div className="modal-view-card-cont-skill">
-              <span style={{ color: "#1e7c60", fontWeight: 400, fontSize: 13 }}>
-                &nbsp;[&nbsp;
-              </span>
+              <span style={{ color: "#1e7c60", fontWeight: 400, fontSize: 13 }}>&nbsp;[&nbsp;</span>
               <span>
                 {projectSkill.map((item, idx) => {
                   if (idx + 1 === projectSkill.length) {
@@ -787,9 +721,7 @@ const Project = () => {
                   }
                 })}
               </span>
-              <span style={{ color: "#1e7c60", fontWeight: 400, fontSize: 13 }}>
-                &nbsp;]
-              </span>
+              <span style={{ color: "#1e7c60", fontWeight: 400, fontSize: 13 }}>&nbsp;]</span>
             </div>
             <br></br>
             <div className="cont-box">{content}</div>
@@ -807,21 +739,10 @@ const Project = () => {
           </div>
           <div className="wrapper">
             <i id="left1" className="i1 opa5">
-              <img
-                className="angle-bracket"
-                src={require("../common/card/lc.png")}
-                alt="l-angle-bracket"
-              />
+              <img className="angle-bracket" src={require("../common/card/lc.png")} alt="l-angle-bracket" />
             </i>
-            <div
-              className="alim-move-pro"
-              style={{ display: tf ? "" : "none" }}
-            >
-              <img
-                className="alim-move-pro"
-                src={require("../common/image/pointer.png")}
-                alt="pointer_img"
-              />
+            <div className="alim-move-pro" style={{ display: tf ? "" : "none" }}>
+              <img className="alim-move-pro" src={require("../common/image/pointer.png")} alt="pointer_img" />
             </div>
             <ul className="carousel">
               <li
@@ -834,19 +755,12 @@ const Project = () => {
                 }}
               >
                 <div className="img">
-                  <img
-                    src={require("../common/project/cuckoo-main1.png")}
-                    draggable="false"
-                    alt="1"
-                  />
+                  <img src={require("../common/project/cuckoo-main1.png")} draggable="false" alt="1" />
                 </div>
                 <h3>쿠쿠</h3>
                 <span>
                   <span style={{ color: "#1e7c60", fontWeight: 600 }}>[ </span>
-                  <span
-                    className="f15"
-                    style={{ color: "ivory", fontWeight: 500 }}
-                  >
+                  <span className="f15" style={{ color: "ivory", fontWeight: 500 }}>
                     <span className="f15" style={{ display: "inline-block" }}>
                       <div className="text-btn">role</div>&nbsp;&nbsp;
                     </span>
@@ -863,19 +777,12 @@ const Project = () => {
                 }}
               >
                 <div className="img">
-                  <img
-                    src={require("../common/project/kurly-main1.png")}
-                    draggable="false"
-                    alt="2"
-                  />
+                  <img src={require("../common/project/kurly-main1.png")} draggable="false" alt="2" />
                 </div>
                 <h3>마켓컬리</h3>
                 <span>
                   <span style={{ color: "#1e7c60", fontWeight: 600 }}>[ </span>
-                  <span
-                    className="f15"
-                    style={{ color: "ivory", fontWeight: 500 }}
-                  >
+                  <span className="f15" style={{ color: "ivory", fontWeight: 500 }}>
                     <span className="f15" style={{ display: "inline-block" }}>
                       <div className="text-btn">role</div>&nbsp;&nbsp;
                     </span>
@@ -892,19 +799,12 @@ const Project = () => {
                 }}
               >
                 <div className="img">
-                  <img
-                    src={require("../common/project/stx-main1.png")}
-                    draggable="false"
-                    alt="stx-img"
-                  />
+                  <img src={require("../common/project/stx-main1.png")} draggable="false" alt="stx-img" />
                 </div>
                 <h3>STX</h3>
                 <span>
                   <span style={{ color: "#1e7c60", fontWeight: 600 }}>[ </span>
-                  <span
-                    className="f15"
-                    style={{ color: "ivory", fontWeight: 500 }}
-                  >
+                  <span className="f15" style={{ color: "ivory", fontWeight: 500 }}>
                     <span className="f15" style={{ display: "inline-block" }}>
                       <div className="text-btn">role</div>&nbsp;&nbsp;
                     </span>
@@ -921,19 +821,12 @@ const Project = () => {
                 }}
               >
                 <div className="img">
-                  <img
-                    src={require("../common/project/wn-main6.png")}
-                    draggable="false"
-                    alt="5"
-                  />
+                  <img src={require("../common/project/wn-main6.png")} draggable="false" alt="5" />
                 </div>
                 <h3>위젯누리</h3>
                 <span>
                   <span style={{ color: "#1e7c60", fontWeight: 600 }}>[ </span>
-                  <span
-                    className="f15"
-                    style={{ color: "ivory", fontWeight: 500 }}
-                  >
+                  <span className="f15" style={{ color: "ivory", fontWeight: 500 }}>
                     <span className="f15" style={{ display: "inline-block" }}>
                       <div className="text-btn">role</div>&nbsp;&nbsp;
                     </span>
@@ -979,21 +872,14 @@ const Project = () => {
                 }}
               >
                 <div className="img">
-                  <img
-                    src={require("../common/project/pofol-main1.png")}
-                    draggable="false"
-                    alt="1"
-                  />
+                  <img src={require("../common/project/pofol-main1.png")} draggable="false" alt="1" />
                 </div>
                 <h3>Portfolio 메이킹</h3>
                 {/* <span>깃에도 정리(three컴포넌트 등)</span>
                 <span>구글애널리틱스/구글태그 표현</span> */}
                 <span>
                   <span style={{ color: "#1e7c60", fontWeight: 600 }}>[ </span>
-                  <span
-                    className="f15"
-                    style={{ color: "ivory", fontWeight: 500 }}
-                  >
+                  <span className="f15" style={{ color: "ivory", fontWeight: 500 }}>
                     <span className="f15" style={{ display: "inline-block" }}>
                       <div className="text-btn">role</div>&nbsp;&nbsp;
                     </span>
@@ -1006,23 +892,41 @@ const Project = () => {
               <li
                 className="card-pro"
                 onClick={(e) => {
+                  cardClick(e, 31);
+                }}
+                style={{
+                  marginLeft: "16px",
+                }}
+              >
+                <div className="img">
+                  <img src={require("../common/project/poke-main1.png")} draggable="false" alt="1" />
+                </div>
+                <h3>포켓몬도감</h3>
+                <span>
+                  <span style={{ color: "#1e7c60", fontWeight: 600 }}>[ </span>
+                  <span className="f15" style={{ color: "ivory", fontWeight: 500 }}>
+                    <span className="f15" style={{ display: "inline-block" }}>
+                      <div className="text-btn">role</div>&nbsp;&nbsp;
+                    </span>
+                    All
+                  </span>
+                  <span style={{ color: "#1e7c60", fontWeight: 600 }}> ]</span>
+                </span>
+                <span>제작기간 (1개월) / 토이프로젝트</span>
+              </li>
+              <li
+                className="card-pro"
+                onClick={(e) => {
                   cardClick(e, 22);
                 }}
               >
                 <div className="img">
-                  <img
-                    src={require("../common/project/ot-main1.png")}
-                    draggable="false"
-                    alt="2"
-                  />
+                  <img src={require("../common/project/ot-main1.png")} draggable="false" alt="2" />
                 </div>
                 <h3>OT. (옷.)</h3>
                 <span>
                   <span style={{ color: "#1e7c60", fontWeight: 600 }}>[ </span>
-                  <span
-                    className="f15"
-                    style={{ color: "ivory", fontWeight: 500 }}
-                  >
+                  <span className="f15" style={{ color: "ivory", fontWeight: 500 }}>
                     <span className="f15" style={{ display: "inline-block" }}>
                       <div className="text-btn">role</div>&nbsp;&nbsp;
                     </span>
@@ -1039,19 +943,12 @@ const Project = () => {
                 }}
               >
                 <div className="img">
-                  <img
-                    src={require("../common/project/alpaka-main1.png")}
-                    draggable="false"
-                    alt="3"
-                  />
+                  <img src={require("../common/project/alpaka-main1.png")} draggable="false" alt="3" />
                 </div>
                 <h3>알파카 살리기</h3>
                 <span>
                   <span style={{ color: "#1e7c60", fontWeight: 600 }}>[ </span>
-                  <span
-                    className="f15"
-                    style={{ color: "ivory", fontWeight: 500 }}
-                  >
+                  <span className="f15" style={{ color: "ivory", fontWeight: 500 }}>
                     <span className="f15" style={{ display: "inline-block" }}>
                       <div className="text-btn">role</div>&nbsp;&nbsp;
                     </span>
@@ -1068,19 +965,12 @@ const Project = () => {
                 }}
               >
                 <div className="img">
-                  <img
-                    src={require("../common/project/wish-main1.png")}
-                    draggable="false"
-                    alt="4"
-                  />
+                  <img src={require("../common/project/wish-main1.png")} draggable="false" alt="4" />
                 </div>
                 <h3>WinWin</h3>
                 <span>
                   <span style={{ color: "#1e7c60", fontWeight: 600 }}>[ </span>
-                  <span
-                    className="f15"
-                    style={{ color: "ivory", fontWeight: 500 }}
-                  >
+                  <span className="f15" style={{ color: "ivory", fontWeight: 500 }}>
                     <span className="f15" style={{ display: "inline-block" }}>
                       <div className="text-btn">role</div>&nbsp;&nbsp;
                     </span>
@@ -1097,19 +987,12 @@ const Project = () => {
                 }}
               >
                 <div className="img">
-                  <img
-                    src={require("../common/project/todo-main1.png")}
-                    draggable="false"
-                    alt="5"
-                  />
+                  <img src={require("../common/project/todo-main1.png")} draggable="false" alt="5" />
                 </div>
                 <h3>to do list</h3>
                 <span>
                   <span style={{ color: "#1e7c60", fontWeight: 600 }}>[ </span>
-                  <span
-                    className="f15"
-                    style={{ color: "ivory", fontWeight: 500 }}
-                  >
+                  <span className="f15" style={{ color: "ivory", fontWeight: 500 }}>
                     <span className="f15" style={{ display: "inline-block" }}>
                       <div className="text-btn">role</div>&nbsp;&nbsp;
                     </span>
@@ -1138,11 +1021,7 @@ const Project = () => {
               </li> */}
             </ul>
             <i id="right2" className="i2">
-              <img
-                className="angle-bracket2"
-                src={require("../common/card/rc.png")}
-                alt="r-angle-bracket"
-              />
+              <img className="angle-bracket2" src={require("../common/card/rc.png")} alt="r-angle-bracket" />
             </i>
           </div>
         </div>
