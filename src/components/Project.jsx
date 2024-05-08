@@ -493,7 +493,7 @@ const Project = () => {
         case 31: //포켓몬도감
           setProjectCate("SIDE");
           setProjectTitle("포켓몬도감");
-          setProjectSubTitle("openApi 사용 토이프로젝트");
+          setProjectSubTitle("openApi 사용 프로젝트");
           setProjectInfo("제작 기간 (1개월)");
           setProjectSkill(["React", "ReduxToolkit", "TypeScript", "Html", "Sass", "React-intersection-observer"]);
           setEndNum(4);
@@ -501,8 +501,44 @@ const Project = () => {
           setContent(
             <>
               포켓몬 openApi 이용하여<br></br>
-              포켓몬 도감 만드는 토이 프로젝트.<br></br>
-              포켓몬 검색기능, 카드 클릭 시 디테일화면, 무한스크롤 등
+              포켓몬 도감 구현<br></br>
+              <br></br>- 포켓몬api 이용하여 포켓몬도감 구현<br></br>- 포켓몬의 순서에 맞게 나오는 리스트 화면<br></br>-
+              포켓몬 번호 검색 기능<br></br>- 포켓몬 상세정보 화면 (포켓몬 정보, 진화단계 등 표시)<br></br>- 무한스크롤
+            </>
+          );
+          break;
+        case 32: //map 라이브러리 사용프로젝트
+          setProjectCate("SIDE");
+          setProjectTitle("openlayers 라이브러리 프로젝트");
+          setProjectSubTitle("라이브러리 사용 프로젝트");
+          setProjectInfo("제작 기간 (1개월)");
+          setProjectSkill(["React", "ReduxToolkit", "Styled-components", "TypeScript", "Html", "Vitest"]);
+          setEndNum(2);
+          setPhotoUrl("angel-main");
+          setContent(
+            <>
+              Map 라이브러리<br></br>
+              openlayers 이용하여<br></br>맵 위에 특정 location 표시 및<br></br>
+              레이아웃 구성
+            </>
+          );
+          break;
+        case 33: //모바일화면 인터렉션 적용 프로젝트
+          setProjectCate("SIDE");
+          setProjectTitle("모바일화면 인터렉션 프로젝트");
+          setProjectSubTitle("모바일화면 사이드 프로젝트");
+          setProjectInfo("제작 기간 (1개월)");
+          setProjectSkill(["React", "Redux", "Styled-components", "TypeScript", "Html", "Vitest"]);
+          setEndNum(4);
+          setPhotoUrl("medi-main");
+          setContent(
+            <>
+              모바일화면 구현 프로젝트<br></br>
+              모바일 화면으로 레이아웃 구성<br></br>
+              스크롤 자동 이동, 하단 아코디언 박스,<br></br>
+              체크리스트 리스트업 및<br></br>
+              체크박스,props 관리 등<br></br>
+              인터렉션 적용 프로젝트
             </>
           );
           break;
@@ -875,8 +911,6 @@ const Project = () => {
                   <img src={require("../common/project/pofol-main1.png")} draggable="false" alt="1" />
                 </div>
                 <h3>Portfolio 메이킹</h3>
-                {/* <span>깃에도 정리(three컴포넌트 등)</span>
-                <span>구글애널리틱스/구글태그 표현</span> */}
                 <span>
                   <span style={{ color: "#1e7c60", fontWeight: 600 }}>[ </span>
                   <span className="f15" style={{ color: "ivory", fontWeight: 500 }}>
@@ -888,6 +922,56 @@ const Project = () => {
                   <span style={{ color: "#1e7c60", fontWeight: 600 }}> ]</span>
                 </span>
                 <span>제작기간 (6개월) / 포트폴리오</span>
+              </li>
+              <li
+                className="card-pro"
+                onClick={(e) => {
+                  cardClick(e, 33);
+                }}
+                style={{
+                  marginLeft: "16px",
+                }}
+              >
+                <div className="img">
+                  <img src={require("../common/project/medi-main1.png")} draggable="false" alt="1" />
+                </div>
+                <h3>모바일화면 인터렉션 프로젝트</h3>
+                <span>
+                  <span style={{ color: "#1e7c60", fontWeight: 600 }}>[ </span>
+                  <span className="f15" style={{ color: "ivory", fontWeight: 500 }}>
+                    <span className="f15" style={{ display: "inline-block" }}>
+                      <div className="text-btn">role</div>&nbsp;&nbsp;
+                    </span>
+                    All
+                  </span>
+                  <span style={{ color: "#1e7c60", fontWeight: 600 }}> ]</span>
+                </span>
+                <span>제작기간 (1개월) / 사이드 프로젝트</span>
+              </li>
+              <li
+                className="card-pro"
+                onClick={(e) => {
+                  cardClick(e, 32);
+                }}
+                style={{
+                  marginLeft: "16px",
+                }}
+              >
+                <div className="img">
+                  <img src={require("../common/project/angel-main1.png")} draggable="false" alt="1" />
+                </div>
+                <h3>openlayers 라이브러리 프로젝트</h3>
+                <span>
+                  <span style={{ color: "#1e7c60", fontWeight: 600 }}>[ </span>
+                  <span className="f15" style={{ color: "ivory", fontWeight: 500 }}>
+                    <span className="f15" style={{ display: "inline-block" }}>
+                      <div className="text-btn">role</div>&nbsp;&nbsp;
+                    </span>
+                    All
+                  </span>
+                  <span style={{ color: "#1e7c60", fontWeight: 600 }}> ]</span>
+                </span>
+                <span>제작기간 (1개월) / 사이드 프로젝트</span>
               </li>
               <li
                 className="card-pro"
@@ -912,7 +996,7 @@ const Project = () => {
                   </span>
                   <span style={{ color: "#1e7c60", fontWeight: 600 }}> ]</span>
                 </span>
-                <span>제작기간 (1개월) / 토이프로젝트</span>
+                <span>제작기간 (1개월) / 사이드 프로젝트</span>
               </li>
               <li
                 className="card-pro"
